@@ -100,7 +100,7 @@ export default function HeaderBottom() {
                                     <Link to=""><i className="fas fa-shopping-cart"></i></Link>
                                 </div>
                             </li>
-                            <li className="d-none d-lg-block"> <Link to="" classNameName='btn header-btn'>Sign in</Link>
+                            <li className="d-none d-lg-block"> <Link to="" className='btn header-btn'>Sign in</Link>
                             </li>
                         </ul>
                     </div>
