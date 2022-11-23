@@ -1,4 +1,4 @@
-import LinkTag from "./LinkTag";
+import { Link } from "react-router-dom";
 
 export default function HotTag(props) {
     return (
@@ -9,7 +9,9 @@ export default function HotTag(props) {
                 <ul>
                 {props.tags.map((tag, index) => {
                     return (
-                        <LinkTag to={tag.to} key={index}>{tag.name}</LinkTag>
+                        <li key={index}>
+                            <Link to={tag.to}>{tag.name}</Link>
+                        </li>
                     );
                 })}
                 </ul>

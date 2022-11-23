@@ -30,30 +30,30 @@ const BestRights = [
 
 export default function BestCollection() {
     return (
-        <div class="best-collection-area section-padding2">
-            <div class="container">
-                <div class="row d-flex justify-content-between align-items-end">
+        <div className="best-collection-area section-padding2">
+            <div className="container">
+                <div className="row d-flex justify-content-between align-items-end">
 
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="best-left-cap">
+                    <div className="col-xl-4 col-lg-4 col-md-6">
+                        <div className="best-left-cap">
                             <h2>Best Collection of This Month</h2>
                             <p>Designers who are interesten crea.</p>
-                            <Link to="#" class="btn shop1-btn">Shop Now</Link>
+                            <Link to="#" className="btn shop1-btn">Shop Now</Link>
                         </div>
-                        <div class="best-left-img mb-30 d-none d-sm-block">
+                        <div className="best-left-img mb-30 d-none d-sm-block">
                             <img src={collection1} alt="" />
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-lg-2 d-none d-lg-block">
-                        <div class="best-mid-img mb-30 ">
+                    <div className="col-xl-2 col-lg-2 d-none d-lg-block">
+                        <div className="best-mid-img mb-30 ">
                             <img src={collection2} alt="" />
                         </div>
                     </div>
 
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div className="col-xl-4 col-lg-6 col-md-6">
                         {BestRights.map((item, index) => {
-                            return <BestRightCap key={index} name={item.name} type={item.type} img={item.img} active={item.active} />
+                            return <BestRightCap index={index} name={item.name} type={item.type} img={item.img} active={item.active} />
                         })}
                     </div>
                 </div>

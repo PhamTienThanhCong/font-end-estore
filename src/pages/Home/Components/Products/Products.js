@@ -2,29 +2,29 @@ import { Link } from "react-router-dom";
  
 export default function Products(props) {
     return (
-        <div class="col-xl-4 col-lg-4 col-md-6" key={props.key}>
-            <div class="single-product mb-60">
-                <div class="product-img">
+        <div className="col-xl-4 col-lg-4 col-md-6" key={props.index}>
+            <div className="single-product mb-60">
+                <div className="product-img">
                     <img src={props.image} alt=""/>
-                        <div class="new-product">
+                        <div className="new-product">
                             <span>{props.type}</span>
                         </div>
                 </div>
-                <div class="product-caption">
-                    <div class="product-ratting">
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star low-star"></i>
-                        <i class="far fa-star low-star"></i>
+                <div className="product-caption">
+                    <div className="product-ratting">
+                        <i className="far fa-star"></i>
+                        <i className="far fa-star"></i>
+                        <i className="far fa-star"></i>
+                        <i className="far fa-star low-star"></i>
+                        <i className="far fa-star low-star"></i>
                     </div>
                     <h4>
                         <Link to={props.link}>{props.name}</Link>
                     </h4>
-                    <div class="price">
+                    <div className="price">
                         <ul>
                             <li>${props.price}</li>
-                            <li class="discount">${props.price_old}</li>
+                            <li className="discount">${props.price_old}</li>
                         </ul>
                     </div>
                 </div>

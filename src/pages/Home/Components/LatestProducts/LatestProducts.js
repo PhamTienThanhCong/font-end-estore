@@ -59,23 +59,23 @@ const TheProducts  = [
 
 export default function LatestProducts() {
     return (
-        <section class="latest-product-area padding-bottom">
-        <div class="container">
+        <section className="latest-product-area padding-bottom">
+        <div className="container">
   
-          <div class="tab-content" id="nav-tabContent">
+          <div className="tab-content" id="nav-tabContent">
   
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              <div class="row">
+            <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div className="row">
                 
                 {TheProducts.map((product, index) => (
                     <Products
+                        index={index + "product"}
                         image={product.image}
                         type={product.type}
                         link={product.link}
                         name={product.name}
                         price={product.price}
                         price_old={product.price_old}
-                        key={index}
                     />
                 ))}
 
