@@ -5,6 +5,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Cart from "./pages/Cart/Cart"
+import CallJavaScript from './Components/CallJavaScript/CallJavaScript';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
         </Routes>
       <Footer />
+      <CallJavaScript />
     </div>
   );
 }

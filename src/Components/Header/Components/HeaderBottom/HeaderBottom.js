@@ -10,7 +10,7 @@ export default function HeaderBottom() {
                     <div className="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                         <div className="logo">
                             <Link to="">
-                                <img src={logo} alt="" />
+                                <img style={{ height: "80px" }} src={logo} alt="" />
                             </Link>
                                 
                         </div>

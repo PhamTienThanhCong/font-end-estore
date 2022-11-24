@@ -447,7 +447,10 @@
           $("#seconds").html("<span>Seconds</span>" + seconds);
 
         }
-      
+      // click counter js
+
+
+
         setInterval(function () {
           makeTimer();
         }, 1000);

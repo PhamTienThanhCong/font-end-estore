@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import CartTable from "./components/CartTable/CartTable";
 
 export default function Cart() {
+    document.title = "Cart";
     return (
         <>
             <div className="slider-area ">
@@ -26,8 +27,8 @@ export default function Cart() {
                             <CartTable />
 
                             <div className="checkout_btn_inner float-right">
-                                <Link className="btn_1" href="#">Continue Shopping</Link>
-                                <Link className="btn_1 checkout_btn_1" href="#">Proceed to checkout</Link>
+                                <Link className="btn_1" to="/">Continue Shopping</Link>
+                                <Link className="btn_1 checkout_btn_1" to="#">Proceed to checkout</Link>
                             </div>
                         </div>
                     </div>

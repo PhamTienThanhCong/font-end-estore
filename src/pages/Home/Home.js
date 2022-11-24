@@ -7,7 +7,10 @@ import LatestOffers from "./Components/LatestOffers/LatestOffers";
 import Endow from "./Components/Endow/Endow";
 import ListImg from "./Components/ListImg/ListImg";
 
+import CallJavaScript from "../../Components/CallJavaScript/CallJavaScript";
+
 export default function Home() {
+  document.title = "Home";
   return (
     <main>
 
@@ -26,7 +29,7 @@ export default function Home() {
       <Endow />
 
       <ListImg />
-
+    
     </main>
   );
 }
