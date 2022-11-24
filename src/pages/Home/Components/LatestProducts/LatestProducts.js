@@ -69,6 +69,7 @@ export default function LatestProducts() {
                 
                 {TheProducts.map((product, index) => (
                     <Products
+                        key={index}
                         index={index + "product"}
                         image={product.image}
                         type={product.type}

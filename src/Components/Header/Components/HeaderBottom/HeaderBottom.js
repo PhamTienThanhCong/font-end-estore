@@ -21,40 +21,40 @@ export default function HeaderBottom() {
                             <nav>
                                 <ul id="navigation">
                                     <li>
-                                        <Link to="">Home</Link>
+                                        <Link to="/">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="">Catagori</Link>
+                                        <Link to="Catagori">Catagori</Link>
                                     </li>
-                                    <li className="hot"><Link to="">Latest</Link>
+                                    <li className="hot"><Link to="#">Latest</Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to=""> Product list</Link>
+                                                <Link to="product-list"> Product list</Link>
                                             </li>
                                             <li>
-                                                <Link to=""> Product Details</Link>
+                                                <Link to="product-details"> Product Details</Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link to="">Blog</Link>
+                                        <Link to="#">Blog</Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to="">Blog</Link>
+                                                <Link to="blog">Blog</Link>
                                             </li>
                                             <li>
-                                                <Link to="">Blog Details</Link>
+                                                <Link to="blog-detail">Blog Details</Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link to="">Pages</Link>
+                                        <Link to="#">Pages</Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to="">Login</Link>
+                                                <Link to="/login">Login</Link>
                                             </li>
                                             <li>
-                                                <Link to="">Card</Link>
+                                                <Link to="/card">Card</Link>
                                             </li>
                                             <li>
                                                 <Link to="">Element</Link>
@@ -74,7 +74,7 @@ export default function HeaderBottom() {
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link to="">Contact</Link>
+                                        <Link to="/contact">Contact</Link>
                                     </li>
                                 </ul>
                             </nav>
@@ -97,10 +97,10 @@ export default function HeaderBottom() {
                             </li>
                             <li>
                                 <div className="shopping-card">
-                                    <Link to=""><i className="fas fa-shopping-cart"></i></Link>
+                                    <Link to="/cart"><i className="fas fa-shopping-cart"></i></Link>
                                 </div>
                             </li>
-                            <li className="d-none d-lg-block"> <Link to="" className='btn header-btn'>Sign in</Link>
+                            <li className="d-none d-lg-block"> <Link to="/login" className='btn header-btn'>Sign in</Link>
                             </li>
                         </ul>
                     </div>

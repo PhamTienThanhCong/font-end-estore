@@ -47,13 +47,13 @@ export default function BestCollection() {
 
                     <div className="col-xl-2 col-lg-2 d-none d-lg-block">
                         <div className="best-mid-img mb-30 ">
-                            <img src={collection2} alt="" />
+                            <img src={collection2} alt=""/>
                         </div>
                     </div>
 
                     <div className="col-xl-4 col-lg-6 col-md-6">
                         {BestRights.map((item, index) => {
-                            return <BestRightCap index={index} name={item.name} type={item.type} img={item.img} active={item.active} />
+                            return <BestRightCap key={index} index={index} name={item.name} type={item.type} img={item.img} active={item.active} />
                         })}
                     </div>
                 </div>
