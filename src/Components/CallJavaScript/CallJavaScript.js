@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet';
 
 export default function CallJavaScript() {
     return (
@@ -24,7 +24,6 @@ export default function CallJavaScript() {
 
             <script src="./assets/js/plugins.js"></script>
             <script src="./assets/js/main.js"></script>
-
         </Helmet>
-    )
+    );
 }

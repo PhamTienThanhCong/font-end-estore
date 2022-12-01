@@ -1,13 +1,12 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-export default function CartProduct(props){
-
+export default function CartProduct(props) {
     const [totalPrice, setTotalPrice] = useState(props.price * props.quantity);
     const [quantity, setQuantity] = useState(props.quantity);
 
     const changeQuantity = (type) => {
         console.log(type);
-        if (type === "minus") {
+        if (type === 'minus') {
             if (quantity > 1) {
                 setTotalPrice(totalPrice - props.price);
                 setQuantity(quantity - 1);
@@ -18,7 +17,7 @@ export default function CartProduct(props){
                 setQuantity(quantity + 1);
             }
         }
-    }
+    };
 
     return (
         <tr key={props.id}>
@@ -37,20 +36,18 @@ export default function CartProduct(props){
             </td>
             <td>
                 <div className="product_count">
-
-                    <span className="input-number-decrement" onClick={() => changeQuantity("minus")}> 
+                    <span className="input-number-decrement" onClick={() => changeQuantity('minus')}>
                         <i className="ti-minus"></i>
                     </span>
-                    <input className="input-number" type="text" value={quantity} min="0" max="10"/>
-                    <span className="input-number-increment" onClick={() => changeQuantity("add")}> 
+                    <input className="input-number" type="text" value={quantity} min="0" max="10" />
+                    <span className="input-number-increment" onClick={() => changeQuantity('add')}>
                         <i className="ti-plus"></i>
                     </span>
-
                 </div>
             </td>
             <td>
                 <h5>${totalPrice}</h5>
             </td>
         </tr>
-    )
+    );
 }

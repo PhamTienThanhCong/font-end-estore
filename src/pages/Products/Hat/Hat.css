@@ -1,0 +1,15 @@
+.hat_container {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.hat_header {
+    margin-top: 48px;
+}
+
+.hat_inner {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 150px;
+}

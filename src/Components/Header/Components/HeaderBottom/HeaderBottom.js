@@ -1,22 +1,19 @@
 import { Link } from 'react-router-dom';
-import logo from "./logo.png";
+import logo from './logo.png';
 
 export default function HeaderBottom() {
     return (
         <div className="header-bottom  header-sticky">
             <div className="container-fluid">
                 <div className="row align-items-center">
-
                     <div className="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                         <div className="logo">
                             <Link to="">
-                                <img style={{ height: "80px" }} src={logo} alt="" />
+                                <img style={{ height: '80px' }} src={logo} alt="" />
                             </Link>
-                                
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-8 col-md-7 col-sm-5">
-
                         <div className="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
@@ -24,54 +21,50 @@ export default function HeaderBottom() {
                                         <Link to="/">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="Catagori">Catagori</Link>
-                                    </li>
-                                    <li className="hot"><Link to="#">Latest</Link>
+                                        <Link to="/ao-nam">Áo</Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to="product-list"> Product list</Link>
+                                                <Link to="/ao-nam">Áo Nam</Link>
                                             </li>
                                             <li>
-                                                <Link to="product-details"> Product Details</Link>
+                                                <Link to="/ao-thun">Áo T-shirt</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/ao-so-mi">Áo Sơ Mi</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/ao-polo">Áo Polo</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/ao-the-thao">Áo Thể Thao</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/ao-khoac">Áo Khoác</Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="hot">
+                                        <Link to="/shoes">Giày</Link>
+                                        <ul className="submenu">
+                                            <li>
+                                                <Link to="/shoes/nike">Nike</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/shoes/adidas">Adidas</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/shoes/vans">Vans</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/shoes/mlb">MLB</Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link to="#">Blog</Link>
-                                        <ul className="submenu">
-                                            <li>
-                                                <Link to="blog">Blog</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="blog-detail">Blog Details</Link>
-                                            </li>
-                                        </ul>
+                                        <Link to="/hat">Nón</Link>
                                     </li>
                                     <li>
-                                        <Link to="#">Pages</Link>
-                                        <ul className="submenu">
-                                            <li>
-                                                <Link to="/login">Login</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/card">Card</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="">Element</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="">About</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="">Confirmation</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="">Shopping Cart</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="">Product Checkout</Link>
-                                            </li>
-                                        </ul>
+                                        <Link to="/about">About</Link>
                                     </li>
                                     <li>
                                         <Link to="/contact">Contact</Link>
@@ -97,10 +90,16 @@ export default function HeaderBottom() {
                             </li>
                             <li>
                                 <div className="shopping-card">
-                                    <Link to="/cart"><i className="fas fa-shopping-cart"></i></Link>
+                                    <Link to="/cart">
+                                        <i className="fas fa-shopping-cart"></i>
+                                    </Link>
                                 </div>
                             </li>
-                            <li className="d-none d-lg-block"> <Link to="/login" className='btn header-btn'>Sign in</Link>
+                            <li className="d-none d-lg-block">
+                                {' '}
+                                <Link to="/login" className="btn header-btn">
+                                    Sign in
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -111,5 +110,5 @@ export default function HeaderBottom() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
