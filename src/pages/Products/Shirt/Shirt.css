@@ -1,14 +1,13 @@
-.shoes_container {
+.shirt_container {
     padding-left: 64px;
     padding-right: 64px;
-    
 }
 
-.shoes_header {
+.shirt_header {
     margin-top: 48px;
 }
 
-.shoes_inner {
+.shirt_inner {
     margin-bottom: 64px;
     margin-top: 24px;
     display: grid;

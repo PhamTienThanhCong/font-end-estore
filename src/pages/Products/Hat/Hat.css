@@ -8,6 +8,7 @@
 }
 
 .hat_inner {
+    margin-bottom: 64px;
     margin-top: 24px;
     display: grid;
     grid-template-columns: auto auto auto auto auto;

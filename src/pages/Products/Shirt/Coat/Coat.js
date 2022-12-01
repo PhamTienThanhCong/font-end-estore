@@ -1,17 +1,17 @@
-import ProductItem from '../../../Components/ProductItem/ProductItem';
-import { SHIRTS } from '../ProductData';
-import './Shirt.css';
+import { useState } from 'react';
+import ProductItem from '../../../../Components/ProductItem/ProductItem';
+import { COAT } from '../../ProductData';
+import '../Shirt.css';
 
-function Shirt() {
+function Coat() {
     const [visible, setVisible] = useState(38);
-
     return (
         <div className="shirt_container">
             <div className="shirt_header">
-                <h3>Giày</h3>
+                <h3>Áo khoác</h3>
             </div>
             <div className="shirt_inner">
-                {SHIRTS.slice(0, visible).map((item, index) => (
+                {COAT.slice(0, visible).map((item, index) => (
                     <ProductItem data={item} key={index} />
                 ))}
             </div>
@@ -19,4 +19,4 @@ function Shirt() {
     );
 }
 
-export default Shirt;
+export default Coat;

@@ -14,6 +14,16 @@ import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import ProductDetail from './Components/ProductDetail/ProductDetail';
 import Shoes from './pages/Products/Shoes/Shoes';
+import Nike from './pages/Products/Shoes/Nike/Nike';
+import Adidas from './pages/Products/Shoes/Adidas/Adidas';
+import Vans from './pages/Products/Shoes/Vans/Vans';
+import MLB from './pages/Products/Shoes/MLB/MLB';
+import MenShirt from './pages/Products/Shirt/MenShirt/MenShirt';
+import TShirt from './pages/Products/Shirt/TShirt/TShirt';
+import Shirts from './pages/Products/Shirt/Shirts/Shirts';
+import PoloShirt from './pages/Products/Shirt/PoloShirt/PoloShirt';
+import SportShirt from './pages/Products/Shirt/SportShirt/SportShirt';
+import Coat from './pages/Products/Shirt/Coat/Coat';
 
 function App() {
     return (
@@ -31,6 +41,16 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/product/:productId" element={<ProductDetail />} />
                 <Route path="/shoes" element={<Shoes />} />
+                <Route path="/shoes/nike" element={<Nike />} />
+                <Route path="/shoes/adidas" element={<Adidas />} />
+                <Route path="/shoes/vans" element={<Vans />} />
+                <Route path="/shoes/mlb" element={<MLB />} />
+                <Route path="/ao-nam" element={<MenShirt />} />
+                <Route path="/ao-thun" element={<TShirt />} />
+                <Route path="/ao-so-mi" element={<Shirts />} />
+                <Route path="/ao-polo" element={<PoloShirt />} />
+                <Route path="/ao-the-thao" element={<SportShirt />} />
+                <Route path="/ao-khoac" element={<Coat />} />
             </Routes>
             <Footer />
             <CallJavaScript />
