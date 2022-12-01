@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
- 
+import { Link } from 'react-router-dom';
+
 export default function Products(props) {
     return (
         <div className="col-xl-4 col-lg-4 col-md-6" key={props.index}>
             <div className="single-product mb-60">
                 <div className="product-img">
-                    <img src={props.image} alt=""/>
-                        <div className="new-product">
-                            <span>{props.type}</span>
-                        </div>
+                    <img src={props.image} alt="" />
+                    <div className="new-product">
+                        <span>{props.type}</span>
+                    </div>
                 </div>
                 <div className="product-caption">
                     <div className="product-ratting">
@@ -30,5 +30,5 @@ export default function Products(props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }

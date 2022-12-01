@@ -7,5 +7,5 @@ export default function ListEndow(props) {
                 <p>{props.description}</p>
             </div>
         </div>
-    )
+    );
 }

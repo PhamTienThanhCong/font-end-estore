@@ -1,26 +1,26 @@
-import { Link } from "react-router-dom";
-import CartProduct from "../CartProduct/CartProduct";
-import arrivel1 from "./arrivel/arrivel_1.png";
-import arrivel2 from "./arrivel/arrivel_2.png";
+import { Link } from 'react-router-dom';
+import CartProduct from '../CartProduct/CartProduct';
+import arrivel1 from './arrivel/arrivel_1.png';
+import arrivel2 from './arrivel/arrivel_2.png';
 
 const Carts = [
     {
         id: 1,
-        name: "Minimalistic shop for multipurpose use",
+        name: 'Minimalistic shop for multipurpose use',
         price: 360,
         quantity: 1,
-        image: arrivel1
+        image: arrivel1,
     },
     {
         id: 2,
-        name: "Minimalistic shop for womans",
+        name: 'Minimalistic shop for womans',
         price: 160,
         quantity: 1,
-        image: arrivel2
-    }
-]
+        image: arrivel2,
+    },
+];
 
-export default function CartTable(){
+export default function CartTable() {
     return (
         <table className="table">
             <thead>
@@ -34,18 +34,29 @@ export default function CartTable(){
             <tbody>
                 {Carts.map((cart) => {
                     return (
-                        <CartProduct key={cart.id} id={cart.id} name={cart.name} price={cart.price} quantity={cart.quantity} image={cart.image} />
-                    )
+                        <CartProduct
+                            key={cart.id}
+                            id={cart.id}
+                            name={cart.name}
+                            price={cart.price}
+                            quantity={cart.quantity}
+                            image={cart.image}
+                        />
+                    );
                 })}
                 <tr className="bottom_button">
                     <td>
-                        <Link className="btn_1" href="#">Update Cart</Link>
+                        <Link className="btn_1" href="#">
+                            Update Cart
+                        </Link>
                     </td>
                     <td></td>
                     <td></td>
                     <td>
                         <div className="cupon_text float-right">
-                            <Link className="btn_1" href="#">Close Coupon</Link>
+                            <Link className="btn_1" href="#">
+                                Close Coupon
+                            </Link>
                         </div>
                     </td>
                 </tr>
@@ -70,19 +81,19 @@ export default function CartTable(){
                             <ul className="list">
                                 <li>
                                     Flat Rate: $5.00
-                                    <input type="radio" aria-label="Radio button for following text input"/>
+                                    <input type="radio" aria-label="Radio button for following text input" />
                                 </li>
                                 <li>
                                     Free Shipping
-                                    <input type="radio" aria-label="Radio button for following text input"/>
+                                    <input type="radio" aria-label="Radio button for following text input" />
                                 </li>
                                 <li>
                                     Flat Rate: $10.00
-                                    <input type="radio" aria-label="Radio button for following text input"/>
+                                    <input type="radio" aria-label="Radio button for following text input" />
                                 </li>
                                 <li className="active">
                                     Local Delivery: $2.00
-                                    <input type="radio" aria-label="Radio button for following text input"/>
+                                    <input type="radio" aria-label="Radio button for following text input" />
                                 </li>
                             </ul>
                             <h6>
@@ -100,11 +111,13 @@ export default function CartTable(){
                                 <option value="4">phnôm pêng</option>
                             </select>
                             <input className="post_code" type="text" placeholder="Postcode/Zipcode" />
-                            <Link className="btn_1" href="#">Update Details</Link>
+                            <Link className="btn_1" href="#">
+                                Update Details
+                            </Link>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
-    )
+    );
 }

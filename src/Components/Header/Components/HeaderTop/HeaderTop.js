@@ -1,8 +1,8 @@
 import current from './current.png';
 import { Link } from 'react-router-dom';
 
-export default function HeaderTop(){
-    return(
+export default function HeaderTop() {
+    return (
         <div className="header-top top-bg d-none d-lg-block">
             <div className="container-fluid">
                 <div className="col-xl-12">
@@ -50,5 +50,5 @@ export default function HeaderTop(){
                 </div>
             </div>
         </div>
-    )
+    );
 }
