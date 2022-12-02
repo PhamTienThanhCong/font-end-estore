@@ -1,4 +1,7 @@
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import './CartProduct.css';
 
 export default function CartProduct(props) {
     const [totalPrice, setTotalPrice] = useState(props.price * props.quantity);
@@ -34,15 +37,15 @@ export default function CartProduct(props) {
             <td>
                 <h5>${props.price}</h5>
             </td>
-            <td>
-                <div className="product_count">
-                    <span className="input-number-decrement" onClick={() => changeQuantity('minus')}>
-                        <i className="ti-minus"></i>
-                    </span>
-                    <input className="input-number" type="text" value={quantity} min="0" max="10" />
-                    <span className="input-number-increment" onClick={() => changeQuantity('add')}>
-                        <i className="ti-plus"></i>
-                    </span>
+            <td style={{ textAlign: 'center' }}>
+                <div className="count-product">
+                    <div onClick={() => changeQuantity('minus')} className="sub-btn">
+                        <FontAwesomeIcon icon={faMinus} />
+                    </div>
+                    <span className="product_quantity">{quantity}</span>
+                    <div onClick={() => changeQuantity('plus')} className="add-btn">
+                        <FontAwesomeIcon icon={faPlus} />
+                    </div>
                 </div>
             </td>
             <td>

@@ -2139,6 +2139,7 @@ input:focus {
   top: 90%;
   visibility: hidden;
   opacity: 0;
+  z-index: 99;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
   padding: 17px 0;
   border-top: 5px solid #ff003c;
@@ -4782,7 +4783,7 @@ input:focus {
 /* line 16, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_contact.scss */
 .contact-info__icon i, .contact-info__icon span {
   color: #8f9195;
-  font-size: 27px;
+  font-size: 40px;
 }
 
 /* line 24, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_contact.scss */

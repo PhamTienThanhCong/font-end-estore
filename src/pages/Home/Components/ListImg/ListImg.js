@@ -34,17 +34,15 @@ const imgList = [
 
 export default function ListImg() {
     return (
-        <div className="gallery-wrapper lf-padding">
+        <div className="gallery-container">
             <div className="gallery-area">
                 <div className="container-fluid">
-                    <div className="row">
-                        {imgList.map((item, index) => {
-                            return (
-                                <div className="gallery-items" key={item.id} style={{ overflow: 'hidden' }}>
-                                    <img src={item.img} alt={item.alt} />
-                                </div>
-                            );
-                        })}
+                    <div className="gallery_row">
+                        {imgList.map((item, index) => (
+                            <div className="gallery-items" key={index}>
+                                <img src={item.img} alt={item.alt} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -68,13 +68,16 @@
     justify-content:space-around;
     align-items: center;
     width: 100px;
+    user-select: none;
 }
 
-.sub-btn {
+.sub-product-btn {
+    user-select: none;
     cursor: pointer;
 }
 
-.add-btn {
+.add-product-btn {
+    user-select: none;
     cursor: pointer;
 }
 

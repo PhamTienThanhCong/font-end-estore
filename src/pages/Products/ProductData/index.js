@@ -2,7 +2,7 @@ export const HAT_DATA = [
     {
         id: 'mu-luoi-trai-nam-1',
         nameProduct: 'Mũ/Nón lưỡi trai nam Classic Cap thêu logo Coolmate - Xanh lá',
-        price: 199000,
+        price: ' 199.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-tech-cap-theu-logo-coolmate-xam-1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -11,7 +11,7 @@ export const HAT_DATA = [
     {
         id: 'mu-luoi-trai-nam-2',
         nameProduct: 'Mũ/Nón lưỡi trai nam Classic Cap thêu logo Coolmate - Xanh lá',
-        price: 199000,
+        price: ' 199.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-tech-cap-theu-logo-coolmate-xam-1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -20,7 +20,7 @@ export const HAT_DATA = [
     {
         id: 'mu-luoi-trai-nam-3',
         nameProduct: 'Mũ/Nón lưỡi trai nam Classic Cap thêu logo Coolmate - Xanh lá',
-        price: 199000,
+        price: ' 199.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-tech-cap-theu-logo-coolmate-xam-1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -29,7 +29,7 @@ export const HAT_DATA = [
     {
         id: 'mu-luoi-trai-nam-4',
         nameProduct: 'Mũ/Nón lưỡi trai nam Classic Cap thêu logo Coolmate - Xanh lá',
-        price: 199000,
+        price: ' 199.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-tech-cap-theu-logo-coolmate-xam-1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -38,7 +38,7 @@ export const HAT_DATA = [
     {
         id: 'mu-luoi-trai-nam-5',
         nameProduct: 'Mũ/Nón lưỡi trai nam Classic Cap thêu logo Coolmate - Xanh lá',
-        price: 199000,
+        price: ' 199.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-tech-cap-theu-logo-coolmate-xam-1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -47,7 +47,7 @@ export const HAT_DATA = [
     {
         id: 'mu-luoi-trai-nam-6',
         nameProduct: 'Mũ/Nón lưỡi trai nam Classic Cap thêu logo Coolmate - Xanh lá',
-        price: 199000,
+        price: ' 199.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-tech-cap-theu-logo-coolmate-xam-1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -56,7 +56,7 @@ export const HAT_DATA = [
     {
         id: 'mu-luoi-trai-1',
         nameProduct: 'Mũ/Nón lưỡi trai nam Classic Cap thêu logo Coolmate - Xanh lá',
-        price: 199000,
+        price: ' 199.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-tech-cap-theu-logo-coolmate-xam-1.jpg',
         ratting: 4.8,
         countOfRatting: 10,
@@ -75,7 +75,7 @@ export const NIKE_DATA = [
     {
         id: 'giay-nike-1',
         nameProduct: 'Giày Nike Giày Nike Air Force 1 Low LE GS All White DH2920-111',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://product.hstatic.net/200000581855/product/air-force-1-big-kids-shoe-yjjzro_0ad09cd2f79b45048056acf54900a913_grande.jpg',
         ratting: 5,
         countOfRatting: 100,
@@ -87,7 +87,7 @@ export const NIKE_DATA = [
     {
         id: 'giay-nike-2',
         nameProduct: 'Giày Nike Giày Nike Air Force 1 Low LE GS All White DH2920-111',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://product.hstatic.net/200000581855/product/air-force-1-big-kids-shoe-yjjzro_0ad09cd2f79b45048056acf54900a913_grande.jpg',
         ratting: 5,
         countOfRatting: 100,
@@ -96,7 +96,7 @@ export const NIKE_DATA = [
     {
         id: 'giay-nike-3',
         nameProduct: 'Giày Nike Giày Nike Air Force 1 Low LE GS All White DH2920-111',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://product.hstatic.net/200000581855/product/air-force-1-big-kids-shoe-yjjzro_0ad09cd2f79b45048056acf54900a913_grande.jpg',
         ratting: 5,
         countOfRatting: 100,
@@ -105,7 +105,7 @@ export const NIKE_DATA = [
     {
         id: 'giay-nike-4',
         nameProduct: 'Giày Nike Giày Nike Air Force 1 Low LE GS All White DH2920-111',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://product.hstatic.net/200000581855/product/air-force-1-big-kids-shoe-yjjzro_0ad09cd2f79b45048056acf54900a913_grande.jpg',
         ratting: 5,
         countOfRatting: 100,
@@ -114,7 +114,7 @@ export const NIKE_DATA = [
     {
         id: 'giay-nike-5',
         nameProduct: 'Giày Nike Giày Nike Air Force 1 Low LE GS All White DH2920-111',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://product.hstatic.net/200000581855/product/air-force-1-big-kids-shoe-yjjzro_0ad09cd2f79b45048056acf54900a913_grande.jpg',
         ratting: 5,
         countOfRatting: 100,
@@ -126,7 +126,7 @@ export const ADIDAS_DATA = [
     {
         id: 'giay-adidas-1',
         nameProduct: 'Giày Thể Thao Adidas Neo Grand Court K EF0103',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://thesneakerhouse.com/wp-content/uploads/2019/06/3e1b671c1f78ed234187cc2fc82a07a6.jpg',
         ratting: 5,
         countOfRatting: 100,
@@ -146,13 +146,13 @@ export const ADIDAS_DATA = [
         price: 3002133,
         image: 'https://thesneakerhouse.com/wp-content/uploads/2019/06/3e1b671c1f78ed234187cc2fc82a07a6.jpg',
         ratting: 5,
-        countOfRatting: 1000,
+        countOfRatting: '1.000',
         to: '/product/giay-adidas-2',
     },
     {
         id: 'giay-adidas-3',
         nameProduct: 'Giày Thể Thao Adidas Neo Grand Court K EF0103',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://thesneakerhouse.com/wp-content/uploads/2019/06/3e1b671c1f78ed234187cc2fc82a07a6.jpg',
         ratting: 5,
         countOfRatting: 32,
@@ -161,7 +161,7 @@ export const ADIDAS_DATA = [
     {
         id: 'giay-adidas-4',
         nameProduct: 'Giày Thể Thao Adidas Neo Grand Court K EF0103',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://thesneakerhouse.com/wp-content/uploads/2019/06/3e1b671c1f78ed234187cc2fc82a07a6.jpg',
         ratting: 5,
         countOfRatting: 32,
@@ -170,7 +170,7 @@ export const ADIDAS_DATA = [
     {
         id: 'giay-adidas-5',
         nameProduct: 'Giày Thể Thao Adidas Neo Grand Court K EF0103',
-        price: 2000000,
+        price: '2000.000',
         image: 'https://thesneakerhouse.com/wp-content/uploads/2019/06/3e1b671c1f78ed234187cc2fc82a07a6.jpg',
         ratting: 5,
         countOfRatting: 132,
@@ -191,7 +191,7 @@ export const VANS_DATA = [
     {
         id: 'giay-vans-1',
         nameProduct: 'GIÀY THỂ THAO VANS AUTHENTIC BLACK/WHITE MÀU ĐEN',
-        price: 1290000,
+        price: '1290.000',
         image: 'https://cdn.shopify.com/s/files/1/0072/5902/products/vans-authentic-black-2_2048x2048.jpg?v=1611366713',
         ratting: 4,
         countOfRatting: 213,
@@ -206,7 +206,7 @@ export const VANS_DATA = [
     {
         id: 'giay-vans-2',
         nameProduct: 'GIÀY THỂ THAO VANS AUTHENTIC BLACK/WHITE MÀU ĐEN',
-        price: 1290000,
+        price: '1290.000',
         image: 'https://cdn.shopify.com/s/files/1/0072/5902/products/vans-authentic-black-2_2048x2048.jpg?v=1611366713',
         ratting: 4,
         countOfRatting: 213,
@@ -221,7 +221,7 @@ export const VANS_DATA = [
     {
         id: 'giay-vans-3',
         nameProduct: 'GIÀY THỂ THAO VANS AUTHENTIC BLACK/WHITE MÀU ĐEN',
-        price: 1290000,
+        price: '1290.000',
         image: 'https://cdn.shopify.com/s/files/1/0072/5902/products/vans-authentic-black-2_2048x2048.jpg?v=1611366713',
         ratting: 4,
         countOfRatting: 213,
@@ -236,7 +236,7 @@ export const VANS_DATA = [
     {
         id: 'giay-vans-4',
         nameProduct: 'GIÀY THỂ THAO VANS AUTHENTIC BLACK/WHITE MÀU ĐEN',
-        price: 1290000,
+        price: '1290.000',
         image: 'https://cdn.shopify.com/s/files/1/0072/5902/products/vans-authentic-black-2_2048x2048.jpg?v=1611366713',
         ratting: 4,
         countOfRatting: 213,
@@ -254,7 +254,7 @@ export const MLB_DATA = [
     {
         id: 'giay-mlb-1',
         nameProduct: 'Giày sneakers unisex Big Ball Chunky Cookie',
-        price: 2990000,
+        price: '2990.000',
         image: 'https://product.hstatic.net/1000284478/product/43pks_3ashcc11n_2_59d29fa3cb354b4eb559087bbed0ab58_large.jpg',
         ratting: 4.8,
         countOfRatting: 282,
@@ -272,7 +272,7 @@ export const MLB_DATA = [
     {
         id: 'giay-mlb-2',
         nameProduct: 'Giày sneakers unisex Big Ball Chunky Cookie',
-        price: 2990000,
+        price: '2990.000',
         image: 'https://product.hstatic.net/1000284478/product/43pks_3ashcc11n_2_59d29fa3cb354b4eb559087bbed0ab58_large.jpg',
         ratting: 4.2,
         countOfRatting: 1312,
@@ -290,7 +290,7 @@ export const MLB_DATA = [
     {
         id: 'giay-mlb-3',
         nameProduct: 'Giày sneakers unisex Big Ball Chunky Cookie',
-        price: 2990000,
+        price: '2990.000',
         image: 'https://product.hstatic.net/1000284478/product/43pks_3ashcc11n_2_59d29fa3cb354b4eb559087bbed0ab58_large.jpg',
         ratting: 4.2,
         countOfRatting: 1312,
@@ -315,7 +315,7 @@ export const T_SHIRT = [
     {
         id: 'ao-thun-1',
         nameProduct: 'Áo thun thể thao nam Recycle Active V2',
-        price: 159000,
+        price: ' 159.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/tee_recycle_v2_xam_dam_1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -332,7 +332,7 @@ export const T_SHIRT = [
     {
         id: 'ao-thun-2',
         nameProduct: 'Áo thun Marvel Avengers Logo Basics - Cacao',
-        price: 299000,
+        price: ' 299.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/cacao_aven_2.jpg',
         ratting: 5,
         countOfRatting: 3,
@@ -348,7 +348,7 @@ export const T_SHIRT = [
     {
         id: 'ao-thun-3',
         nameProduct: 'Áo thun thể thao nam Recycle Active V2',
-        price: 159000,
+        price: ' 159.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/tee_recycle_v2_xam_dam_1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -365,7 +365,7 @@ export const T_SHIRT = [
     {
         id: 'ao-thun-4',
         nameProduct: 'Áo thun Marvel Avengers Logo Basics - Cacao',
-        price: 299000,
+        price: ' 299.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/cacao_aven_2.jpg',
         ratting: 5,
         countOfRatting: 3,
@@ -384,7 +384,7 @@ export const SHIRT = [
     {
         id: 'ao-so-mi-1',
         nameProduct: 'Áo sơ mi nam dài tay Café-DriS khử mùi hiệu quả',
-        price: 159000,
+        price: ' 159.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/uIMG_0978_copy.jpg',
         ratting: 4.9,
         countOfRatting: 160,
@@ -399,7 +399,7 @@ export const SHIRT = [
     {
         id: 'ao-so-mi-2',
         nameProduct: 'Áo Sơ mi nam Excool Limited ngắn tay chui đầu',
-        price: 259000,
+        price: ' 259.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/DSC00703_copy.jpg',
         ratting: 4.5,
         countOfRatting: 17,
@@ -415,7 +415,7 @@ export const SHIRT = [
     {
         id: 'ao-so-mi-3',
         nameProduct: 'Áo sơ mi nam dài tay Café-DriS khử mùi hiệu quả',
-        price: 159000,
+        price: ' 159.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/uIMG_0978_copy.jpg',
         ratting: 4.9,
         countOfRatting: 160,
@@ -430,7 +430,7 @@ export const SHIRT = [
     {
         id: 'ao-so-mi-4',
         nameProduct: 'Áo Sơ mi nam Excool Limited ngắn tay chui đầu',
-        price: 259000,
+        price: ' 259.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/DSC00703_copy.jpg',
         ratting: 4.5,
         countOfRatting: 17,
@@ -449,7 +449,7 @@ export const POLO_SHIRT = [
     {
         id: 'ao-polo-1',
         nameProduct: 'Áo Polo nam Café - khử mùi hiệu quả',
-        price: 239000,
+        price: ' 239.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/IMG_5535.jpg',
         ratting: 4.9,
         countOfRatting: 95,
@@ -466,7 +466,7 @@ export const POLO_SHIRT = [
     {
         id: 'ao-polo-2',
         nameProduct: 'Áo Polo nam Café - khử mùi hiệu quả',
-        price: 239000,
+        price: ' 239.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/IMG_5641.jpg',
         ratting: 4.9,
         countOfRatting: 95,
@@ -486,8 +486,8 @@ export const SPORTS_SHIRT = [
     {
         id: 'ao-the-thao-1',
         nameProduct: 'Áo Tank top thể thao nam thoáng khí',
-        price: 99000,
-        image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2022/DSC04707-copy.jpg',
+        price: '99.000',
+        image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/IMG_5535.jpg',
         ratting: 4.5,
         countOfRatting: 209,
         to: '/product/ao-the-thao-1',
@@ -502,7 +502,7 @@ export const SPORTS_SHIRT = [
     {
         id: 'ao-the-thao-2',
         nameProduct: 'Áo thun thể thao nam ProMax-S1',
-        price: 149000,
+        price: ' 149.000',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/tee_pro_s1_xanh_troi.jpg',
         ratting: 4.5,
         countOfRatting: 94,
@@ -521,8 +521,8 @@ export const COAT = [
     {
         id: 'ao-khoac-1',
         nameProduct: 'Áo khoác gió thể thao HeiQ ViroBlock, chống UV & trượt nước',
-        price: 449000,
-        image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/_MG_2369-2_(1).jpg',
+        price: ' 449.000',
+        image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/IMG_5535.jpg',
         ratting: 4.8,
         countOfRatting: 340,
         to: '/product/ao-khoac-1',
@@ -538,8 +538,8 @@ export const COAT = [
     {
         id: 'ao-khoac-2',
         nameProduct: 'Áo khoác nam có mũ Daily Wear - trượt nước, chống UV 99%',
-        price: 449000,
-        image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/ao-khoac-mu-daily-wear-xam-6_48.jpg',
+        price: ' 449.000',
+        image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/IMG_5535.jpg',
         ratting: 4.8,
         countOfRatting: 17,
         to: '/product/ao-khoac-2',

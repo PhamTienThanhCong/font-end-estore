@@ -23,8 +23,8 @@ export default function Products(props) {
                     </h4>
                     <div className="price">
                         <ul>
-                            <li>${props.price}</li>
-                            <li className="discount">${props.price_old}</li>
+                            <li>{props.price}đ</li>
+                            <li className="discount">{props.price_old}đ</li>
                         </ul>
                     </div>
                 </div>

@@ -27,7 +27,9 @@ export default function CartTable() {
                 <tr>
                     <th scope="col">Product</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
+                    <th scope="col" style={{ textAlign: 'center' }}>
+                        Quantity
+                    </th>
                     <th scope="col">Total</th>
                 </tr>
             </thead>

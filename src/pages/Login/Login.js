@@ -6,24 +6,11 @@ export default function Login() {
     document.title = 'Login';
     return (
         <>
-            {/* <div className="slider-area ">
-                <div
-                    className="single-slider slider-height2 d-flex align-items-center"
-                    data-background="assets/img/hero/category.jpg"
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="hero-cap text-center">
-                                    <h2>Login</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+            <div className="slider-area " style={{ textAlign: 'center' }}>
+                <h1>Login</h1>
+            </div>
 
-            <section className="login_part section_padding ">
+            <section className="login_part section_padding " style={{ paddingTop: 50 }}>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-6">

@@ -12,11 +12,15 @@ function ProductDetail() {
     const features = product.features;
     const [quantity, setQuantity] = useState(1);
     const handleAdd = () => {
-        setQuantity((prev) => prev + 1);
+        if (quantity < 10) {
+            setQuantity((prev) => prev + 1);
+        }
     };
 
     const handleSub = () => {
-        setQuantity((prev) => prev - 1);
+        if (quantity > 1) {
+            setQuantity((prev) => prev - 1);
+        }
     };
     return (
         <div className="detail_container">
@@ -39,11 +43,11 @@ function ProductDetail() {
                     <div className="price">{product.price}đ</div>
                     <div className="add-to-cart">
                         <div className="quantity">
-                            <div onClick={handleSub} className="sub-btn">
+                            <div onClick={handleSub} className="sub-product-btn">
                                 -
                             </div>
                             <span>{quantity}</span>
-                            <div onClick={handleAdd} className="add-btn">
+                            <div onClick={handleAdd} className="add-product-btn">
                                 +
                             </div>
                         </div>
