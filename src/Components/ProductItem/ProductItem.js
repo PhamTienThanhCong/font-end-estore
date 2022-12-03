@@ -15,10 +15,11 @@ function ProductItem({ data, type }) {
                 }}
             >
                 <img className="img_1" src={data.image} alt="" />
+                <img className="img_2" src={data.imageHover} alt="" />
                 <div className="buy_btn">
-                    <Link to={data.to} style={{ color: 'black' }} className="buy_btn_inner">
+                    <div style={{ color: 'black' }} className="buy_btn_inner">
                         Mua ngay
-                    </Link>
+                    </div>
                 </div>
                 <div className="ratting" style={{ fontSize: 14, color: 'black' }}>
                     {data.ratting}

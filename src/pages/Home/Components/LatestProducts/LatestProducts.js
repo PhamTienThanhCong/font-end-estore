@@ -59,7 +59,7 @@ const TheProducts = [
 
 export default function LatestProducts() {
     return (
-        <section className="latest-product-area padding-bottom">
+        <section className="latest-product-area padding-bottom" style={{ marginTop: 100 }}>
             <div className="container">
                 <div className="tab-content" id="nav-tabContent">
                     <div

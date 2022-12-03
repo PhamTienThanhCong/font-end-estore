@@ -1,11 +1,14 @@
-import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faMinus, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { decrementQuantity, incrementQuantity, removeItem } from '../../../../redux/cartSlice';
 import './CartProduct.css';
 
-export default function CartProduct(props) {
+export default function CartProduct({ props }) {
     const [totalPrice, setTotalPrice] = useState(props.price * props.quantity);
     const [quantity, setQuantity] = useState(props.quantity);
+    const dispatch = useDispatch();
 
     const changeQuantity = (type) => {
         console.log(type);
@@ -27,29 +30,46 @@ export default function CartProduct(props) {
             <td>
                 <div className="media">
                     <div className="d-flex">
-                        <img src={props.image} alt="" />
+                        <img src={props.image} alt="" className="cart-item-img" />
                     </div>
                     <div className="media-body">
-                        <p>{props.name}</p>
+                        <span>{props.nameProduct}</span>
                     </div>
                 </div>
             </td>
             <td>
-                <h5>${props.price}</h5>
+                <h5>{props.price}đ</h5>
             </td>
             <td style={{ textAlign: 'center' }}>
                 <div className="count-product">
-                    <div onClick={() => changeQuantity('minus')} className="sub-btn">
+                    <div
+                        onClick={() => {
+                            dispatch(decrementQuantity(props.id));
+                            changeQuantity('minus');
+                        }}
+                        className="sub-btn"
+                    >
                         <FontAwesomeIcon icon={faMinus} />
                     </div>
                     <span className="product_quantity">{quantity}</span>
-                    <div onClick={() => changeQuantity('plus')} className="add-btn">
+                    <div
+                        onClick={() => {
+                            dispatch(incrementQuantity(props.id));
+                            changeQuantity('plus');
+                        }}
+                        className="add-btn"
+                    >
                         <FontAwesomeIcon icon={faPlus} />
                     </div>
                 </div>
             </td>
             <td>
-                <h5>${totalPrice}</h5>
+                <h5>{totalPrice}đ</h5>
+            </td>
+            <td>
+                <div style={{ textAlign: 'center', cursor: 'pointer' }} onClick={() => dispatch(removeItem(props.id))}>
+                    <FontAwesomeIcon icon={faXmark} />
+                </div>
             </td>
         </tr>
     );

@@ -14,7 +14,6 @@ export default function Home() {
     return (
         <main>
             <Slide />
-            <ShopCategory />
             <LatestProducts />
             <BestProduct />
             <BestCollection />

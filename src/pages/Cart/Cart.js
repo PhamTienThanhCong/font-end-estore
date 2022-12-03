@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import CartTable from './components/CartTable/CartTable';
 import './Cart.css';
+import Modal from '../../Components/Modal/Modal';
+import { useState } from 'react';
 
 export default function Cart() {
     document.title = 'Cart';
+    const [openModal, setOpenModal] = useState(false);
     return (
         <>
             <div className="slider-area " style={{ textAlign: 'center' }}>
@@ -21,14 +24,19 @@ export default function Cart() {
                                     Continue Shopping
                                 </Link>
 
-                                <Link className="btn_1 checkout_btn_1" to="#">
+                                <div
+                                    className="btn_1 checkout_btn_1"
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => setOpenModal(true)}
+                                >
                                     Proceed to checkout
-                                </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            {openModal && <Modal onOpen={setOpenModal} />}
         </>
     );
 }

@@ -1,7 +1,22 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from './logo.png';
 
 export default function HeaderBottom() {
+    const navigate = useNavigate();
+
+    const [searchValue, setSearchValue] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (searchValue.trim()) {
+            navigate(`/product/search/keyword=${searchValue}`);
+            setSearchValue('');
+        } else {
+            navigate('/');
+        }
+    };
+
     return (
         <div className="header-bottom  header-sticky">
             <div className="container-fluid">
@@ -76,11 +91,21 @@ export default function HeaderBottom() {
                     <div className="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                         <ul className="header-right f-right d-none d-lg-block d-flex justify-content-between">
                             <li className="d-none d-xl-block">
-                                <form className="form-box f-right ">
-                                    <input type="text" name="Search" placeholder="Search products" />
-                                    <div className="search-icon">
+                                <form className="form-box f-right " onSubmit={handleSubmit}>
+                                    <input
+                                        type="text"
+                                        name="Search"
+                                        placeholder="Search products"
+                                        value={searchValue}
+                                        onChange={(e) => setSearchValue(e.target.value)}
+                                    />
+                                    <button
+                                        className="search-icon"
+                                        type="submit"
+                                        style={{ border: 'none', backgroundColor: 'white' }}
+                                    >
                                         <i className="fas fa-search special-tag"></i>
-                                    </div>
+                                    </button>
                                 </form>
                             </li>
                             <li className=" d-none d-xl-block">
