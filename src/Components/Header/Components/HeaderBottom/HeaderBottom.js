@@ -7,7 +7,7 @@ export default function HeaderBottom() {
     const navigate = useNavigate();
 
     const [searchValue, setSearchValue] = useState('');
-    const [isDarkMode, setDarkMode] = useState(true);
+    const [isDarkMode, setDarkMode] = useState(false);
 
     const toggleDarkMode = (checked) => {
         setDarkMode(checked);
