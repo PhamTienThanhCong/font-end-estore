@@ -1,11 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import logo from './logo.png';
 
 export default function HeaderBottom() {
     const navigate = useNavigate();
 
     const [searchValue, setSearchValue] = useState('');
+    const [isDarkMode, setDarkMode] = useState(true);
+
+    const toggleDarkMode = (checked) => {
+        setDarkMode(checked);
+    };
+
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    };
+    useEffect(() => {
+        localStorage.setItem('theme', theme);
+        document.body.className = theme;
+    }, [theme]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,10 +42,14 @@ export default function HeaderBottom() {
                 <div className="row align-items-center">
                     <div className="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                         <div className="logo">
-                            <Link to="">
+                            <Link to="/">
                                 <img style={{ height: '80px' }} src={logo} alt="" />
                             </Link>
                         </div>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginLeft: 12 }} onClick={toggleTheme}>
+                        <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={35} />
                     </div>
                     <div className="col-xl-6 col-lg-8 col-md-7 col-sm-5">
                         <div className="main-menu f-right d-none d-lg-block">
@@ -128,7 +151,6 @@ export default function HeaderBottom() {
                             </li>
                         </ul>
                     </div>
-
                     <div className="col-12">
                         <div className="mobile_menu d-block d-lg-none"></div>
                     </div>

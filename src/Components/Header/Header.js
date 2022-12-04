@@ -11,7 +11,6 @@ import '../../assets/css/style.css';
 import '../../assets/css/themify-icons.css';
 
 import Load from './Components/Load/Load';
-import HeaderTop from './Components/HeaderTop/HeaderTop';
 import HeaderBottom from './Components/HeaderBottom/HeaderBottom';
 
 export default function Header() {
@@ -21,7 +20,6 @@ export default function Header() {
             <header>
                 <div className="header-area">
                     <div className="main-header ">
-                        <HeaderTop />
                         <HeaderBottom />
                     </div>
                 </div>

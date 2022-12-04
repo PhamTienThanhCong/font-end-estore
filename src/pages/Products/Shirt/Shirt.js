@@ -8,7 +8,7 @@ function Shirt() {
     return (
         <div className="shirt_container">
             <div className="shirt_header">
-                <h3>Giày</h3>
+                <h3 style={{ color: 'blue' }}>Giày</h3>
             </div>
             <div className="shirt_inner">
                 {SHIRTS.slice(0, visible).map((item, index) => (

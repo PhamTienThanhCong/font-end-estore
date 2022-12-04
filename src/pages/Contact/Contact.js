@@ -7,10 +7,11 @@ import './Contact.css';
 import Map from '../../Components/Map/Map';
 
 function Contact() {
+    document.title = 'Contact';
     return (
         <main>
             <div className="slider-area " style={{ textAlign: 'center', paddingTop: 50 }}>
-                <h1>Contact Us</h1>
+                <h1 style={{ color: 'blue' }}>Contact Us</h1>
             </div>
 
             <section className="contact-section" style={{ paddingTop: 50 }}>

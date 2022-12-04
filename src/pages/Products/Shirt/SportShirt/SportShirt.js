@@ -5,11 +5,11 @@ import '../Shirt.css';
 
 function SportShirt() {
     const [visible, setVisible] = useState(38);
-
+    document.title = 'Product | Áo thể thao';
     return (
         <div className="shirt_container">
             <div className="shirt_header">
-                <h3>Áo thể thao</h3>
+                <h3 style={{ color: 'blue' }}>Áo thể thao</h3>
             </div>
             <div className="shirt_inner">
                 {SPORTS_SHIRT.slice(0, visible).map((item, index) => (

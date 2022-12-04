@@ -3,14 +3,16 @@ import CartTable from './components/CartTable/CartTable';
 import './Cart.css';
 import Modal from '../../Components/Modal/Modal';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 export default function Cart() {
     document.title = 'Cart';
+    const cart = useSelector((state) => state.cart);
     const [openModal, setOpenModal] = useState(false);
     return (
         <>
             <div className="slider-area " style={{ textAlign: 'center' }}>
-                <h1>Cart List</h1>
+                <h1 style={{ color: 'blue' }}>Cart List</h1>
             </div>
 
             <section className="cart_area section_padding" style={{ paddingTop: 50 }}>
@@ -36,7 +38,7 @@ export default function Cart() {
                     </div>
                 </div>
             </section>
-            {openModal && <Modal onOpen={setOpenModal} />}
+            {openModal && cart.length > 0 && <Modal onOpen={setOpenModal} />}
         </>
     );
 }

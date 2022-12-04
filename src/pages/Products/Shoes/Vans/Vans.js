@@ -5,11 +5,11 @@ import '../Shoes.css';
 
 function Vans() {
     const [visible, setVisible] = useState(38);
-
+    document.title = 'Product | Giày Vans';
     return (
         <div className="shoes_container">
             <div className="shoes_header">
-                <h3>Giày Vans</h3>
+                <h3 style={{ color: 'blue' }}>Giày Vans</h3>
             </div>
             <div className="shoes_inner">
                 {VANS_DATA.slice(0, visible).map((item, index) => (

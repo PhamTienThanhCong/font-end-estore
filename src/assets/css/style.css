@@ -74,6 +74,15 @@
   cursor: pointer;
 }
 
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
 /* line 78, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_variables.scss */
 .boxed-btn:hover {
   background: #ff003c;

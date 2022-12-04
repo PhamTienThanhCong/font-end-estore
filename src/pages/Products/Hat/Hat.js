@@ -5,11 +5,11 @@ import './Hat.css';
 
 function Hat() {
     const [visible, setVisible] = useState(38);
-
+    document.title = 'Product | Mũ/Nón';
     return (
         <div className="hat_container">
             <div className="hat_header">
-                <h3>Mũ/Nón</h3>
+                <h3 style={{ color: 'blue' }}>Mũ/Nón</h3>
             </div>
             <div className="hat_inner">
                 {HAT_DATA.slice(0, visible).map((item, index) => (

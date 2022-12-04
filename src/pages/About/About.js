@@ -8,10 +8,11 @@ import client1 from './img/client_1.png';
 import client2 from './img/client_2.png';
 
 function About() {
+    document.title = 'About';
     return (
         <div>
             <div class="slider-area " style={{ textAlign: 'center' }}>
-                <h1>About</h1>
+                <h1 style={{ color: 'blue' }}>About</h1>
             </div>
 
             <section class="about_us padding_top" style={{ paddingTop: 50 }}>

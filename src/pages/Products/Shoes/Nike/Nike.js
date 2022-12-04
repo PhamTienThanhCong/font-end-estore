@@ -5,11 +5,11 @@ import '../Shoes.css';
 
 function Nike() {
     const [visible, setVisible] = useState(38);
-
+    document.title = 'Product | Giày Nike';
     return (
         <div className="shoes_container">
             <div className="shoes_header">
-                <h3>Giày Nike</h3>
+                <h3 style={{ color: 'blue' }}>Giày Nike</h3>
             </div>
             <div className="shoes_inner">
                 {NIKE_DATA.slice(0, visible).map((item, index) => (
