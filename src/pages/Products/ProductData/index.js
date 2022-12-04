@@ -316,6 +316,7 @@ export const T_SHIRT = [
         id: 'ao-thun-1',
         nameProduct: 'Áo thun thể thao nam Recycle Active V2',
         price: 159000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/tee_recycle_v2_xam_dam_1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -333,6 +334,7 @@ export const T_SHIRT = [
         id: 'ao-thun-2',
         nameProduct: 'Áo thun Marvel Avengers Logo Basics - Cacao',
         price: 299000,
+        priceOld: 299000,
         imageHover:
             'https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/August2022/cacao_aven_8.jpg',
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/cacao_aven_2.jpg',
@@ -351,6 +353,7 @@ export const T_SHIRT = [
         id: 'ao-thun-3',
         nameProduct: 'Áo thun thể thao nam Recycle Active V2',
         price: 159000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/tee_recycle_v2_xam_dam_1.jpg',
         ratting: 5,
         countOfRatting: 2,
@@ -368,6 +371,7 @@ export const T_SHIRT = [
         id: 'ao-thun-4',
         nameProduct: 'Áo thun Marvel Avengers Logo Basics - Cacao',
         price: 299000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/cacao_aven_2.jpg',
         ratting: 5,
         countOfRatting: 3,
@@ -387,6 +391,7 @@ export const SHIRT = [
         id: 'ao-so-mi-1',
         nameProduct: 'Áo sơ mi nam dài tay Café-DriS khử mùi hiệu quả',
         price: 159000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/uIMG_0978_copy.jpg',
         ratting: 4.9,
         countOfRatting: 160,
@@ -402,6 +407,7 @@ export const SHIRT = [
         id: 'ao-so-mi-2',
         nameProduct: 'Áo Sơ mi nam Excool Limited ngắn tay chui đầu',
         price: 259000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/DSC00703_copy.jpg',
         ratting: 4.5,
         countOfRatting: 17,
@@ -418,6 +424,7 @@ export const SHIRT = [
         id: 'ao-so-mi-3',
         nameProduct: 'Áo sơ mi nam dài tay Café-DriS khử mùi hiệu quả',
         price: 159000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/uIMG_0978_copy.jpg',
         ratting: 4.9,
         countOfRatting: 160,
@@ -433,6 +440,7 @@ export const SHIRT = [
         id: 'ao-so-mi-4',
         nameProduct: 'Áo Sơ mi nam Excool Limited ngắn tay chui đầu',
         price: 259000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/DSC00703_copy.jpg',
         ratting: 4.5,
         countOfRatting: 17,
@@ -452,6 +460,7 @@ export const POLO_SHIRT = [
         id: 'ao-polo-1',
         nameProduct: 'Áo Polo nam Café - khử mùi hiệu quả',
         price: 239000,
+        priceOld: 299000,
         image: 'https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2021/IMG_5535.jpg',
         ratting: 4.9,
         countOfRatting: 95,
@@ -557,4 +566,4 @@ export const COAT = [
 
 export const SHIRTS = [...MENS_SHIRT, ...T_SHIRT, ...SHIRT, ...POLO_SHIRT, ...SPORTS_SHIRT, ...COAT];
 
-export const PRODUCTS = [...HAT_DATA, ...SHOES_DATA, ...SHIRTS];
+export const PRODUCTS = [...SHIRTS, ...HAT_DATA, ...SHOES_DATA];

@@ -1,3 +1,4 @@
+import { PRODUCTS } from '../../../Products/ProductData';
 import Products from '../Products/Products';
 import product1 from './img_products/product1.png';
 import product2 from './img_products/product2.png';
@@ -69,17 +70,8 @@ export default function LatestProducts() {
                         aria-labelledby="nav-home-tab"
                     >
                         <div className="row">
-                            {TheProducts.map((product, index) => (
-                                <Products
-                                    key={index}
-                                    index={index + 'product'}
-                                    image={product.image}
-                                    type={product.type}
-                                    link={product.link}
-                                    name={product.name}
-                                    price={product.price}
-                                    price_old={product.price_old}
-                                />
+                            {PRODUCTS.slice(0, 6).map((product, index) => (
+                                <Products key={index} index={index + 'product'} props={product} />
                             ))}
                         </div>
                     </div>
