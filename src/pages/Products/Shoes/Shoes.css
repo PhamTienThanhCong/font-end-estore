@@ -11,8 +11,7 @@
 .shoes_inner {
     margin-bottom: 64px;
     margin-top: 24px;
-    display: grid;
-    grid-template-columns: 264px 264px 264px 264px 264px;
-    column-gap: 18px;
-    row-gap: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
 }

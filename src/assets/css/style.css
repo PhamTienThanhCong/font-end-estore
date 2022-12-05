@@ -76,7 +76,7 @@
 
 .dark {
   background-color: #424242;
-  color: #fff;
+  color: #fff !important;
 }
 .light {
   background-color: #fff;

@@ -51,7 +51,7 @@ export default function HeaderBottom() {
                     <div style={{ display: 'flex', alignItems: 'center', marginLeft: 12 }} onClick={toggleTheme}>
                         <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={35} />
                     </div>
-                    <div className="col-xl-6 col-lg-8 col-md-7 col-sm-5">
+                    <div className="col-xl-5 col-lg-8 col-md-7 col-sm-5">
                         <div className="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
@@ -116,6 +116,7 @@ export default function HeaderBottom() {
                             <li className="d-none d-xl-block">
                                 <form className="form-box f-right " onSubmit={handleSubmit}>
                                     <input
+                                        id='search-id'
                                         type="text"
                                         name="Search"
                                         placeholder="Search products"
