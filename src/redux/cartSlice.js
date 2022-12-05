@@ -4,6 +4,7 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState: {
         cart: [],
+        numberCart: 0,
     },
     reducers: {
         addToCart: (state, action) => {
@@ -13,6 +14,7 @@ const cartSlice = createSlice({
                 itemInCart.quantity++;
             } else {
                 state.cart.push({ ...action.payload, quantity: 1 });
+                state.numberCart++;
             }
         },
         incrementQuantity: (state, action) => {

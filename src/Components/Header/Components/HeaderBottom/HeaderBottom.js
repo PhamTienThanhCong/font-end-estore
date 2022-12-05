@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 export default function HeaderBottom() {
     const navigate = useNavigate();
 
-    const cart = useSelector((state) => state.cart);
+    const numberCart = useSelector((state) => state.numberCart);
 
     const [searchValue, setSearchValue] = useState('');
     const [isDarkMode, setDarkMode] = useState(false);
@@ -147,7 +147,7 @@ export default function HeaderBottom() {
                             </li>
                             <li style={{ marginTop: 9 }}>
                                 <div className="shopping-card">
-                                    <div className="count-product">{cart.length}</div>
+                                    <div className="count-of-product">{numberCart}</div>
                                     <Link to="/cart">
                                         <i className="fas fa-shopping-cart"></i>
                                     </Link>
