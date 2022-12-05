@@ -75,7 +75,7 @@
 }
 
 .dark {
-  background-color: #333;
+  background-color: #424242;
   color: #fff;
 }
 .light {
@@ -2269,7 +2269,7 @@ input:focus {
 }
 
 /* line 224, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
-.header-bottom .header-right .shopping-cards::before {
+.header-bottom .header-right .shopping-card::before {
   position: absolute;
   content: "02";
   width: 25px;

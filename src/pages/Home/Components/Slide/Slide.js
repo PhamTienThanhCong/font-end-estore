@@ -15,7 +15,6 @@ export default function Slide() {
                     <div className="container">
                         <div
                             className="row d-flex align-items-center justify-content-between"
-                            style={{ overflow: 'hidden' }}
                         >
                             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
                                 <div className="hero__img" data-animation="bounceIn" data-delay=".4s">

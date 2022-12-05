@@ -7,7 +7,7 @@ import './SearchProduct.css';
 function SearchProduct() {
     const [visible, setVisible] = useState(38);
     document.title = 'Search Product';
-    const { searchValue } = useParams();
+    const { searchValue } = useParams(); 
     return (
         <div className="search_container">
             <div className="search_header">
