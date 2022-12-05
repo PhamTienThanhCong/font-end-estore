@@ -2,9 +2,13 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import logo from './logo.png';
+import './HeaderBottom.css';
+import { useSelector } from 'react-redux';
 
 export default function HeaderBottom() {
     const navigate = useNavigate();
+
+    const cart = useSelector((state) => state.cart);
 
     const [searchValue, setSearchValue] = useState('');
     const [isDarkMode, setDarkMode] = useState(false);
@@ -51,7 +55,7 @@ export default function HeaderBottom() {
                     <div style={{ display: 'flex', alignItems: 'center', marginLeft: 12 }} onClick={toggleTheme}>
                         <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={35} />
                     </div>
-                    <div className="col-xl-5 col-lg-8 col-md-7 col-sm-5">
+                    <div className="col-xl-6 col-lg-8 col-md-7 col-sm-5">
                         <div className="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
@@ -113,13 +117,13 @@ export default function HeaderBottom() {
                     </div>
                     <div className="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                         <ul className="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                            <li className="d-none d-xl-block">
+                            <li className="d-none d-xl-block" style={{ marginTop: 9 }}>
                                 <form className="form-box f-right " onSubmit={handleSubmit}>
                                     <input
                                         id='search-id'
                                         type="text"
                                         name="Search"
-                                        placeholder="Search products"
+                                        placeholder="Search"
                                         value={searchValue}
                                         onChange={(e) => setSearchValue(e.target.value)}
                                     />
@@ -132,19 +136,28 @@ export default function HeaderBottom() {
                                     </button>
                                 </form>
                             </li>
-                            <li className=" d-none d-xl-block">
+
+                            <div
+                                style={{ display: 'flex', alignItems: 'center', marginLeft: 12 }}
+                                onClick={toggleTheme}
+                            >
+                                <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={35} />
+                            </div>
+
+                            <li className=" d-none d-xl-block" style={{ marginTop: 9 }}>
                                 <div className="favorit-items">
                                     <i className="far fa-heart"></i>
                                 </div>
                             </li>
-                            <li>
+                            <li style={{ marginTop: 9 }}>
                                 <div className="shopping-card">
+                                    <div className="count-product">{cart.length}</div>
                                     <Link to="/cart">
                                         <i className="fas fa-shopping-cart"></i>
                                     </Link>
                                 </div>
                             </li>
-                            <li className="d-none d-lg-block">
+                            <li className="d-none d-lg-block" style={{ marginTop: 9 }}>
                                 {' '}
                                 <Link to="/login" className="btn header-btn">
                                     Sign in
