@@ -41,7 +41,7 @@ export default function CartProduct({ props }) {
                 <h5>{props.price}đ</h5>
             </td>
             <td style={{ textAlign: 'center' }}>
-                <div className="count-product">
+                <div className="count-product-cart">
                     <div
                         onClick={() => {
                             dispatch(decrementQuantity(props.id));
@@ -51,13 +51,13 @@ export default function CartProduct({ props }) {
                     >
                         <FontAwesomeIcon icon={faMinus} />
                     </div>
-                    <span className="product_quantity">{quantity}</span>
+                    <span className="product_quantity-cart">{quantity}</span>
                     <div
                         onClick={() => {
                             dispatch(incrementQuantity(props.id));
                             changeQuantity('plus');
                         }}
-                        className="add-btn"
+                        className="add-btn-sa"
                     >
                         <FontAwesomeIcon icon={faPlus} />
                     </div>

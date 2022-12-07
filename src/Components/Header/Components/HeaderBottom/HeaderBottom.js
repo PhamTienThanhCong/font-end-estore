@@ -28,7 +28,40 @@ export default function HeaderBottom() {
     useEffect(() => {
         localStorage.setItem('theme', theme);
         document.body.className = theme;
-    }, [theme]);
+        if (theme === 'dark') {
+            toggleDarkMode(true);
+        } else {
+            toggleDarkMode(false);
+        }
+        document.getElementById('navigation').className = theme;
+        // add class in class name_product
+        const products = document.getElementsByClassName('name_product');
+        for (let i = 0; i < products.length; i++) {
+            products[i].className = 'name_product ' + theme;
+        }
+        document.getElementById('header-sticky').className = "row align-items-center " + theme;
+        document.getElementById('header1').style.backgroundColor = theme === 'light' ? '#fff' : '#333';
+        let LinkTo =  document.getElementsByClassName('link-to');
+        for (let i = 0; i < LinkTo.length; i++) {
+            LinkTo[i].className = "link-to " + theme;
+        }
+        document.getElementById('search-submit').className = "form-box f-right " + theme;
+        document.getElementById('dark-mode-btn').className = theme;
+        const sliderArea = document.getElementsByClassName('slider-area');
+        for (let i = 0; i < sliderArea.length; i++) {
+            sliderArea[i].className = "slider-area " + theme;
+        }
+        // if page = contact
+        // if (document.getElementsByClassName('about_us_content')){
+        //     document.getElementsByClassName('about_us_content')[0].className = "about_us_content " + theme;
+        //     document.getElementsByClassName('feature_part_content')[0].className = "feature_part_content " + theme;
+        //     const single_feature_part = document.getElementsByClassName('single_feature_part');
+        //     for (let i = 0; i < single_feature_part.length; i++) {
+        //         single_feature_part[i].className = "single_feature_part " + theme;
+        //     }
+        // }
+
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -41,9 +74,9 @@ export default function HeaderBottom() {
     };
 
     return (
-        <div className="header-bottom  header-sticky">
+        <div id="header1" className="header-bottom header-sticky">
             <div className="container-fluid">
-                <div className="row align-items-center">
+                <div id="header-sticky" className="row align-items-center">
                     <div className="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                         <div className="logo">
                             <Link to="/">
@@ -52,18 +85,15 @@ export default function HeaderBottom() {
                         </div>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', marginLeft: 12 }} onClick={toggleTheme}>
-                        <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={35} />
-                    </div>
                     <div className="col-xl-6 col-lg-8 col-md-7 col-sm-5">
                         <div className="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
                                     <li>
-                                        <Link to="/">Home</Link>
+                                        <Link className="link-to" to="/">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="/ao-nam">Áo</Link>
+                                        <Link className="link-to" to="/ao-nam">Áo</Link>
                                         <ul className="submenu">
                                             <li>
                                                 <Link to="/ao-nam">Áo Nam</Link>
@@ -85,8 +115,8 @@ export default function HeaderBottom() {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="hot">
-                                        <Link to="/shoes">Giày</Link>
+                                    <li>
+                                        <Link className="link-to" to="/shoes">Giày</Link>
                                         <ul className="submenu">
                                             <li>
                                                 <Link to="/shoes/nike">Nike</Link>
@@ -103,22 +133,22 @@ export default function HeaderBottom() {
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link to="/hat">Nón</Link>
+                                        <Link className="link-to" to="/hat">Nón</Link>
                                     </li>
                                     <li>
-                                        <Link to="/about">About</Link>
+                                        <Link className="link-to" to="/about">About</Link>
                                     </li>
                                     <li>
-                                        <Link to="/contact">Contact</Link>
+                                        <Link className="link-to" to="/contact">Contact</Link>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                    <div className="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                    <div className="col-xl-5 col-lg-5 col-md-3 col-sm-3 fix-card">
                         <ul className="header-right f-right d-none d-lg-block d-flex justify-content-between">
                             <li className="d-none d-xl-block" style={{ marginTop: 9 }}>
-                                <form className="form-box f-right " onSubmit={handleSubmit}>
+                                <form id='search-submit' className="form-box f-right" onSubmit={handleSubmit}>
                                     <input
                                         id='search-id'
                                         type="text"
@@ -138,10 +168,11 @@ export default function HeaderBottom() {
                             </li>
 
                             <div
+                                id="dark-mode-btn"
                                 style={{ display: 'flex', alignItems: 'center', marginLeft: 12 }}
                                 onClick={toggleTheme}
                             >
-                                <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={35} />
+                                <DarkModeSwitch className='dark-mode-btn-icon' checked={isDarkMode} onChange={toggleDarkMode} size={35} />
                             </div>
 
                             <li className=" d-none d-xl-block" style={{ marginTop: 9 }}>

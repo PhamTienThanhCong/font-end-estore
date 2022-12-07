@@ -1,4 +1,4 @@
-.count-product {
+.count-product-cart {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +13,7 @@
     user-select: none;
 }
 
-.product_quantity {
+.product_quantity-cart {
     user-select: none;
 }
 

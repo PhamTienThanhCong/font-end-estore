@@ -16,7 +16,7 @@ import HeaderBottom from './Components/HeaderBottom/HeaderBottom';
 export default function Header() {
     return (
         <>
-            <Load />
+            {/* <Load /> */}
             <header>
                 <div className="header-area">
                     <div className="main-header ">

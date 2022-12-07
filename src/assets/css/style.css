@@ -75,9 +75,52 @@
 }
 
 .dark {
-  background-color: #424242;
-  color: #fff;
+  background-color: #333;
+  color: #fff !important;
 }
+
+.dark input{
+  background-color: transparent;
+  color: white;
+}
+
+.dark .search-icon i{
+  /* background-color: transparent; */
+  color: white !important;
+}
+
+.dark .dark-mode-btn-icon{
+  color: white !important;
+}
+
+.light .dark-mode-btn-icon{
+  color: black !important;
+}
+/* 
+.dark h1{
+  color: red !important;
+} */
+.dark h5{
+  color: rgb(205, 238, 247) !important;
+}
+
+.dark h3{
+  color: white !important;
+}
+
+.dark p{
+  color: rgb(190, 185, 185) !important;
+}
+
+.dark h4{
+  color: rgb(248, 247, 247) !important;
+}
+
+.dark .search-icon{
+  background-color: #333 !important;
+  color: white !important;
+}
+
 .light {
   background-color: #fff;
   color: #333;
@@ -2269,7 +2312,7 @@ input:focus {
 }
 
 /* line 224, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
-.header-bottom .header-right .shopping-card::before {
+.header-bottom .header-right .shopping-cardss::before {
   position: absolute;
   content: "02";
   width: 25px;

@@ -26,7 +26,7 @@ export default function Products({ props }) {
                 <div className="product-caption">
                     <div className="product-ratting">{showRatting()}</div>
                     <h4>
-                        <Link to={props.to}>{props.nameProduct}</Link>
+                        <Link className='link-to' to={props.to}>{props.nameProduct}</Link>
                     </h4>
                     <div className="price">
                         <ul>
