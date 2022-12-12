@@ -12,7 +12,7 @@ function About() {
     return (
         <div>
             <div class="slider-area " style={{ textAlign: 'center' }}>
-                <h1 style={{ color: 'blue' }}>About</h1>
+                <h1 style={{ color: 'blue', paddingTop: 50 }}>About</h1>
             </div>
 
             <section class="about_us padding_top" style={{ paddingTop: 50 }}>

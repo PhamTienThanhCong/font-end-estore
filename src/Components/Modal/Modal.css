@@ -1,5 +1,4 @@
 .dark-bg {
-    background-color: rgba(0, 0, 0, 0.2);
     width: 100vw;
     height: 100vh;
     z-index: 0;
@@ -16,11 +15,12 @@
     position: fixed;
     width: 650px;
     height: auto;
-    background: #fff;
+    background: rgb(248, 248, 248);
     color: black;
     z-index: 10;
     border-radius: 8px;
     padding: 20px 30px 20px 30px;
+    border: solid 1px black;
 }
 
 .modal_header {
@@ -54,13 +54,13 @@
     width: 100%;
     padding: 8px;
     border-radius: 10px;
-    border: solid 1px #ccc;
+    border: solid 1px black;
 }
 
 .select_1 {
     height: 40px;
     border-radius: 10px;
-    border: solid 1px #ccc;
+    border: solid 1px black;
 }
 
 .pay {

@@ -12,7 +12,7 @@ export default function Cart() {
     return (
         <>
             <div className="slider-area " style={{ textAlign: 'center' }}>
-                <h1 style={{ color: 'blue' }}>Cart List</h1>
+                <h1 style={{ color: 'blue', paddingTop: 50 }}>Cart List</h1>
             </div>
 
             <section className="cart_area section_padding" style={{ paddingTop: 50 }}>

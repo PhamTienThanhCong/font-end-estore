@@ -10,7 +10,15 @@
 .shirt_inner {
     margin-bottom: 64px;
     margin-top: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 264px 264px 264px 264px 264px;
+    column-gap: 21px;
+}
+
+@media (max-width: 500px) {
+    .shirt_inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }

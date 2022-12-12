@@ -39,17 +39,26 @@ export default function HeaderBottom() {
         for (let i = 0; i < products.length; i++) {
             products[i].className = 'name_product ' + theme;
         }
-        document.getElementById('header-sticky').className = "row align-items-center " + theme;
+        document.getElementById('header-sticky').className = 'row align-items-center ' + theme;
         document.getElementById('header1').style.backgroundColor = theme === 'light' ? '#fff' : '#333';
-        let LinkTo =  document.getElementsByClassName('link-to');
-        for (let i = 0; i < LinkTo.length; i++) {
-            LinkTo[i].className = "link-to " + theme;
+        document.getElementsByClassName('slicknav_menu').className = theme;
+        let li = document.getElementsByTagName('li');
+        let linkTo = document.getElementsByClassName('link-to');
+        let submenu = document.getElementsByClassName('submenu');
+        // for (let i = 0; i < li.length; i++) {
+        //     li[i].className = theme;
+        // }
+        for (let i = 0; i < linkTo.length; i++) {
+            linkTo[i].className = 'link-to ' + theme;
         }
-        document.getElementById('search-submit').className = "form-box f-right " + theme;
+        for (let i = 0; i < submenu.length; i++) {
+            submenu[i].className = 'submenu ' + theme;
+        }
+        document.getElementById('search-submit').className = 'form-box f-right ' + theme;
         document.getElementById('dark-mode-btn').className = theme;
         const sliderArea = document.getElementsByClassName('slider-area');
         for (let i = 0; i < sliderArea.length; i++) {
-            sliderArea[i].className = "slider-area " + theme;
+            sliderArea[i].className = 'slider-area ' + theme;
         }
         // if page = contact
         // if (document.getElementsByClassName('about_us_content')){
@@ -60,7 +69,6 @@ export default function HeaderBottom() {
         //         single_feature_part[i].className = "single_feature_part " + theme;
         //     }
         // }
-
     });
 
     const handleSubmit = (e) => {
@@ -90,10 +98,14 @@ export default function HeaderBottom() {
                             <nav>
                                 <ul id="navigation">
                                     <li>
-                                        <Link className="link-to" to="/">Home</Link>
+                                        <Link className="link-to" to="/">
+                                            Home
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/ao-nam">Áo</Link>
+                                        <Link className="link-to" to="/ao-nam">
+                                            Áo
+                                        </Link>
                                         <ul className="submenu">
                                             <li>
                                                 <Link to="/ao-nam">Áo Nam</Link>
@@ -116,7 +128,9 @@ export default function HeaderBottom() {
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/shoes">Giày</Link>
+                                        <Link className="link-to" to="/shoes">
+                                            Giày
+                                        </Link>
                                         <ul className="submenu">
                                             <li>
                                                 <Link to="/shoes/nike">Nike</Link>
@@ -133,13 +147,19 @@ export default function HeaderBottom() {
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/hat">Nón</Link>
+                                        <Link className="link-to" to="/hat">
+                                            Nón
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/about">About</Link>
+                                        <Link className="link-to" to="/about">
+                                            About
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/contact">Contact</Link>
+                                        <Link className="link-to" to="/contact">
+                                            Contact
+                                        </Link>
                                     </li>
                                 </ul>
                             </nav>
@@ -148,9 +168,9 @@ export default function HeaderBottom() {
                     <div className="col-xl-5 col-lg-5 col-md-3 col-sm-3 fix-card">
                         <ul className="header-right f-right d-none d-lg-block d-flex justify-content-between">
                             <li className="d-none d-xl-block" style={{ marginTop: 9 }}>
-                                <form id='search-submit' className="form-box f-right" onSubmit={handleSubmit}>
+                                <form id="search-submit" className="form-box f-right" onSubmit={handleSubmit}>
                                     <input
-                                        id='search-id'
+                                        id="search-id"
                                         type="text"
                                         name="Search"
                                         placeholder="Search"
@@ -169,10 +189,15 @@ export default function HeaderBottom() {
 
                             <div
                                 id="dark-mode-btn"
-                                style={{ display: 'flex', alignItems: 'center', marginLeft: 12 }}
+                                style={{ display: 'flex', alignItems: 'center', marginLeft: 20 }}
                                 onClick={toggleTheme}
                             >
-                                <DarkModeSwitch className='dark-mode-btn-icon' checked={isDarkMode} onChange={toggleDarkMode} size={35} />
+                                <DarkModeSwitch
+                                    className="dark-mode-btn-icon"
+                                    checked={isDarkMode}
+                                    onChange={toggleDarkMode}
+                                    size={35}
+                                />
                             </div>
 
                             <li className=" d-none d-xl-block" style={{ marginTop: 9 }}>

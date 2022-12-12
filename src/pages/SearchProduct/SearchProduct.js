@@ -7,11 +7,11 @@ import './SearchProduct.css';
 function SearchProduct() {
     const [visible, setVisible] = useState(38);
     document.title = 'Search Product';
-    const { searchValue } = useParams(); 
+    const { searchValue } = useParams();
     return (
         <div className="search_container">
             <div className="search_header">
-                <h3 style={{ color: 'blue' }}>Keyword: {searchValue}</h3>
+                <h3 style={{ color: 'blue', paddingTop: 50 }}>Keyword: {searchValue}</h3>
             </div>
             <div className="search_inner">
                 {PRODUCTS.filter((item) => {
