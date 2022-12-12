@@ -25,4 +25,7 @@
         margin-top: 15px;
         position: absolute;
     }
+    .slicknav_nav *{
+        background-color: #333;
+    }
   }
