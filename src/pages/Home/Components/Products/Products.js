@@ -3,7 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 export default function Products({ props }) {
-    const rate = props.ratting.toFixed();
+    let rate;
+    if (props.ratting) {
+        rate = props.ratting.toFixed();
+    }
     const showRatting = () => {
         let result = [];
         for (let i = 1; i <= rate; i++) {
@@ -26,7 +29,9 @@ export default function Products({ props }) {
                 <div className="product-caption">
                     <div className="product-ratting">{showRatting()}</div>
                     <h4>
-                        <Link className='link-to' to={props.to}>{props.nameProduct}</Link>
+                        <Link className="link-to" to={props.to}>
+                            {props.nameProduct}
+                        </Link>
                     </h4>
                     <div className="price">
                         <ul>

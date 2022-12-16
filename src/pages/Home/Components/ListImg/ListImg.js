@@ -1,8 +1,7 @@
 import gallery1 from './img/gallery1.jpg';
 import gallery2 from './img/gallery2.jpg';
 import gallery3 from './img/gallery3.jpg';
-import gallery4 from './img/gallery4.jpg';
-import gallery5 from './img/gallery5.jpg';
+import Products from '../Products/Products';
 
 const imgList = [
     {
@@ -20,32 +19,33 @@ const imgList = [
         img: gallery3,
         alt: 'gallery3',
     },
-    {
-        id: 4,
-        img: gallery4,
-        alt: 'gallery4',
-    },
-    {
-        id: 5,
-        img: gallery5,
-        alt: 'gallery5',
-    },
 ];
 
 export default function ListImg() {
     return (
-        <div className="gallery-container">
-            <div className="gallery-area">
-                <div className="container-fluid">
-                    <div className="gallery_row">
-                        {imgList.map((item, index) => (
-                            <div className="gallery-items" key={index}>
-                                <img src={item.img} alt={item.alt} />
-                            </div>
-                        ))}
+        <section className="latest-product-area padding-bottom">
+            <div className="container">
+                <div className="tab-content" id="nav-tabContent">
+                    <div
+                        className="tab-pane fade show active"
+                        id="nav-home"
+                        role="tabpanel"
+                        aria-labelledby="nav-home-tab"
+                    >
+                        <div className="row">
+                            {imgList.map((item, index) => (
+                                <div className="col-xl-4 col-lg-4 col-md-6" key={index}>
+                                    <div className="single-product mb-60">
+                                        <div className="product-img">
+                                            <img src={item.img} alt={item.alt} />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

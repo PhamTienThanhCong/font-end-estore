@@ -125,6 +125,11 @@
   color: #333;
 }
 
+.gallery-img {
+  width: 100%;
+  height: 100%;
+}
+
 /* line 78, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_variables.scss */
 .boxed-btn:hover {
   background: #ff003c;
@@ -3530,6 +3535,10 @@ input:focus {
   .gallery-wrapper .gallery-area .gallery-items {
     width: 50%;
   }
+  .gallery_row {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3542,6 +3551,14 @@ input:focus {
 /* line 2, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_footer.scss */
 .footer-area .footer-logo {
   margin-bottom: 40px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://trello.com/1/cards/638f0e30b0dd5405c70fe54a/attachments/638f0e3572bc7d01b0877731/previews/638f0e3572bc7d01b087773e/download/2_1920x750_8d8ae5ef81364f288889339c63147dbb.jpg.webp");
 }
 
 /* line 6, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_footer.scss */

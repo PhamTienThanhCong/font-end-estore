@@ -1,8 +1,3 @@
-import gallery1 from './img/gallery1.jpg';
-import gallery2 from './img/gallery2.jpg';
-import gallery3 from './img/gallery3.jpg';
-import gallery4 from './img/gallery4.jpg';
-import gallery5 from './img/gallery5.jpg';
 import './Contact.css';
 import Map from '../../Components/Map/Map';
 
@@ -123,30 +118,6 @@ function Contact() {
                     </div>
                 </div>
             </section>
-
-            <div className="gallery-container">
-                <div className="gallery-area">
-                    <div className="container-fluid">
-                        <div className="gallery_row">
-                            <div className="gallery-items">
-                                <img src={gallery1} alt="" />
-                            </div>
-                            <div className="gallery-items">
-                                <img src={gallery2} alt="" />
-                            </div>
-                            <div className="gallery-items">
-                                <img src={gallery3} alt="" />
-                            </div>
-                            <div className="gallery-items">
-                                <img src={gallery4} alt="" />
-                            </div>
-                            <div className="gallery-items">
-                                <img src={gallery5} alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
     );
 }

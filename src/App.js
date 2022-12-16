@@ -23,6 +23,8 @@ import PoloShirt from './pages/Products/Shirt/PoloShirt/PoloShirt';
 import SportShirt from './pages/Products/Shirt/SportShirt/SportShirt';
 import Coat from './pages/Products/Shirt/Coat/Coat';
 import SearchProduct from './pages/SearchProduct/SearchProduct';
+import Error from './pages/Error/Error';
+import Success from './pages/Success/Success';
 
 function App() {
     return (
@@ -49,6 +51,8 @@ function App() {
                 <Route path="/ao-the-thao" element={<SportShirt />} />
                 <Route path="/ao-khoac" element={<Coat />} />
                 <Route path="/product/search/keyword=:searchValue" element={<SearchProduct />} />
+                <Route path="*" element={<Error />} />
+                <Route path="/payment" element={<Success />} />
             </Routes>
             <Footer />
             <CallJavaScript />

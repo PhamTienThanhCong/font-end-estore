@@ -1,4 +1,4 @@
-import about_us_video from './img/about_us_video.png';
+import about_us from './img/about_us.jpg';
 import feature_icon_1 from './img/feature_icon_1.svg';
 import feature_icon_2 from './img/feature_icon_2.svg';
 import feature_icon_3 from './img/feature_icon_3.svg';
@@ -20,17 +20,15 @@ function About() {
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="about_us_content">
-                                <h5>Our Mission</h5>
+                                <h5>Shop sinh ra làm gì ?</h5>
                                 <h3>
-                                    Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor sollicitudin.
-                                    Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.
+                                    Shop sinh ra với mong muốn trở thành điển hình về mô hình DOANH NGHIỆP TRÁCH NHIỆM
+                                    bằng cách vừa làm kinh doanh bài bản, có lợi nhuận và đồng thời mang lại những giá
+                                    trị thiết thực và lâu dài cho khách hàng, cho nhân viên, cho đối tác, cho cộng đồng,
+                                    xã hội và cho cổ đông
                                 </h3>
-                                <div class="about_us_video">
-                                    <img src={about_us_video} alt="#" class="img-fluid" />
-                                    <a
-                                        class="about_video_icon popup-youtube"
-                                        href="https://www.youtube.com/watch?v=DWHB6nTyKDI"
-                                    ></a>
+                                <div class="about_us_video" style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <img src={about_us} alt="#" class="img-fluid" />
                                 </div>
                             </div>
                         </div>
@@ -43,15 +41,17 @@ function About() {
                     <div class="row justify-content-between">
                         <div class="col-lg-6">
                             <div class="feature_part_tittle">
-                                <h3>Credibly innovate granular internal or organic sources whereas standards.</h3>
+                                <h3>Câu chuyện dịch vụ khách hàng của Shop</h3>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <div class="feature_part_content">
                                 <p>
-                                    Seamlessly empower fully researched growth strategies and interoperable internal or
-                                    “organic” sources. Credibly innovate granular internal or “organic” sources whereas
-                                    high standards in web-readiness.
+                                    Ở Shop, chúng tôi tin rằng việc bán một gói hàng đó là bán cả một trải nghiệm mua
+                                    sắm. Coolmate có kỳ vọng trở thành một thương hiệu điển hình về việc hướng tới khách
+                                    hàng một cách sâu sắc tại Việt Nam. Với mong muốn góp một phần nhỏ thay đổi nhận
+                                    thức của các doanh nghiệp trong việc mang tới những trải nghiêm tốt hơn cho khách
+                                    hàng, đặc biệt trong lĩnh vực Thương Mại Điện Tử.
                                 </p>
                             </div>
                         </div>
@@ -60,25 +60,25 @@ function About() {
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_1} alt="#" />
-                                <h4>Credit Card Support</h4>
+                                <h4>Hỗ trợ thẻ tín dụng</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_2} alt="#" />
-                                <h4>Online Order</h4>
+                                <h4>Đặt hàng trực tuyến</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_3} alt="#" />
-                                <h4>Free Delivery</h4>
+                                <h4>Giao hàng miễn phí</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_4} alt="#" />
-                                <h4>Product with Gift</h4>
+                                <h4>Sản phẩm có quà tặng</h4>
                             </div>
                         </div>
                     </div>

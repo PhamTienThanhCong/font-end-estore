@@ -123,3 +123,24 @@
     align-items: center;
     font-size: 14px;
 }
+
+@media (max-width: 500px) {
+    .detail_container {
+        margin: 50px 15px 0 15px;
+    }
+    .image_product {
+        width: 100%;
+        border-radius: 20px;
+    }
+    .detail_inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .detal_right {
+        width: 100%;
+        padding: 0;
+    }
+    .detail_left {
+        padding: 0;
+    }
+}

@@ -3,12 +3,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import logo from './logo.png';
 import './HeaderBottom.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import Tippy from '@tippyjs/react';
+import { logout } from '../../../../redux/cartSlice';
 
 export default function HeaderBottom() {
     const navigate = useNavigate();
+    const defaultFn = () => {};
+    const dispatch = useDispatch();
+
+    const handleLogOut = () => {
+        dispatch(logout());
+    };
+
+    const showMenu = () => {
+        document.getElementById('myDropdown').classList.toggle('show');
+    };
 
     const numberCart = useSelector((state) => state.numberCart);
+    const user = useSelector((state) => state.user);
+    const login = true;
 
     const [searchValue, setSearchValue] = useState('');
     const [isDarkMode, setDarkMode] = useState(false);
@@ -45,9 +59,6 @@ export default function HeaderBottom() {
         let li = document.getElementsByTagName('li');
         let linkTo = document.getElementsByClassName('link-to');
         let submenu = document.getElementsByClassName('submenu');
-        // for (let i = 0; i < li.length; i++) {
-        //     li[i].className = theme;
-        // }
         for (let i = 0; i < linkTo.length; i++) {
             linkTo[i].className = 'link-to ' + theme;
         }
@@ -60,15 +71,18 @@ export default function HeaderBottom() {
         for (let i = 0; i < sliderArea.length; i++) {
             sliderArea[i].className = 'slider-area ' + theme;
         }
-        // if page = contact
-        // if (document.getElementsByClassName('about_us_content')){
-        //     document.getElementsByClassName('about_us_content')[0].className = "about_us_content " + theme;
-        //     document.getElementsByClassName('feature_part_content')[0].className = "feature_part_content " + theme;
-        //     const single_feature_part = document.getElementsByClassName('single_feature_part');
-        //     for (let i = 0; i < single_feature_part.length; i++) {
-        //         single_feature_part[i].className = "single_feature_part " + theme;
-        //     }
-        // }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
     });
 
     const handleSubmit = (e) => {
@@ -215,9 +229,21 @@ export default function HeaderBottom() {
                             </li>
                             <li className="d-none d-lg-block" style={{ marginTop: 9 }}>
                                 {' '}
-                                <Link to="/login" className="btn header-btn">
-                                    Sign in
-                                </Link>
+                                {user ? (
+                                    <div class="dropdown">
+                                        <button class="dropbtn" onClick={showMenu}>
+                                            {user.name}
+                                        </button>
+                                        <div id="myDropdown" class="dropdown-content">
+                                            <div>Hồ sơ</div>
+                                            <div onClick={handleLogOut}>Đăng xuất</div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <Link to="/login" className="btn header-btn">
+                                        Sign in
+                                    </Link>
+                                )}
                             </li>
                         </ul>
                     </div>

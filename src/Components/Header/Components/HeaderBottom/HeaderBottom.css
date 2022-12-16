@@ -29,3 +29,40 @@
         background-color: #333;
     }
   }
+
+  .dropbtn {
+    background-color: #fff;
+    color: black;
+    padding: 8px 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+  }
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content div {
+    color: black;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}

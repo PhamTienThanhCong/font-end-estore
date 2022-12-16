@@ -57,7 +57,7 @@ export default function CartProduct({ props }) {
                             dispatch(incrementQuantity(props.id));
                             changeQuantity('plus');
                         }}
-                        className="add-btn-sa"
+                        className="add-btn"
                     >
                         <FontAwesomeIcon icon={faPlus} />
                     </div>

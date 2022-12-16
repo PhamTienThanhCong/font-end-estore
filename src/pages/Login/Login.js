@@ -1,9 +1,28 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { login } from '../../redux/cartSlice';
 // import { FormLogin } from "./components/FormLogin"
 
 export default function Login() {
     // set name page
     document.title = 'Login';
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const users = useSelector((state) => state.users);
+
+    const handleLogin = () => {
+        const payload = users.find((user) => user.email === email && user.password === password);
+
+        if (payload) {
+            dispatch(login(payload));
+            navigate('/');
+        } else {
+            alert('Wrong credential !!!');
+        }
+    };
     return (
         <>
             <div className="slider-area " style={{ textAlign: 'center' }}>
@@ -34,7 +53,13 @@ export default function Login() {
                                         Welcome Back ! <br /> Please Sign in now
                                     </h3>
 
-                                    <form className="row contact_form" action="#" method="post" noValidate="novalidate">
+                                    <form
+                                        className="row contact_form"
+                                        action="#"
+                                        method="post"
+                                        noValidate="novalidate"
+                                        onSubmit={handleLogin}
+                                    >
                                         <div className="col-md-12 form-group p_star">
                                             <input
                                                 type="text"
@@ -43,6 +68,7 @@ export default function Login() {
                                                 name="name"
                                                 defaultValue=""
                                                 placeholder="Username"
+                                                onChange={(e) => setEmail(e.target.value)}
                                             />
                                         </div>
                                         <div className="col-md-12 form-group p_star">
@@ -52,6 +78,7 @@ export default function Login() {
                                                 id="password"
                                                 name="password"
                                                 defaultValue=""
+                                                onChange={(e) => setPassword(e.target.value)}
                                                 placeholder="Password"
                                             />
                                         </div>

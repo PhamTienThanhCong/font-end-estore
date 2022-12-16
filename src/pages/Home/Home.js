@@ -8,6 +8,7 @@ import Endow from './Components/Endow/Endow';
 import ListImg from './Components/ListImg/ListImg';
 
 import CallJavaScript from '../../Components/CallJavaScript/CallJavaScript';
+import Banner from './Components/Banner/Banner';
 
 export default function Home() {
     document.title = 'Home';
@@ -19,6 +20,7 @@ export default function Home() {
             <BestCollection />
             <LatestOffers />
             <Endow />
+            <Banner />
             <ListImg />
         </main>
     );
