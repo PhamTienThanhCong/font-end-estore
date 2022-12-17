@@ -12,8 +12,8 @@
     margin-bottom: 64px;
     margin-top: 24px;
     display: grid;
-    grid-template-columns: 264px 264px 264px 264px 264px;
-    column-gap: 21px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    column-gap: 10px;
 }
 
 @media (max-width: 500px) {
