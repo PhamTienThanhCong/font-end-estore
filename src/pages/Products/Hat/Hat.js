@@ -16,6 +16,9 @@ function Hat() {
                 {HAT_DATA.slice(0, visible).map((item, index) => (
                     <ProductItem data={item} key={index} />
                 ))}
+            </div>
+            {/* div center content */}
+            <div className="button-show-more">
                 <ButtonMore onClick={() => setVisible((prev) => prev + 6)} />
             </div>
         </div>

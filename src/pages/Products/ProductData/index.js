@@ -567,3 +567,5 @@ export const COAT = [
 export const SHIRTS = [...MENS_SHIRT, ...T_SHIRT, ...SHIRT, ...POLO_SHIRT, ...SPORTS_SHIRT, ...COAT];
 
 export const PRODUCTS = [...SHIRTS, ...HAT_DATA, ...SHOES_DATA];
+
+export const COLOR_SHIRTS = ['white', 'black', 'gray', 'blue', 'yellow']

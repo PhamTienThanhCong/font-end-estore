@@ -56,17 +56,11 @@ export default function HeaderBottom() {
         document.getElementById('header-sticky').className = 'row align-items-center ' + theme;
         document.getElementById('header1').style.backgroundColor = theme === 'light' ? '#fff' : '#333';
         document.getElementsByClassName('slicknav_menu').className = theme;
-        let li = document.getElementsByTagName('li');
-        let linkTo = document.getElementsByClassName('link-to');
-        let submenu = document.getElementsByClassName('submenu');
-        for (let i = 0; i < linkTo.length; i++) {
-            linkTo[i].className = 'link-to ' + theme;
-        }
-        for (let i = 0; i < submenu.length; i++) {
-            submenu[i].className = 'submenu ' + theme;
-        }
         document.getElementById('search-submit').className = 'form-box f-right ' + theme;
         document.getElementById('dark-mode-btn').className = theme;
+        document.getElementById('shopping-card-color').className = 'shopping-card ' + theme;
+        document.getElementById('favorit-items-color').className = 'favorit-items ' + theme;
+
         const sliderArea = document.getElementsByClassName('slider-area');
         for (let i = 0; i < sliderArea.length; i++) {
             sliderArea[i].className = 'slider-area ' + theme;
@@ -215,12 +209,12 @@ export default function HeaderBottom() {
                             </div>
 
                             <li className=" d-none d-xl-block" style={{ marginTop: 9 }}>
-                                <div className="favorit-items">
+                                <div className="favorit-items" id="favorit-items-color">
                                     <i className="far fa-heart"></i>
                                 </div>
                             </li>
                             <li style={{ marginTop: 9 }}>
-                                <div className="shopping-card">
+                                <div className="shopping-card" id='shopping-card-color'>
                                     <div className="count-of-product">{numberCart}</div>
                                     <Link to="/cart">
                                         <i className="fas fa-shopping-cart"></i>

@@ -19,10 +19,14 @@ function Contact() {
                         <div className="col-lg-8">
                             <form
                                 className="form-contact contact_form"
-                                action="https://preview.colorlib.com/theme/estore/contact_process.php"
+                                action="#"
                                 method="post"
                                 id="contactForm"
                                 noValidate="novalidate"
+                                onSubmit={(e) => { 
+                                    e.preventDefault(); 
+                                    alert('Thank you for your message!');
+                                }}
                             >
                                 <div className="row">
                                     <div className="col-12">

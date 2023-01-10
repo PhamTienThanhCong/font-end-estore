@@ -46,7 +46,7 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: .03em;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
 .add-to-cart {
@@ -122,6 +122,33 @@
     display: flex;
     align-items: center;
     font-size: 14px;
+}
+
+.color-list{
+    margin-bottom: 15px;
+}
+
+.color-list .pick{
+    border: 3px solid #ccc;
+    width: 60px;
+    height: 30px;
+    scale: 1.16;
+}
+
+.color-list .color-item{
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.choses-color {
+    border: 2px solid rgb(255, 0, 0) !important;
+    scale: 1.05;
 }
 
 @media (max-width: 500px) {

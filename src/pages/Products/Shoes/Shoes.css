@@ -15,6 +15,11 @@
     grid-template-columns: 20% 20% 20% 20% 20%;
     column-gap: 10px;
 }
+.button-show-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 500px) {
     .shoes_inner{

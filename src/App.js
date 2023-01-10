@@ -51,8 +51,8 @@ function App() {
                 <Route path="/ao-the-thao" element={<SportShirt />} />
                 <Route path="/ao-khoac" element={<Coat />} />
                 <Route path="/product/search/keyword=:searchValue" element={<SearchProduct />} />
-                <Route path="*" element={<Error />} />
                 <Route path="/payment" element={<Success />} />
+                <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
             <CallJavaScript />

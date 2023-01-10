@@ -1,9 +1,10 @@
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { PRODUCTS } from '../../pages/Products/ProductData';
+import { COLOR_SHIRTS } from '../../pages/Products/ProductData';
 import { addToCart } from '../../redux/cartSlice';
 import './ProductDetail.css';
 
@@ -11,16 +12,24 @@ function ProductDetail() {
     const location = useLocation();
     const productId = location.pathname.replace('/product/', '');
     const product = PRODUCTS.find((product) => product.id === productId);
+    const colors = COLOR_SHIRTS
     const features = product.features;
     const rate = product.ratting.toFixed();
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(1);
+    const [choseColor, setChoseColor] = useState('white');
+
+    const handleColor = (color) => {
+        if (choseColor !== color) {
+            setChoseColor(color);
+        }
+    };
+
     const handleAdd = () => {
         if (quantity < 10) {
             setQuantity((prev) => prev + 1);
         }
     };
-
     const handleSub = () => {
         if (quantity > 1) {
             setQuantity((prev) => prev - 1);
@@ -45,7 +54,7 @@ function ProductDetail() {
             </div>
             <div className="detail_inner">
                 <div className="detail_left">
-                    <img src={product.image} className="image_product" />
+                    <img src={product.image} className="image_product" alt={product.nameProduct}/>
                 </div>
                 <div className="detal_right">
                     <h1 className="name_product">{product.nameProduct}</h1>
@@ -53,6 +62,20 @@ function ProductDetail() {
                         {showRatting()}({product.countOfRatting})
                     </div>
                     <div className="price">{product.price}đ</div>
+                    <div className='chose-color'>
+                        <div className='color-header'>Màu sắc</div>
+                        <div className='color-list'>
+                            {colors && colors.map((color, index) => 
+                                <span 
+                                    key={index}
+                                    style={{backgroundColor: color}}
+                                    className={color === choseColor ? 'color-item choses-color' : 'color-item'   }
+                                    onClick={ () => handleColor(color) }
+                                    >    
+                                </span>
+                            )}
+                        </div>
+                    </div>
                     <div className="add-to-cart">
                         <div className="quantity">
                             <div onClick={handleSub} className="sub-product-btn">
@@ -82,7 +105,7 @@ function ProductDetail() {
                     <div className="feature">
                         <div className="feature_header">Đặc điểm nổi bật</div>
                         <div className="feature_content">
-                            {features && features.map((feature) => <div className="feature_item">- {feature}</div>)}
+                            {features && features.map((feature,index) => <div key={index} className="feature_item">- {feature}</div>)}
                         </div>
                     </div>
                 </div>

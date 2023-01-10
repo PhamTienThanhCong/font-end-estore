@@ -9,11 +9,11 @@ function SearchProduct() {
     document.title = 'Search Product';
     const { searchValue } = useParams();
     return (
-        <div className="search_container">
-            <div className="search_header">
+        <div className="shoes_container">
+            <div className="shoes_header">
                 <h3 style={{ color: 'blue', paddingTop: 50 }}>Keyword: {searchValue}</h3>
             </div>
-            <div className="search_inner">
+            <div className="shoes_inner">
                 {PRODUCTS.filter((item) => {
                     if (searchValue == '') {
                         return item;
