@@ -4,7 +4,7 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import logo from './logo.png';
 import './HeaderBottom.css';
 import { useDispatch, useSelector } from 'react-redux';
-import Tippy from '@tippyjs/react';
+import AVATAR_IMG from './avatar.jpg';
 import { logout } from '../../../../redux/cartSlice';
 
 export default function HeaderBottom() {
@@ -17,12 +17,20 @@ export default function HeaderBottom() {
     };
 
     const showMenu = () => {
-        document.getElementById('myDropdown').classList.toggle('show');
+        if (document.getElementById('myDropdown').style.display === 'block') {
+            active = false;
+            document.getElementById('myDropdown').style.display = 'none';
+        }else{
+            active = true;
+            document.getElementById('myDropdown').style.display = 'block';
+        }
+        console.log(active);
     };
 
     const numberCart = useSelector((state) => state.numberCart);
     const user = useSelector((state) => state.user);
     const login = true;
+    let active = false;
 
     const [searchValue, setSearchValue] = useState('');
     const [isDarkMode, setDarkMode] = useState(false);
@@ -66,13 +74,15 @@ export default function HeaderBottom() {
             sliderArea[i].className = 'slider-area ' + theme;
         }
         window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
+            console.log(event.target);
+            if (!event.target.matches('.avatar-show-active') && !event.target.matches('.account-list')) {
                 var dropdowns = document.getElementsByClassName('dropdown-content');
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
                     var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
+                    if (active === true) {
+                        openDropdown.style.display = 'none';
+                        console.log('close');
                     }
                 }
             }
@@ -224,12 +234,13 @@ export default function HeaderBottom() {
                             <li className="d-none d-lg-block" style={{ marginTop: 9 }}>
                                 {' '}
                                 {user ? (
-                                    <div class="dropdown">
-                                        <button class="dropbtn" onClick={showMenu}>
-                                            {user.name}
-                                        </button>
-                                        <div id="myDropdown" class="dropdown-content">
-                                            <div>Hồ sơ</div>
+                                    <div className="dropdown">
+                                        <div className="dropbtn" onClick={showMenu} >
+                                            <img className='avatar-show-active' src={AVATAR_IMG} alt={user.name}  />
+                                        </div>
+                                        <div id="myDropdown" className="dropdown-content">
+                                            <div className='account-list'>{user.name}</div>
+                                            <div className='account-list'>Hồ sơ</div>
                                             <div onClick={handleLogOut}>Đăng xuất</div>
                                         </div>
                                     </div>
