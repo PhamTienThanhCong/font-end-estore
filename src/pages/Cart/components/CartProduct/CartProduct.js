@@ -26,7 +26,7 @@ export default function CartProduct({ props }) {
     };
 
     return (
-        <tr key={props.id}>
+        <tr key={props.id} className="tr-body">
             <td>
                 <div className="media">
                     <div className="d-flex">
@@ -37,10 +37,10 @@ export default function CartProduct({ props }) {
                     </div>
                 </div>
             </td>
-            <td>
+            <td className="cart-price">
                 <h5>{props.price}đ</h5>
             </td>
-            <td style={{ textAlign: 'center' }}>
+            <td style={{ textAlign: 'center' }} className="btn-quantity">
                 <div className="count-product-cart">
                     <div
                         onClick={() => {
@@ -63,10 +63,10 @@ export default function CartProduct({ props }) {
                     </div>
                 </div>
             </td>
-            <td>
+            <td className="total-price">
                 <h5>{totalPrice}đ</h5>
             </td>
-            <td>
+            <td className="btn-delete">
                 <div style={{ textAlign: 'center', cursor: 'pointer' }} onClick={() => dispatch(removeItem(props.id))}>
                     <FontAwesomeIcon icon={faXmark} />
                 </div>

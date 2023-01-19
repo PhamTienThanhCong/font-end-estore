@@ -7548,14 +7548,14 @@ input:focus {
 
 @media (max-width: 576px) {
   /* line 808, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-  .cart_area .media {
+  .cart_area  {
     display: block;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   /* line 813, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
-  .cart_area .media {
+  .cart_area  {
     display: block;
   }
 }
@@ -7679,6 +7679,8 @@ input:focus {
   vertical-align: middle;
   align-self: center;
 }
+
+
 
 /* line 1126, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_product.scss */
 .cart_inner .table tbody tr td .media .d-flex {

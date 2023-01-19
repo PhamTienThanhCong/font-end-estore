@@ -13,13 +13,14 @@ export default function Login() {
     const dispatch = useDispatch();
     const users = useSelector((state) => state.users);
 
-    const handleLogin = () => {
+    const handleLogin = (e) => {
         const payload = users.find((user) => user.email === email && user.password === password);
 
         if (payload) {
             dispatch(login(payload));
             navigate('/');
         } else {
+            e.preventDefault();
             alert('Wrong credential !!!');
         }
     };

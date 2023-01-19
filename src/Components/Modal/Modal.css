@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    width: 650px;
+    min-width: 50%;
     height: auto;
     background: rgb(248, 248, 248);
     color: black;

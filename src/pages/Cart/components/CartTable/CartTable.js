@@ -31,7 +31,7 @@ export default function CartTable() {
                     return <CartProduct key={index} props={cart} />;
                 })}
                 <tr className="bottom_button"></tr>
-                <tr>
+                <tr className="subtotal">
                     <td></td>
                     <td></td>
                     <td></td>
