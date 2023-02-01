@@ -6,6 +6,7 @@ import '../Shirt.css';
 
 function MenShirt() {
     const [visible, setVisible] = useState(6);
+
     document.title = 'Product | Áo nam';
     return (
         <div className="shirt_container">
@@ -13,9 +14,9 @@ function MenShirt() {
                 <h3 style={{ color: 'blue', paddingTop: 50 }}>Áo nam</h3>
             </div>
             <div className="shirt_inner">
-                {SHIRTS.slice(0, visible).map((item, index) => (
-                    <ProductItem data={item} key={index} />
-                ))}
+                {SHIRTS.slice(0, visible).map((item, index) => {
+                    return <ProductItem data={item} key={index} />;
+                })}
             </div>
             <div className="button-show-more">
                 <ButtonMore onClick={() => setVisible((prev) => prev + 6)} />

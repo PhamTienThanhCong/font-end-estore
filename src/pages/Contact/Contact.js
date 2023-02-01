@@ -1,8 +1,25 @@
 import './Contact.css';
 import Map from '../../Components/Map/Map';
+import { useState } from 'react';
 
 function Contact() {
     document.title = 'Contact';
+    const [message, setMessage] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (message === '') {
+            alert('Please enter message');
+        } else if (name === '') {
+            alert('Please enter name');
+        } else if (email === '') {
+            alert('Please enter email');
+        } else if (subject === '') {
+            alert('Please enter subject');
+        }
+    };
     return (
         <main>
             <div className="slider-area " style={{ textAlign: 'center', paddingTop: 50 }}>
@@ -23,10 +40,7 @@ function Contact() {
                                 method="post"
                                 id="contactForm"
                                 noValidate="novalidate"
-                                onSubmit={(e) => { 
-                                    e.preventDefault(); 
-                                    alert('Thank you for your message!');
-                                }}
+                                onSubmit={handleSubmit}
                             >
                                 <div className="row">
                                     <div className="col-12">
@@ -38,6 +52,8 @@ function Contact() {
                                                 cols="30"
                                                 rows="9"
                                                 placeholder=" Enter Message"
+                                                value={message}
+                                                onChange={(e) => setMessage(e.target.value)}
                                             ></textarea>
                                         </div>
                                     </div>
@@ -49,6 +65,8 @@ function Contact() {
                                                 id="name"
                                                 type="text"
                                                 placeholder="Enter your name"
+                                                value={name}
+                                                onChange={(e) => setName(e.target.value)}
                                             />
                                         </div>
                                     </div>
@@ -60,6 +78,8 @@ function Contact() {
                                                 id="email"
                                                 type="email"
                                                 placeholder="Email"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
                                             />
                                         </div>
                                     </div>
@@ -71,6 +91,8 @@ function Contact() {
                                                 id="subject"
                                                 type="text"
                                                 placeholder="Enter Subject"
+                                                value={subject}
+                                                onChange={(e) => setSubject(e.target.value)}
                                             />
                                         </div>
                                     </div>
