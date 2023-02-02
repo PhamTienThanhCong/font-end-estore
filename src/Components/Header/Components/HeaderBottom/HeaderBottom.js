@@ -74,7 +74,6 @@ export default function HeaderBottom() {
             sliderArea[i].className = 'slider-area ' + theme;
         }
         window.onclick = function (event) {
-            console.log(event.target);
             if (!event.target.matches('.avatar-show-active') && !event.target.matches('.account-list')) {
                 var dropdowns = document.getElementsByClassName('dropdown-content');
                 var i;

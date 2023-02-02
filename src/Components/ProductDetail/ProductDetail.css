@@ -171,3 +171,10 @@
         padding: 0;
     }
 }
+
+.detail_header{
+    margin: 20px;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}

@@ -123,19 +123,19 @@ function ProductDetail() {
                     </div>
                 </div>
             </div>
-            <div className="button-show-more" style={{ marginTop: 50 }}>
+            {/* <div className="button-show-more" style={{ marginTop: 50 }}>
                 <ButtonMore onClick={handleMore} />
-            </div>
+            </div> */}
 
-            {visible && (
-                <div className="shoes_inner">
-                    {PRODUCTS.filter((product) => product.id.includes(productId.slice(0, productId.length - 2)))
-                        .slice(0, 6)
-                        .map((item, index) => (
-                            <ProductItem data={item} key={index} />
-                        ))}
-                </div>
-            )}
+            <div className="detail_header">Sản phẩm liên quan</div>
+
+            <div className="shoes_inner">
+                {PRODUCTS.filter((product) => product.id.includes(productId.slice(0, productId.length - 2)))
+                    .slice(0, 6)
+                    .map((item, index) => (
+                        <ProductItem data={item} key={index} />
+                    ))}
+            </div>
         </div>
     );
 }

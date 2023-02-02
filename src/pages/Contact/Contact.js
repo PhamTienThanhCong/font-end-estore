@@ -18,6 +18,14 @@ function Contact() {
             alert('Please enter email');
         } else if (subject === '') {
             alert('Please enter subject');
+        } else {
+            // check email validation
+            const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter valid email');
+                return;
+            }
+            alert('Thank you for your message');
         }
     };
     return (
