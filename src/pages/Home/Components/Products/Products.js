@@ -28,8 +28,8 @@ export default function Products({ props }) {
                 </div>
                 <div className="product-caption">
                     <div className="product-ratting">{showRatting()}</div>
-                    <h4>
-                        <Link className="link-to" to={props.to} style={{ color: 'red' }}>
+                    <h4 className="best-product-color">
+                        <Link className="link-to" to={props.to}>
                             {props.nameProduct}
                         </Link>
                     </h4>

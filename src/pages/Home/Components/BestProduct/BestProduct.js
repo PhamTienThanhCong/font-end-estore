@@ -19,11 +19,11 @@ export default function BestProduct() {
                         </div>
                         <div className="col-xl-8 col-lg-8">
                             <div className="best-product-caption">
-                                <h2>
+                                <h2 className='title-color-dark'>
                                     Find The Best Product
                                     <br /> from Our Shop
                                 </h2>
-                                <p>Designers who are interesten creating state ofthe.</p>
+                                <p className='title-color-dark'>Designers who are interesten creating state ofthe.</p>
                                 <Link to="#" className="black-btn">
                                     Shop Now
                                 </Link>
