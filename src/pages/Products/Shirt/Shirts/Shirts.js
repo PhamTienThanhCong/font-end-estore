@@ -5,8 +5,13 @@ import Fillter from '../../../../Components/Fillter/Fillter';
 
 import { SHIRT } from '../../ProductData';
 import '../Shirt.css';
+import { useEffect } from 'react';
 
 function Shirts() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     const [visible, setVisible] = useState(6);
     document.title = 'Product | Áo sơ mi';
     const [priceFilter, setPriceFilter] = useState(0);

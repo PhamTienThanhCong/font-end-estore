@@ -4,8 +4,13 @@ import ProductItem from '../../../../Components/ProductItem/ProductItem';
 import Fillter from '../../../../Components/Fillter/Fillter';
 import { T_SHIRT } from '../../ProductData';
 import '../Shirt.css';
+import { useEffect } from 'react';
 
 function TShirt() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     const [visible, setVisible] = useState(6);
     document.title = 'Product | Áo thun';
     const [priceFilter, setPriceFilter] = useState(0);

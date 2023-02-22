@@ -1,8 +1,15 @@
 import './Contact.css';
 import Map from '../../Components/Map/Map';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Contact() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
+    const navigate = useNavigate();
     document.title = 'Contact';
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
@@ -26,6 +33,8 @@ function Contact() {
                 return;
             }
             alert('Thank you for your message');
+            // navigate to home page
+            navigate('/');
         }
     };
     return (

@@ -4,9 +4,14 @@ import './Cart.css';
 import Modal from '../../Components/Modal/Modal';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 export default function Cart() {
     document.title = 'Cart';
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     const cart = useSelector((state) => state.cart);
     const [openModal, setOpenModal] = useState(false);
     return (

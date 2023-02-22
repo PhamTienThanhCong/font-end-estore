@@ -5,8 +5,13 @@ import { COAT } from '../../ProductData';
 import Fillter from '../../../../Components/Fillter/Fillter';
 
 import '../Shirt.css';
+import { useEffect } from 'react';
 
 function Coat() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     const [visible, setVisible] = useState(38);
     document.title = 'Product | Áo khoác';
 

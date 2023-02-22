@@ -4,8 +4,13 @@ import Fillter from '../../../../Components/Fillter/Fillter';
 import ProductItem from '../../../../Components/ProductItem/ProductItem';
 import { VANS_DATA } from '../../ProductData';
 import '../Shoes.css';
+import { useEffect } from 'react';
 
 function Vans() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     const [visible, setVisible] = useState(6);
     document.title = 'Product | Giày Vans';const [priceFilter, setPriceFilter] = useState(0);
     const [vodeFilter, setVoteFilter] = useState(0);

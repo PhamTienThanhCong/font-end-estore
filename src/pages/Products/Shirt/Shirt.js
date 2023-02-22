@@ -3,8 +3,13 @@ import ProductItem from '../../../Components/ProductItem/ProductItem';
 import { SHIRTS } from '../ProductData';
 import Fillter from '../../../Components/Fillter/Fillter';
 import './Shirt.css';
+import { useEffect } from 'react';
 
 function Shirt() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     const [visible, setVisible] = useState(12);
 
     const [priceFilter, setPriceFilter] = useState(0);

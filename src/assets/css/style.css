@@ -101,6 +101,21 @@
   color: rgb(240, 240, 240) !important;
 }
 
+.dark textarea{
+  background-color: transparent;
+  color: white;
+}
+
+.dark textarea:focus{
+  background-color: transparent;
+  color: white;
+}
+
+.dark input:focus{
+  background-color: transparent;
+  color: white;
+}
+
 .dark h2{
   color: rgb(240, 240, 240) !important;
 }
