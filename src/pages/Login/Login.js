@@ -3,8 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../redux/cartSlice';
 // import { FormLogin } from "./components/FormLogin"
+import { useEffect } from 'react';
 
 export default function Login() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     // set name page
     document.title = 'Login';
     const [email, setEmail] = useState('');

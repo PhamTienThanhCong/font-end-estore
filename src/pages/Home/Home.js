@@ -9,8 +9,13 @@ import ListImg from './Components/ListImg/ListImg';
 
 import CallJavaScript from '../../Components/CallJavaScript/CallJavaScript';
 import Banner from './Components/Banner/Banner';
+import { useEffect } from 'react';
 
 export default function Home() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     document.title = 'Home';
     return (
         <main>

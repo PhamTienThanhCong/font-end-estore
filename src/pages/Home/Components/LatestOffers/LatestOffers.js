@@ -13,18 +13,18 @@ export default function LatestOffers() {
                     <div className="row d-flex align-items-center">
                         <div className="col-xl-5 col-lg-5 col-md-6 offset-xl-1 offset-lg-1">
                             <div className="latest-caption">
-                                <h2>
+                                <h2 className='title-color-dark'>
                                     Get Our
                                     <br />
                                     Latest Offers News
                                 </h2>
-                                <p>Subscribe news latter</p>
+                                <p className='title-color-dark'>Subscribe news latter</p>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-5 col-md-6 ">
                             <div className="latest-subscribe">
                                 <form action="#">
-                                    <input type="email" placeholder="Your email here" />
+                                    <input className='input-color-dark' type="email" placeholder="Your email here" />
                                     <button>Shop Now</button>
                                 </form>
                             </div>

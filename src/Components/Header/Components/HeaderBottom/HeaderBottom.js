@@ -68,6 +68,7 @@ export default function HeaderBottom() {
         document.getElementById('dark-mode-btn').className = theme;
         document.getElementById('shopping-card-color').className = 'shopping-card ' + theme;
         document.getElementById('favorit-items-color').className = 'favorit-items ' + theme;
+        // const bestProductColor = document.getElementsByClassName('');
 
         const sliderArea = document.getElementsByClassName('slider-area');
         for (let i = 0; i < sliderArea.length; i++) {

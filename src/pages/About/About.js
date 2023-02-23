@@ -7,8 +7,14 @@ import client from './img/client.png';
 import client1 from './img/client_1.png';
 import client2 from './img/client_2.png';
 
+import { useEffect } from 'react';
+
 function About() {
     document.title = 'About';
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     return (
         <div>
             <div class="slider-area " style={{ textAlign: 'center' }}>

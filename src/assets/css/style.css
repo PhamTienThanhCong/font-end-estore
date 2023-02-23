@@ -101,6 +101,21 @@
   color: rgb(240, 240, 240) !important;
 }
 
+.dark textarea{
+  background-color: transparent;
+  color: white;
+}
+
+.dark textarea:focus{
+  background-color: transparent;
+  color: white;
+}
+
+.dark input:focus{
+  background-color: transparent;
+  color: white;
+}
+
 .dark h2{
   color: rgb(240, 240, 240) !important;
 }
@@ -118,7 +133,25 @@
 .dark h4{
   color: rgb(248, 247, 247) !important;
 }
+
+.dark h6{
+  color: rgb(248, 247, 247) !important;
+}
+
+.dark .title-color-dark{
+  color: black !important;
+}
+
+.dark .input-color-dark{
+  color: black !important;
+  border: 1px solid black !important;
+}
+
 .dark li a{
+  color: rgb(233, 228, 228) !important;
+}
+
+.dark .best-product-color a{
   color: rgb(233, 228, 228) !important;
 }
 

@@ -6,6 +6,10 @@ import { register } from '../../redux/cartSlice';
 import './Register.css';
 
 function Register() {
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
     document.title = 'Register';
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
