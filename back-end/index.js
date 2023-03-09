@@ -24,6 +24,7 @@ app.use(morgan())
 //routers
 app.use('/v1/category', categoryRoute);
 app.use('/v1/product', productRoute);
+app.use('/v1/user', productRoute);
 
 let port = 8000;
 app.listen(port, () => console.log('server is running in port ' + port));

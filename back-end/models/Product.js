@@ -5,10 +5,15 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
         minLength: 3,
-        maxLength: 20,
+        maxLength: 50,
         unique: true
     },
-    description: {
+    url: {
+        type: String,
+        required: true,
+        minLength: 3,
+        maxLength: 50,
+    },description: {
         type: String,
         required: true,
         minLength: 5,
@@ -29,11 +34,11 @@ const productSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category'
     },
-    quantity: {
+    star: {
         type: Number,
-        required: true,
-        min: 0,
-    },
+        min: 1,
+        max: 5
+    }
 })
 
 module.exports = mongoose.model('Product', productSchema);
