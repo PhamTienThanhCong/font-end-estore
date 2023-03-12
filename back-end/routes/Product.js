@@ -6,11 +6,8 @@ const router = require('express').Router();
 router.get("/", productController.getAllProducts);
 //get one product
 router.get("/:id", productController.getProduct);
-//delete product
-router.delete("/:id", productController.deleteProduct);
-//create product
-router.post("/", productController.createProduct);
-//update product
-router.put("/:id", productController.updateProduct);
+//route find product by category
+router.get("/category/:id", productController.getProductByCategory);
+
 
 module.exports = router;

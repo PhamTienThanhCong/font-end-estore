@@ -1,56 +1,49 @@
-const Product = require('../models/Product');
+const Products = require('../models/Product');
 const Category = require('../models/Category');
 
 
 const ProductController = {
     getAllProducts: async(req, res) => {
+        // return data in value Products
         try {
-            const products = await Product.find();
-            return res.status(200).json(products);
+            // nhận method get từ client
+            const {Category, CategoryName, nameProduct} = req.query;
+            // đảo ramdom mảng products
+            Products.sort(() => Math.random() - 0.5);
+            if (CategoryName) {
+                const products = Products.filter(product => product.category.toLowerCase() == CategoryName.toLowerCase());
+                return res.status(200).json(products);
+            }
+            if (Category) {
+                const products = Products.filter(product => product.category.toLowerCase().includes(Category.toLowerCase()));
+                return res.status(200).json(products);
+            }
+            if (nameProduct) {
+                const products = Products.filter(product => product.nameProduct.toLowerCase().includes(nameProduct.toLowerCase()));
+                return res.status(200).json(products);
+            }
+            return res.status(200).json(Products); 
         }catch(err) {
             return res.status(500).json(err);
         }
     },
     getProduct: async(req, res) => {
+        // return data in value Products
         try {
-            const product = await Product.findById(req.params.id).populate('category');
-            return res.status(200).json(product);
+            const id = req.params.id;
+            const product = Products.find(product => product.id == id);
+            return res.status(200).json(product); 
         }catch(err) {
             return res.status(500).json(err);
         }
     },
-    deleteProduct: async(req, res) => {
+    getProductByCategory: async(req, res) => {
+        // return data in value Products
         try {
-            await Category.updateMany(
-                {products: req.params.id},
-                {$pull: {products: req.params.id}}
-            );
-            await Product.findByIdAndDelete(req.params.id);
-            return res.status(200).json('Product deleted');
-
-        }catch(err) {
-            return res.status(500).json(err);
-        }
-    },
-    createProduct: async(req, res) => {
-        try {
-            const newProduct = new Product(req.body);
-            const product = await newProduct.save();
-            await Category.findByIdAndUpdate(req.body.category, {
-                $push: {products: product._id}
-            });
-            
-            return res.status(200).json(product);
-        }catch(err) {
-            return res.status(500).json(err);
-        }
-    },
-    updateProduct: async(req, res) => {
-        try {
-            const product = await Product.findByIdAndUpdate(req.params.id, {
-                $set: req.body
-            }, {new: true});
-            return res.status(200).json(product);
+            const id = req.params.id;
+            const CategoryName = id.toLowerCase();
+            const products = Products.filter(product => product.category.toLowerCase() == CategoryName);
+            return res.status(200).json(products); 
         }catch(err) {
             return res.status(500).json(err);
         }

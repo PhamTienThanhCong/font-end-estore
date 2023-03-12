@@ -10,6 +10,9 @@ const userRoute = require("./routes/User");
 
 dotenv.config();
 const app = express();
+
+app.use("/public", express.static(__dirname + "/public"));
+
 // connect mongodb
 mongoose.connect(process.env.MONGODB_URL, () => {
     if (mongoose.connection.readyState === 1) {
