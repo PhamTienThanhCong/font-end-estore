@@ -39,7 +39,7 @@ const UserController = {
                 // save the user to the session
                 user.password = "********";
                 req.session.user = user;
-                res.status(200).json({message: 'Login successful'});
+                res.status(200).json({message: 'Login successful', account: user });
             } else {
                 res.status(401).json({message: 'Incorrect password'});
             }

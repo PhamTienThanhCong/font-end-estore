@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { register } from '../../redux/cartSlice';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
@@ -16,11 +16,10 @@ function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
-
-    const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const handleRegister = () => {
+    const handleRegister = (e) => {
+        e.preventDefault();
         if (name === '' || phone === '' || email === '' || password === '' || confirmPass === '') {
             navigate('/register');
             alert('Please enter enough information');
@@ -28,16 +27,23 @@ function Register() {
             navigate('/register');
             alert('Please re-enter your confirm password');
         } else {
-            dispatch(
-                register({
-                    id: new Date().getTime(),
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    password: password,
-                }),
-            );
-            navigate('/login');
+            // setting header for axios
+            axios.defaults.headers.post['Content-Type'] = 'application/json';
+            axios.post('http://localhost:8000/v1/user/register', {
+                fullname: name,
+                phone: phone,
+                email: email,
+                password: password,
+            })
+            .then((res) => {
+                console.log(res);
+                alert('Register successfully');
+                navigate('/login');
+            })
+            .catch((err) => {
+                console.log(err);
+                alert('Register failed');
+            });
         }
     };
     return (
@@ -112,9 +118,7 @@ function Register() {
                             </button>
                             <div>
                                 Do you have an account?{' '}
-                                <a href="/login" style={{ color: 'blue' }}>
-                                    Login
-                                </a>
+                                <Link to="/login" style={{ color: 'blue' }}>Login</Link>
                             </div>
                         </div>
                     </form>

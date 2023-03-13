@@ -233,10 +233,10 @@ export default function HeaderBottom() {
                                 {user ? (
                                     <div className="dropdown">
                                         <div className="dropbtn" onClick={showMenu} >
-                                            <img className='avatar-show-active' src={AVATAR_IMG} alt={user.name}  />
+                                            <img className='avatar-show-active' src={AVATAR_IMG} alt={user.fullname}  />
                                         </div>
                                         <div id="myDropdown" className="dropdown-content">
-                                            <div className='account-list'>{user.name}</div>
+                                            <div className='account-list'>{user.fullname}</div>
                                             <div className='account-list'>Profile</div>
                                             <div onClick={handleLogOut}>Log Out</div>
                                         </div>

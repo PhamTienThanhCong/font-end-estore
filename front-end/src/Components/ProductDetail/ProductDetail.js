@@ -7,28 +7,42 @@ import { addToCart } from '../../redux/cartSlice';
 import ButtonMore from '../ButtonMore/ButtonMore';
 import ProductItem from '../ProductItem/ProductItem';
 import './ProductDetail.css';
+import axios from 'axios';
 
 function ProductDetail() {
     const location = useLocation();
     const productId = location.pathname.replace('/product/', '');
-    const product = [];
-    const colors = [];
-    const features = product.features;
-    const rate = product.ratting.toFixed();
+    const [product, setProduct] = useState({});
+    const [rating, setRating] = useState(0);
+    const [PRODUCTS, setPRODUCTS] = useState([]);
+    useEffect (() => {
+        axios.get('http://localhost:8000/v1/product/' + productId)
+        .then((res) => {
+            setProduct(res.data);
+            setRating(res.data.ratting.toFixed());
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }, [productId]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8000/v1/product?Category=' + product.category)
+            .then(res => {
+                setPRODUCTS(res.data);
+            })
+            .catch(err => console.log(err));
+    }, [product]);
+
+    const colors = [ 'white', 'black', 'red', 'yellow'];
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(1);
     const [choseColor, setChoseColor] = useState('white');
-    const [visible, setVisible] = useState(false);
 
     const handleColor = (color) => {
         if (choseColor !== color) {
             setChoseColor(color);
         }
-    };
-
-    const handleMore = () => {
-        setVisible(!visible);
-        console.log(productId.slice(0, 9));
     };
 
     const handleAdd = () => {
@@ -44,10 +58,10 @@ function ProductDetail() {
 
     const showRatting = () => {
         let result = [];
-        for (let i = 1; i <= rate; i++) {
+        for (let i = 1; i <= rating; i++) {
             result.push(<FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} />);
         }
-        for (let j = 1; j <= 5 - rate; j++) {
+        for (let j = 1; j <= 5 - rating; j++) {
             result.push(<FontAwesomeIcon icon={faStar} />);
         }
         return result;
@@ -112,8 +126,8 @@ function ProductDetail() {
                     <div className="feature">
                         <div className="feature_header">Description</div>
                         <div className="feature_content">
-                            {features &&
-                                features.map((feature, index) => (
+                            {product.features &&
+                                product.features.map((feature, index) => (
                                     <div key={index} className="feature_item">
                                         - {feature}
                                     </div>
@@ -122,19 +136,16 @@ function ProductDetail() {
                     </div>
                 </div>
             </div>
-            {/* <div className="button-show-more" style={{ marginTop: 50 }}>
-                <ButtonMore onClick={handleMore} />
-            </div> */}
 
             <div className="detail_header">Other Products</div>
 
-            {/* <div className="shoes_inner">
+            <div className="shoes_inner">
                 {PRODUCTS.filter((product) => product.id.includes(productId.slice(0, productId.length - 2)))
-                    .slice(0, 6)
+                    .slice(0, 4)
                     .map((item, index) => (
                         <ProductItem data={item} key={index} />
                     ))}
-            </div> */}
+            </div>
         </div>
     );
 }

@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../redux/cartSlice';
 // import { FormLogin } from "./components/FormLogin"
 import { useEffect } from 'react';
+import axios from 'axios';
 
 export default function Login() {
     useEffect(() => {
@@ -19,15 +20,23 @@ export default function Login() {
     const users = useSelector((state) => state.users);
 
     const handleLogin = (e) => {
-        const payload = users.find((user) => user.email === email && user.password === password);
-
-        if (payload) {
-            dispatch(login(payload));
+        e.preventDefault();
+        axios.defaults.headers.post['Content-Type'] = 'application/json';
+        axios.post('http://localhost:8000/v1/user/login', {
+            email: email,
+            password: password,
+        })
+        .then((res) => {
+            console.log(res);
+            alert('Login successfully');
+            dispatch(login(res.data.account));
             navigate('/');
-        } else {
-            e.preventDefault();
-            alert('Wrong credential !!!');
-        }
+        })
+        .catch((err) => {
+            console.log(err);
+            alert('Login failed');
+        });
+
     };
     return (
         <>
@@ -43,8 +52,7 @@ export default function Login() {
                                 <div className="login_part_text_iner">
                                     <h2>New to our Shop?</h2>
                                     <p>
-                                        There are advances being made in science and technology everyday, and a good
-                                        example of this is the
+                                        Come join us! We are a community of people who love to shop and share
                                     </p>
                                     <Link to="/register" className="btn_3">
                                         Create an Account
@@ -73,7 +81,7 @@ export default function Login() {
                                                 id="name"
                                                 name="name"
                                                 defaultValue=""
-                                                placeholder="Username"
+                                                placeholder="Your Email"
                                                 onChange={(e) => setEmail(e.target.value)}
                                             />
                                         </div>
