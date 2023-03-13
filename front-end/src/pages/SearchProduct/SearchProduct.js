@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductItem from '../../Components/ProductItem/ProductItem';
 import Fillter from '../../Components/Fillter/Fillter';
-import { PRODUCTS } from '../Products/ProductData';
 import './SearchProduct.css';
 import { useEffect } from 'react';
 
@@ -14,6 +13,7 @@ function SearchProduct() {
     const [visible, setVisible] = useState(38);
     document.title = 'Search Product';
     const { searchValue } = useParams();
+    const PRODUCTS = [];
     
     const [priceFilter, setPriceFilter] = useState(0);
     const [vodeFilter, setVoteFilter] = useState(0);

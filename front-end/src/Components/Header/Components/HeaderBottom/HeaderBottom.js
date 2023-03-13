@@ -121,51 +121,48 @@ export default function HeaderBottom() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/men-shirt">
+                                        <Link className="link-to" to="productType/shirt">
                                             Shirt
                                         </Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to="/men-shirt">Men Shirt</Link>
+                                                <Link to="/productType/SHIRT-tshirt">T-Shirt</Link>
                                             </li>
                                             <li>
-                                                <Link to="/t-shirt">T-Shirt</Link>
+                                                <Link to="/productType/SHIRT-shirt">Shirt</Link>
                                             </li>
                                             <li>
-                                                <Link to="/shirts">Shirt</Link>
+                                                <Link to="/productType/SHIRT-polo">Polo Shirt</Link>
                                             </li>
                                             <li>
-                                                <Link to="/polo-shirt">Polo Shirt</Link>
+                                                <Link to="/productType/SHIRT-sport">Sport Shirt</Link>
                                             </li>
                                             <li>
-                                                <Link to="/sport-shirt">Sport Shirt</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/coat">Coat</Link>
+                                                <Link to="/productType/SHIRT-coat">Coat</Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/shoes">
+                                        <Link className="link-to" to="/productType/shoes">
                                             Shoe
                                         </Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to="/shoes/nike">Nike</Link>
+                                                <Link to="/productType/shoes-nike">Nike</Link>
                                             </li>
                                             <li>
-                                                <Link to="/shoes/adidas">Adidas</Link>
+                                                <Link to="/productType/shoes-adidas">Adidas</Link>
                                             </li>
                                             <li>
-                                                <Link to="/shoes/vans">Vans</Link>
+                                                <Link to="/productType/shoes-vans">Vans</Link>
                                             </li>
                                             <li>
-                                                <Link to="/shoes/mlb">MLB</Link>
+                                                <Link to="/productType/shoes-mlb">MLB</Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link className="link-to" to="/hat">
+                                        <Link className="link-to" to="/productType/hat">
                                             Hat
                                         </Link>
                                     </li>

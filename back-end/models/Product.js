@@ -395,7 +395,7 @@ const dataProduct = [
     {
         id: 'shirt-1',
         nameProduct: 'Café-DriS mens long-sleeved shirt ',
-        category: "shirt",
+        category: "SHIRT-shirt",
         price: 159000,
         priceOld: 299000,
         image: `http://localhost:8000/public/images/product29.jpg`,
@@ -412,7 +412,7 @@ const dataProduct = [
     {
         id: 'shirt-2',
         nameProduct: 'Excool Limited ',
-        category: "shirt",
+        category: "SHIRT-shirt",
         price: 259000,
         priceOld: 299000,
         image: `http://localhost:8000/public/images/product30.jpg`,
@@ -430,7 +430,7 @@ const dataProduct = [
     {
         id: 'shirt-3',
         nameProduct: 'Café-DriS mens long-sleeved shirt ',
-        category: "shirt",
+        category: "SHIRT-shirt",
         price: 159000,
         priceOld: 299000,
         image: `http://localhost:8000/public/images/product31.jpg`,
@@ -447,7 +447,7 @@ const dataProduct = [
     {
         id: 'shirt-4',
         nameProduct: 'Excool Limited ',
-        category: "shirt",
+        category: "SHIRT-shirt",
         price: 259000,
         priceOld: 299000,
         image: `http://localhost:8000/public/images/product32.jpg`,

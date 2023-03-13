@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { PRODUCTS } from '../../pages/Products/ProductData';
-import { COLOR_SHIRTS } from '../../pages/Products/ProductData';
 import { addToCart } from '../../redux/cartSlice';
 import ButtonMore from '../ButtonMore/ButtonMore';
 import ProductItem from '../ProductItem/ProductItem';
@@ -13,8 +11,8 @@ import './ProductDetail.css';
 function ProductDetail() {
     const location = useLocation();
     const productId = location.pathname.replace('/product/', '');
-    const product = PRODUCTS.find((product) => product.id === productId);
-    const colors = COLOR_SHIRTS;
+    const product = [];
+    const colors = [];
     const features = product.features;
     const rate = product.ratting.toFixed();
     const dispatch = useDispatch();
@@ -130,13 +128,13 @@ function ProductDetail() {
 
             <div className="detail_header">Other Products</div>
 
-            <div className="shoes_inner">
+            {/* <div className="shoes_inner">
                 {PRODUCTS.filter((product) => product.id.includes(productId.slice(0, productId.length - 2)))
                     .slice(0, 6)
                     .map((item, index) => (
                         <ProductItem data={item} key={index} />
                     ))}
-            </div>
+            </div> */}
         </div>
     );
 }

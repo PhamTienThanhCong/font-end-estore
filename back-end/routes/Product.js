@@ -9,5 +9,4 @@ router.get("/:id", productController.getProduct);
 //route find product by category
 router.get("/category/:id", productController.getProductByCategory);
 
-
 module.exports = router;
