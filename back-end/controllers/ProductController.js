@@ -19,7 +19,7 @@ const ProductController = {
                 return res.status(200).json(products);
             }
             if (nameProduct) {
-                const products = Products.filter(product => product.nameProduct3.toLowerCase().includes(nameProduct.toLowerCase()));
+                const products = Products.filter(product => product.nameProduct.toLowerCase().includes(nameProduct.toLowerCase()));
                 return res.status(200).json(products);
             }
             return res.status(200).json(Products); 

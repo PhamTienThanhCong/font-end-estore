@@ -4,16 +4,17 @@ import ProductItem from '../../Components/ProductItem/ProductItem';
 import Fillter from '../../Components/Fillter/Fillter';
 import './SearchProduct.css';
 import { useEffect } from 'react';
+import axios from 'axios';
 
 function SearchProduct() {
+    const [PRODUCTS, setPRODUCTS] = useState([]);
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
       }, []);
-    const [visible, setVisible] = useState(38);
+
     document.title = 'Search Product';
     const { searchValue } = useParams();
-    const PRODUCTS = [];
     
     const [priceFilter, setPriceFilter] = useState(0);
     const [vodeFilter, setVoteFilter] = useState(0);
@@ -34,6 +35,17 @@ function SearchProduct() {
         setVoteFilter(0);
         document.getElementById('form-reset').reset();
     }
+
+    useEffect (() => {
+        document.getElementById('search-id').value = searchValue;
+        axios.get(`http://localhost:8000/v1/product?nameProduct=${searchValue}`)
+        .then((res) => {
+            setPRODUCTS(res.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    }, [searchValue]);
 
     return (
         <div className="shoes_container">
@@ -80,7 +92,6 @@ function SearchProduct() {
                                 return item;
                             }
                         })
-                        .slice(0, visible)
                         .map((item, index) => (
                             <ProductItem data={item} key={index} />
                         ))}
