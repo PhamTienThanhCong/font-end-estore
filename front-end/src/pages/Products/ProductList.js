@@ -6,6 +6,7 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import BuyNow from '../../Components/BuyNow/BuyNow';
 
 function MenShirt() {
     const { productType } = useParams();
@@ -13,6 +14,8 @@ function MenShirt() {
     const [nameApp, setNameApp] = useState('');
     const [visible, setVisible] = useState(6);
     const [loadMore, setLoadMore] = useState(true);
+    const [open, setOpen] = useState(false);
+    const [product, setProduct] = useState({});
     useEffect(() => {
             // 👇️ scroll to top on page load
             window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -103,7 +106,12 @@ function MenShirt() {
                                         return item;
                                     }
                                 }).slice(0, visible).map((item, index) => {
-                            return <ProductItem data={item} key={index} />;
+                            return <ProductItem 
+                                data={item} 
+                                key={index} 
+                                setOpen={setOpen}
+                                setProduct={setProduct}
+                            />;
                         })
                     }
                     </div>
@@ -113,6 +121,11 @@ function MenShirt() {
                     loadMore ? <ButtonMore onClick={ setVisibleProduct } /> : ''
                 }
             </div>
+            <BuyNow 
+                open={open}
+                setOpen={setOpen}
+                product={product}
+            />
         </div>
     );
 }
