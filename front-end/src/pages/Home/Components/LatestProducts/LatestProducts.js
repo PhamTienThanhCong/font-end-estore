@@ -2,11 +2,14 @@ import ProductItem from '../../../../Components/ProductItem/ProductItem';
 import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import BuyNow from '../../../../Components/BuyNow/BuyNow';
 import './latestProduct.css';
 
 export default function LatestProducts() {
     const [PRODUCTS, setPRODUCTS] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [open, setOpen] = useState(false);
+    const [product, setProduct] = useState({});
     useEffect(() => {
         axios.get('http://localhost:8000/v1/product')
             .then(res => {
@@ -36,6 +39,8 @@ export default function LatestProducts() {
                                         <ProductItem 
                                             key={index} 
                                             data={product}
+                                            setOpen={setOpen}
+                                            setProduct={setProduct}
                                         />
                                     ))
                                 )}
@@ -43,6 +48,11 @@ export default function LatestProducts() {
                     </div>
                 </div>
             </div>
+            <BuyNow 
+                open={open}
+                setOpen={setOpen}
+                product={product}
+            />
         </section>
     );
 }

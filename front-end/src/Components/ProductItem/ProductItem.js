@@ -3,21 +3,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
 import './ProductItem.css';
 
-function ProductItem({ data, type }) {
+function ProductItem({ data, type, setOpen, setProduct }) {
     const navigate = useNavigate();
     return (
         <div className="product_container">
             <Link
-                to={data.to}
                 className="content_up"
-                onClick={() => {
-                    navigate({ state: data });
-                }}
+                // onClick={() => {
+                //     navigate({ state: data });
+                // }}
             >
                 <img className="img_1" src={data.image} alt="" />
                 <img className="img_2" src={data.imageHover} alt="" />
                 <div className="buy_btn">
-                    <div style={{ color: 'black' }} className="buy_btn_inner">
+                    <div 
+                        style={{ color: 'black' }} 
+                        className="buy_btn_inner"
+                        onClick={(e) => { 
+                            setOpen(true);
+                            setProduct(data);
+                         }}
+                    >
                         Buy Now
                     </div>
                 </div>

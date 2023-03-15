@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { addToCart } from '../../redux/cartSlice';
-import ButtonMore from '../ButtonMore/ButtonMore';
 import ProductItem from '../ProductItem/ProductItem';
 import './ProductDetail.css';
 import axios from 'axios';
