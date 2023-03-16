@@ -1,14 +1,21 @@
 import { faMinus, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { decrementQuantity, incrementQuantity, removeItem } from '../../../../redux/cartSlice';
 import './CartProduct.css';
 
-export default function CartProduct({ props }) {
+export default function CartProduct({ props, setValueChecked, checkAll }) {
     const [totalPrice, setTotalPrice] = useState(props.price * props.quantity);
+    const [check, setCheck] = useState(true);
     const [quantity, setQuantity] = useState(props.quantity);
     const dispatch = useDispatch();
+
+    useEffect(()=>{
+        if (checkAll === true){
+            setCheck(true);
+        }
+    }, [checkAll])
 
     const changeQuantity = (type) => {
         if (type === 'minus') {
@@ -26,8 +33,27 @@ export default function CartProduct({ props }) {
         }
     };
 
+    const handleChecked = () => {
+        if (check === true){
+            setCheck(false);
+            setValueChecked(prevState => prevState - 1)
+        }else{
+            setCheck(true);
+            setValueChecked(prevState => prevState + 1);
+        }
+    }
+
     return (
         <tr key={props.id} className="tr-body">
+            <td>
+                <div className="cart-checkbox">
+                    <input 
+                        type="checkbox" 
+                        checked={check}
+                        onClick={handleChecked}
+                    />
+                </div>
+            </td>
             <td>
                 <div className="media">
                     <div className="d-flex">
