@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import CartProduct from '../CartProduct/CartProduct';

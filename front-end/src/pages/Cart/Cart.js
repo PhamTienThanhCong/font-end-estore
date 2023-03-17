@@ -13,6 +13,8 @@ export default function Cart() {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
       }, []);
     const cart = useSelector((state) => state.cart);
+    const user = useSelector((state) => state.user);
+
     const [openModal, setOpenModal] = useState(false);
     return (
         <>
@@ -30,14 +32,19 @@ export default function Cart() {
                                 <Link className="btn_1" to="/">
                                     Continue Shopping
                                 </Link>
-
-                                <div
-                                    className="btn_1 checkout_btn_1"
-                                    style={{ cursor: 'pointer' }}
-                                    onClick={() => setOpenModal(true)}
-                                >
-                                    Proceed to checkout
-                                </div>
+                                    {user ? (
+                                        <div
+                                            className="btn_1 checkout_btn_1"
+                                            style={{ cursor: 'pointer' }}
+                                            onClick={() => setOpenModal(true)}
+                                        >
+                                            process check out
+                                        </div>
+                                    ): (
+                                        <Link className="btn_1 checkout_btn_1" to="/login">
+                                            Login to process check out
+                                        </Link>
+                                    )}
                             </div>
                         </div>
                     </div>
