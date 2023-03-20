@@ -4,7 +4,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const session = require('express-session');
-const categoryRoute = require("./routes/Category");
 const productRoute = require("./routes/Product");
 const userRoute = require("./routes/User");
 
@@ -32,7 +31,6 @@ app.use(session({
     cookie: { maxAge: 60000 }}));
 
 //routers
-app.use('/v1/category', categoryRoute);
 app.use('/v1/product', productRoute);
 app.use('/v1/user', userRoute);
 
