@@ -51,7 +51,7 @@ export default function Slide() {
                                             </p>
 
                                             <div className="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                                <Link href="#" className="btn hero-btn">
+                                                <Link to="/productType/SHIRT-sport" className="btn hero-btn">
                                                     Shop Now
                                                 </Link>
                                             </div>
@@ -95,7 +95,7 @@ export default function Slide() {
                                             </p>
 
                                             <div className="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                                <Link href="#" className="btn hero-btn">
+                                                <Link to="/productType/SHIRT-coat" className="btn hero-btn">
                                                     Shop Now
                                                 </Link>
                                             </div>
@@ -139,7 +139,7 @@ export default function Slide() {
                                             </p>
 
                                             <div className="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                                <Link href="#" className="btn hero-btn">
+                                                <Link to="/productType/hat" className="btn hero-btn">
                                                     Shop Now
                                                 </Link>
                                             </div>
@@ -183,7 +183,7 @@ export default function Slide() {
                                             </p>
 
                                             <div className="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                                <Link href="#" className="btn hero-btn">
+                                                <Link to="/productType/shoes" className="btn hero-btn">
                                                     Shop Now
                                                 </Link>
                                             </div>

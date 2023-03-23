@@ -8,7 +8,7 @@ function Success() {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
       }, []);
     return (
-        <div style={{ color: 'blue', marginTop: 60, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ color: 'black', marginTop: 60, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <FontAwesomeIcon icon={faCircleCheck} style={{ fontSize: 28, paddingRight: 10, marginBottom: 5 }} />
             <h2 style={{ color: 'blue' }}>Thanh toán thành công</h2>
         </div>

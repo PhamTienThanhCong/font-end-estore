@@ -69,7 +69,7 @@ function MenShirt() {
     return (
         <div className="shirt_container">
             <div className="shirt_header">
-                <h3 style={{ color: 'blue', paddingTop: 50 }}>{ nameApp }</h3>
+                <h3 style={{ color: 'black', paddingTop: 50 }}>{ nameApp }</h3>
             </div>
             <div className="shoes_content">
                 <Fillter handleChoicePrice={handleChoicePrice} handleChoiceVote={handleChoiceVote} handleClear={handleClear} />

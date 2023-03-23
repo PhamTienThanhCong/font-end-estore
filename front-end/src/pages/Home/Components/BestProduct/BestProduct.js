@@ -24,7 +24,7 @@ export default function BestProduct() {
                                     <br /> from Our Shop
                                 </h2>
                                 <p className='title-color-dark'>Designers who are interesten creating state ofthe.</p>
-                                <Link to="#" className="black-btn">
+                                <Link to="/productType/SHIRT-tshirt" className="black-btn">
                                     Shop Now
                                 </Link>
                             </div>

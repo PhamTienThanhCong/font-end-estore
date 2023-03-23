@@ -88,3 +88,15 @@
     padding: 10px;
     border-bottom: 1px solid #ccc;
   }
+
+  .carousel-item h1{
+    color: black !important;
+  }
+
+  .carousel-item span{
+    color: #506172 !important;
+  }
+
+  .carousel-item span{
+    color: #506172 !important;
+  }

@@ -41,7 +41,7 @@ export default function Login() {
     return (
         <>
             <div className="slider-area " style={{ textAlign: 'center' }}>
-                <h1 style={{ color: 'blue', paddingTop: 50 }}>Login</h1>
+                <h1 style={{ color: 'black', paddingTop: 50 }}>Login</h1>
             </div>
 
             <section className="login_part section_padding " style={{ paddingTop: 50 }}>

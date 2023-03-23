@@ -37,7 +37,7 @@ export default function BestCollection() {
                         <div className="best-left-cap">
                             <h2>Best Collection of This Month</h2>
                             <p>Designers who are interesten crea.</p>
-                            <Link to="#" className="btn shop1-btn">
+                            <Link to="/productType/SHIRT-tshirt" className="btn shop1-btn">
                                 Shop Now
                             </Link>
                         </div>

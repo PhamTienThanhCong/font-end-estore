@@ -6,57 +6,57 @@ import { Helmet } from 'react-helmet';
 const Quick_Links = [
     {
         name: 'About',
-        to: '/',
+        to: '/about',
     },
     {
         name: 'Offers & Discounts',
-        to: '/',
+        to: '/about',
     },
     {
         name: 'Get Coupon',
-        to: '/',
+        to: '/about',
     },
     {
         name: 'Contact Us',
-        to: '/',
+        to: '/contact',
     },
 ];
 
 const New_Products = [
     {
         name: 'Woman Cloth',
-        to: '/',
+        to: '/productType/shirt',
     },
     {
         name: 'Fashion Accessories',
-        to: '/',
+        to: '/productType/shoes',
     },
     {
         name: 'Man Accessories',
-        to: '/',
+        to: '/productType/hat',
     },
     {
         name: 'Rubber made Toys',
-        to: '/',
+        to: '/productType/shoes',
     },
 ];
 
 const Supports = [
     {
         name: 'Frequently Asked Questions',
-        to: '/',
+        to: '/about',
     },
     {
         name: 'Terms & Conditions',
-        to: '/',
+        to: '/about',
     },
     {
         name: 'Privacy Policy',
-        to: '/',
+        to: '/about',
     },
     {
         name: 'Report a Payment Issue',
-        to: '/',
+        to: '/contact',
     },
 ];
 

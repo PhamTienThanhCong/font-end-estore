@@ -40,7 +40,7 @@ function Contact() {
     return (
         <main>
             <div className="slider-area " style={{ textAlign: 'center', paddingTop: 50 }}>
-                <h1 style={{ color: 'blue', paddingTop: 50 }}>Contact Us</h1>
+                <h1 style={{ color: 'black', paddingTop: 50 }}>Contact Us</h1>
             </div>
 
             <section className="contact-section" style={{ paddingTop: 50 }}>

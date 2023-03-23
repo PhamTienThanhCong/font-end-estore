@@ -32,7 +32,7 @@ function ProductItem({ data, type, setOpen, setProduct }) {
                     <span>
                         <FontAwesomeIcon icon={faStar} />
                     </span>
-                    <span style={{ color: 'blue', fontWeight: 600, fontSize: 14 }}>({data.countOfRatting})</span>
+                    <span style={{ fontWeight: 600, fontSize: 14 }}>({data.countOfRatting})</span>
                 </div>
             </Link>
             <div className="content_down">

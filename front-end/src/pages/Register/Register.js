@@ -50,7 +50,7 @@ function Register() {
         <div className="col-lg-6 col-md-6 register_container">
             <div className="login_part_form">
                 <div className="login_part_form_iner register_inner">
-                    <h1 style={{ color: 'blue', paddingTop: 50, paddingBottom: 50 }}>Register</h1>
+                    <h1 style={{ color: 'black', paddingTop: 50, paddingBottom: 50 }}>Register</h1>
                     <form
                         className="row contact_form"
                         action="#"

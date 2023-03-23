@@ -18,7 +18,7 @@ function About() {
     return (
         <div>
             <div class="slider-area " style={{ textAlign: 'center' }}>
-                <h1 style={{ color: 'blue', paddingTop: 50 }}>About</h1>
+                <h1 style={{ color: 'black', paddingTop: 50 }}>About</h1>
             </div>
 
             <section class="about_us padding_top" style={{ paddingTop: 50 }}>
@@ -26,7 +26,7 @@ function About() {
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="about_us_content">
-                                <h5>The purpose of the shop was born?</h5>
+                                <h5 style={{ color: 'black' }}>The purpose of the shop was born?</h5>
                                 <h3>
                                     Shop was born with the desire to become an example of the US RESPONSIBILITY BUSINESS model
                                     by doing both a methodical, profitable business and at the same time bringing great value
