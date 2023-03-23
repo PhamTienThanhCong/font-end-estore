@@ -7,7 +7,8 @@ import './Modal.css';
 function Modal({ onOpen }) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const handlePay = () => {
+    const handlePay = (e) => {
+        e.preventDefault();
         setTimeout(() => {
             dispatch(payment());
             navigate('/payment');
@@ -25,8 +26,8 @@ function Modal({ onOpen }) {
                 <div className="modal_header">
                     <div className="modal_title">Choose Address</div>
                 </div>
-                <div className="modal_content">
-                    <input placeholder="Họ Và Tên" className="content_2" />
+                <form className="modal_content" onSubmit={handlePay}>
+                    <input placeholder="Họ Và Tên" className="content_2" required/>
                     <div className="choose">
                         <div className="content_1">
                             <select className="select_1">
@@ -54,11 +55,11 @@ function Modal({ onOpen }) {
                             </select>
                         </div>
                     </div>
-                    <input placeholder="Write your note" className="content_2" />
-                    <button className="btn_1 checkout_btn_1 pay" onClick={handlePay}>
+                    <input placeholder="Write your note" className="content_2" required/>
+                    <button className="btn_1 checkout_btn_1 pay">
                         Check out
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     );
