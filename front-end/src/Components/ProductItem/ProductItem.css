@@ -72,11 +72,6 @@
 .content_down {
     
 }
-
-.name_product {
-    color: black;
-}
-
 .name_product:hover { 
     color: red;
 }

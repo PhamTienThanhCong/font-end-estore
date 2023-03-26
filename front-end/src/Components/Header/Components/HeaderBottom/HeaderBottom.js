@@ -69,6 +69,9 @@ export default function HeaderBottom() {
         document.getElementById('shopping-card-color').className = 'shopping-card ' + theme;
         document.getElementById('favorit-items-color').className = 'favorit-items ' + theme;
         // const bestProductColor = document.getElementsByClassName('');
+        // get all class name content_down and add class theme
+        const contentDown = document.getElementsByClassName('content_down');
+        // body add class theme
 
         const sliderArea = document.getElementsByClassName('slider-area');
         for (let i = 0; i < sliderArea.length; i++) {

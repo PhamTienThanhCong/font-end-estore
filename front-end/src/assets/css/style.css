@@ -97,6 +97,10 @@
   color: black !important;
 }
 
+.light .name_product{
+  color: black !important;
+}
+
 .dark h1{
   color: rgb(240, 240, 240) !important;
 }
@@ -164,6 +168,9 @@
 .dark .search-icon{
   background-color: #333 !important;
   color: white !important;
+}
+.dark .content_down{
+  color: white ;
 }
 
 .light {

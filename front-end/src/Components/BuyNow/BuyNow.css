@@ -111,3 +111,16 @@
 .add-to-cart-btn .action{
     width: 40%;
 }
+
+.dark .container-buy-now{
+    background-color: #141414;
+  }
+
+  .dark .feature_header{
+    color: white;
+  }
+
+.dark .modal_content input{
+    color: black;
+}
+

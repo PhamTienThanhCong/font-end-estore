@@ -37,7 +37,11 @@ function ProductItem({ data, type, setOpen, setProduct }) {
             </Link>
             <div className="content_down">
                 <Link className="name_product" to={data.to}>
-                    <div style={{ fontWeight: 600, fontSize: 14 }}>{data.nameProduct}</div>
+                    <div style={{ 
+                        fontWeight: 600, 
+                        fontSize: 14,
+                        // if theme is dark, color is white
+                     }}>{data.nameProduct}</div>
                 </Link>
                 <div className="price">{data.price}đ</div>
             </div>
