@@ -13,18 +13,21 @@ const BestRights = [
         type: 'Jacket',
         img: collection3,
         active: false,
+        link: '/productType/SHIRT-tshirt',
     },
     {
         name: 'Menz jeans',
         type: 'Jacket',
         img: collection4,
         active: true,
+        link: '/productType/SHIRT-polo',
     },
     {
         name: 'Menz Winter',
         type: 'Jacket',
         img: collection5,
         active: false,
+        link: '/productType/SHIRT-coat',
     },
 ];
 
@@ -58,6 +61,7 @@ export default function BestCollection() {
                                 <BestRightCap
                                     key={index}
                                     index={index}
+                                    link={item.link}
                                     name={item.name}
                                     type={item.type}
                                     img={item.img}

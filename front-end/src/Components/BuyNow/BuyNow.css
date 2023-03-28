@@ -124,3 +124,10 @@
     color: black;
 }
 
+.dark .quantity-action{
+    color: white;
+}
+
+.dark .color-product .title{
+    color: white;
+}

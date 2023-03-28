@@ -67,7 +67,7 @@ export default function HeaderBottom() {
         document.getElementById('search-submit').className = 'form-box f-right ' + theme;
         document.getElementById('dark-mode-btn').className = theme;
         document.getElementById('shopping-card-color').className = 'shopping-card ' + theme;
-        document.getElementById('favorit-items-color').className = 'favorit-items ' + theme;
+        // document.getElementById('favorit-items-color').className = 'favorit-items ' + theme;
         // const bestProductColor = document.getElementsByClassName('');
         // get all class name content_down and add class theme
         const contentDown = document.getElementsByClassName('content_down');
@@ -218,11 +218,11 @@ export default function HeaderBottom() {
                                 />
                             </div>
 
-                            <li className=" d-none d-xl-block" style={{ marginTop: 9 }}>
+                            {/* <li className=" d-none d-xl-block" style={{ marginTop: 9 }}>
                                 <div className="favorit-items" id="favorit-items-color">
                                     <i className="far fa-heart"></i>
                                 </div>
-                            </li>
+                            </li> */}
                             <li style={{ marginTop: 9 }}>
                                 <div className="shopping-card" id='shopping-card-color'>
                                     <div className="count-of-product">{numberCart}</div>
