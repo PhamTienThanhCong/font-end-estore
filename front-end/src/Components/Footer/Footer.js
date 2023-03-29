@@ -74,7 +74,7 @@ export default function Footer() {
                                 <div className="single-footer-caption mb-50">
                                     <div className="single-footer-caption mb-30">
                                         <div className="">
-                                            <a href="index.html">
+                                            <a href="#">
                                                 <img style={{ height: '70px' }} src={logo_footer} alt=""></img>
                                             </a>
                                         </div>

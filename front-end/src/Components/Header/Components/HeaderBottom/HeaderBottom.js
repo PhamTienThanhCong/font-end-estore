@@ -9,7 +9,7 @@ import { logout } from '../../../../redux/cartSlice';
 
 export default function HeaderBottom() {
     const navigate = useNavigate();
-    const defaultFn = () => {};
+    const defaultFn = () => { };
     const dispatch = useDispatch();
 
     const handleLogOut = () => {
@@ -20,7 +20,7 @@ export default function HeaderBottom() {
         if (document.getElementById('myDropdown').style.display === 'block') {
             active = false;
             document.getElementById('myDropdown').style.display = 'none';
-        }else{
+        } else {
             active = true;
             document.getElementById('myDropdown').style.display = 'block';
         }
@@ -103,7 +103,7 @@ export default function HeaderBottom() {
     };
 
     return (
-        <div id="header1" className="header-bottom header-sticky">
+        <div id="header1" className="header-bottom header-sticky sticky-bar sticky">
             <div className="container-fluid">
                 <div id="header-sticky" className="row align-items-center">
                     <div className="col-xl-1 col-lg-1 col-md-1 col-sm-3">
@@ -236,7 +236,7 @@ export default function HeaderBottom() {
                                 {user ? (
                                     <div className="dropdown">
                                         <div className="dropbtn" onClick={showMenu} >
-                                            <img className='avatar-show-active' src={AVATAR_IMG} alt={user.fullname}  />
+                                            <img className='avatar-show-active' src={AVATAR_IMG} alt={user.fullname} />
                                         </div>
                                         <div id="myDropdown" className="dropdown-content">
                                             <div className='account-list'>{user.fullname}</div>
@@ -253,7 +253,8 @@ export default function HeaderBottom() {
                         </ul>
                     </div>
                     <div className="col-12">
-                        <div className="mobile_menu d-block d-lg-none"></div>
+                        <div className="mobile_menu d-block d-lg-none">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 export default function CallJavaScript() {
     return (
         <Helmet>
-            <script src="./assets/js/jquery.slicknav.min.js"></script>
+            {/* <script src="./assets/js/jquery.slicknav.min.js"></script>
 
             <script src="./assets/js/owl.carousel.min.js"></script>
             <script src="./assets/js/slick.min.js"></script>
@@ -22,8 +22,8 @@ export default function CallJavaScript() {
             <script src="./assets/js/mail-script.js"></script>
             <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
-            <script src="./assets/js/plugins.js"></script>
-            <script src="./assets/js/main.js"></script>
+            <script src="./assets/js/plugins.js"></script> */}
+            <script src="../../assets/js/main.js"></script>
         </Helmet>
     );
 }
