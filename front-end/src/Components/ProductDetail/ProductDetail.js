@@ -26,7 +26,7 @@ function ProductDetail() {
     }, [productId]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/v1/product?Category=' + product.category)
+        axios.get('http://localhost:8000/v1/product')
             .then(res => {
                 setPRODUCTS(res.data);
             })
@@ -139,7 +139,7 @@ function ProductDetail() {
             <div className="detail_header">Other Products</div>
 
             <div className="shoes_inner">
-                {PRODUCTS.filter((product) => product.id.includes(productId.slice(0, productId.length - 2)))
+                {PRODUCTS
                     .slice(0, 4)
                     .map((item, index) => (
                         <ProductItem data={item} key={index} />
