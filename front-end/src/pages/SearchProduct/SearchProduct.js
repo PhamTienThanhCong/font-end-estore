@@ -5,6 +5,7 @@ import Fillter from '../../Components/Fillter/Fillter';
 import './SearchProduct.css';
 import { useEffect } from 'react';
 import axios from 'axios';
+import { useTranslation } from "react-i18next";
 
 function SearchProduct() {
     const [PRODUCTS, setPRODUCTS] = useState([]);

@@ -6,10 +6,14 @@ import BestCollection from './Components/BestCollection/BestCollection';
 import LatestOffers from './Components/LatestOffers/LatestOffers';
 import Endow from './Components/Endow/Endow';
 import ListImg from './Components/ListImg/ListImg';
-
+import Benefit from './Components/Benefit/Benefit';
 // import CallJavaScript from '../../Components/CallJavaScript/CallJavaScript';
 import Banner from './Components/Banner/Banner';
 import { useEffect } from 'react';
+import ListLogo from './Components/ListLogo/ListLogo';
+import Marquee from '../../Components/Marquee/Marquee';
+
+
 
 export default function Home() {
     useEffect(() => {
@@ -17,16 +21,20 @@ export default function Home() {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
       }, []);
     document.title = 'Home';
+
     return (
         <main>
             <Slide />
             <LatestProducts />
             <BestProduct />
+            <Marquee/>
             <BestCollection />
             <LatestOffers />
             <Endow />
             <Banner />
+            <ListLogo/>
             <ListImg />
+            <Benefit />
         </main>
     );
 }

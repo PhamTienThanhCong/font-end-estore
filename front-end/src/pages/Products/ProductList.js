@@ -7,6 +7,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BuyNow from '../../Components/BuyNow/BuyNow';
+import { useTranslation } from "react-i18next";
 
 function MenShirt() {
     const { productType } = useParams();
@@ -16,6 +17,7 @@ function MenShirt() {
     const [loadMore, setLoadMore] = useState(true);
     const [open, setOpen] = useState(false);
     const [product, setProduct] = useState({});
+    
     useEffect(() => {
             // 👇️ scroll to top on page load
             window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -23,11 +25,12 @@ function MenShirt() {
 
     const [priceFilter, setPriceFilter] = useState(0);
     const [vodeFilter, setVoteFilter] = useState(0);
+    const [brandFilter, setBrandFilter] = useState('');
 
     const handleChoicePrice = (price) => {
         setPriceFilter(price);
     };
-
+      
     const handleChoiceVote = (vote) => {
         setVoteFilter(vote);
     };
@@ -36,9 +39,12 @@ function MenShirt() {
         e.preventDefault();
         setPriceFilter(0);
         setVoteFilter(0);
+        setBrandFilter('');
         document.getElementById('form-reset').reset();
     }
-
+    const handleBrand = (brand) => {
+        setBrandFilter(brand);
+    };
     const setVisibleProduct = () => {
         console.log(visible);
         setVisible(visible + 6);
@@ -46,7 +52,6 @@ function MenShirt() {
             setLoadMore(false);
         }
     };
-
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         setNameApp(productType); 
@@ -72,28 +77,27 @@ function MenShirt() {
                 <h3 style={{ color: 'black', paddingTop: 50 }}>{ nameApp }</h3>
             </div>
             <div className="shoes_content">
-                <Fillter handleChoicePrice={handleChoicePrice} handleChoiceVote={handleChoiceVote} handleClear={handleClear} />
-                
+            <Fillter handleChoicePrice={handleChoicePrice} handleChoiceVote={handleChoiceVote} handleClear={handleClear} handleBrand={handleBrand} />                
                 <div className="shirt_inner">
                     { loading ? <div className="loading">Loading...</div> :
                     PRODUCTS.filter((item) => {
                                     if (priceFilter === 0) {
                                         return item;
                                     } else {
-                                        if (priceFilter === 100000) {
+                                        if (priceFilter === 30) {
                                             if (item.price <= priceFilter) {
                                                 return item;
                                             }
-                                        }else if (priceFilter === 250000) {
-                                            if (item.price <= priceFilter && item.price >= 100000) {
+                                        }else if (priceFilter === 100) {
+                                            if (item.price <= priceFilter && item.price >= 30) {
                                                 return item;
                                             }
-                                        } else if (priceFilter === 500000) {
-                                            if (item.price <= priceFilter && item.price >= 250000) {
+                                        } else if (priceFilter === 200) {
+                                            if (item.price <= priceFilter && item.price >= 100) {
                                                 return item;
                                             }
-                                        } else if (priceFilter === 100000000) {
-                                            if (item.price >= 500000) {
+                                        } else if (priceFilter === 1000) {
+                                            if (item.price >= 200) {
                                                 return item;
                                             }
                                         }
@@ -105,6 +109,11 @@ function MenShirt() {
                                     } else if (Math.round(item.ratting) === vodeFilter) {
                                         return item;
                                     }
+                                }).filter((item) => {
+                                    if (brandFilter !== '') {
+                                        return item.category.includes(`BRAND-${brandFilter.toLowerCase()}`);
+                                    }
+                                    return true;
                                 }).slice(0, visible).map((item, index) => {
                             return <ProductItem 
                                 data={item} 
@@ -113,7 +122,9 @@ function MenShirt() {
                                 setProduct={setProduct}
                             />;
                         })
+                        
                     }
+                    
                     </div>
                 </div>
             <div className="button-show-more">
@@ -131,3 +142,5 @@ function MenShirt() {
 }
 
 export default MenShirt;
+
+

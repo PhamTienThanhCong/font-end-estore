@@ -2,8 +2,11 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
 import './ProductItem.css';
+import { useTranslation } from "react-i18next";
 
 function ProductItem({ data, type, setOpen, setProduct }) {
+    const { t } = useTranslation();
+
     const navigate = useNavigate();
     return (
         <div className="product_container">
@@ -13,8 +16,8 @@ function ProductItem({ data, type, setOpen, setProduct }) {
                 //     navigate({ state: data });
                 // }}
             >
-                <img className="img_1" src={data.image} alt="" />
-                <img className="img_2" src={data.imageHover} alt="" />
+                <Link to={data.to}><img className="img_1" src={data.image} alt="" /></Link>
+                <Link to={data.to}><img className="img_2" src={data.imageHover} alt="" /></Link>
                 <div className="buy_btn">
                     <div 
                         style={{ color: 'black' }} 
@@ -24,7 +27,7 @@ function ProductItem({ data, type, setOpen, setProduct }) {
                             setProduct(data);
                          }}
                     >
-                        Buy Now
+                        {t('item.buy')}
                     </div>
                 </div>
                 <div className="ratting" style={{ fontSize: 14, color: 'black' }}>
@@ -43,7 +46,7 @@ function ProductItem({ data, type, setOpen, setProduct }) {
                         // if theme is dark, color is white
                      }}>{data.nameProduct}</div>
                 </Link>
-                <div className="price">{data.price}đ</div>
+                <div className="price">{data.price}$</div>
             </div>
         </div>
     );

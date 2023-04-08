@@ -7,8 +7,10 @@ import { addToCart } from '../../redux/cartSlice';
 import ProductItem from '../ProductItem/ProductItem';
 import './ProductDetail.css';
 import axios from 'axios';
+import { useTranslation } from "react-i18next";
 
 function ProductDetail() {
+    const { t } = useTranslation();
     const location = useLocation();
     const productId = location.pathname.replace('/product/', '');
     const [product, setProduct] = useState({});
@@ -69,7 +71,7 @@ function ProductDetail() {
     return (
         <div className="detail_container">
             <div className="detail header">
-                <div>Home / {productId}</div>
+                <div>product/ {productId}</div>
             </div>
             <div className="detail_inner">
                 <div className="detail_left">
@@ -80,9 +82,9 @@ function ProductDetail() {
                     <div className="detal_ratting">
                         {showRatting()}({product.countOfRatting})
                     </div>
-                    <div className="price">{product.price}Kc</div>
+                    <div className="price">{product.price}$</div>
                     <div className="chose-color">
-                        <div className="color-header">Color</div>
+                        <div className="color-header">{t('detail.color')}</div>
                         <div className="color-list">
                             {colors &&
                                 colors.map((color, index) => (
@@ -119,16 +121,16 @@ function ProductDetail() {
                                 )
                             }
                         >
-                            Add To Cart
+                            {t('detail.addtocart')}
                         </div>
                     </div>
                     <div className="feature">
-                        <div className="feature_header">Description</div>
+                        <div className="feature_header">{t('detail.description')}</div>
                         <div className="feature_content">
                             {product.features &&
                                 product.features.map((feature, index) => (
                                     <div key={index} className="feature_item">
-                                        - {feature}
+                                        - {t(feature)}
                                     </div>
                                 ))}
                         </div>
@@ -136,7 +138,7 @@ function ProductDetail() {
                 </div>
             </div>
 
-            <div className="detail_header">Other Products</div>
+            <div className="detail_header">{t('detail.other')}</div>
 
             <div className="shoes_inner">
                 {PRODUCTS
@@ -145,6 +147,7 @@ function ProductDetail() {
                         <ProductItem data={item} key={index} />
                     ))}
             </div>
+            
         </div>
     );
 }

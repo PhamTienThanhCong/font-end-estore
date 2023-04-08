@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Register.css';
+import { useTranslation } from "react-i18next";
 
 function Register() {
+    const { t } = useTranslation();
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -50,7 +52,7 @@ function Register() {
         <div className="col-lg-6 col-md-6 register_container">
             <div className="login_part_form">
                 <div className="login_part_form_iner register_inner">
-                    <h1 style={{ color: 'black', paddingTop: 50, paddingBottom: 50 }}>Register</h1>
+                    <h1 style={{ color: 'black', paddingTop: 50, paddingBottom: 50 }}>{t('register.content1')}</h1>
                     <form
                         className="row contact_form"
                         action="#"
@@ -65,7 +67,7 @@ function Register() {
                                 id="name"
                                 name="name"
                                 defaultValue=""
-                                placeholder="Fullname"
+                                placeholder={t('modal.fullname')}
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </div>
@@ -76,7 +78,7 @@ function Register() {
                                 id="password"
                                 name="phone"
                                 defaultValue=""
-                                placeholder="Phone Number"
+                                placeholder={t('register.content3')}
                                 onChange={(e) => setPhone(e.target.value)}
                             />
                         </div>
@@ -86,7 +88,7 @@ function Register() {
                                 className="form-control"
                                 name="email"
                                 defaultValue=""
-                                placeholder="Email"
+                                placeholder={t('about.email')}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -97,7 +99,7 @@ function Register() {
                                 id="password"
                                 name="password"
                                 defaultValue=""
-                                placeholder="Password"
+                                placeholder={t('login.content8')}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
@@ -108,17 +110,17 @@ function Register() {
                                 id="password"
                                 name="password"
                                 defaultValue=""
-                                placeholder="Confirm Password"
+                                placeholder={('register.content4')}
                                 onChange={(e) => setConfirmPass(e.target.value)}
                             />
                         </div>
                         <div className="col-md-12 form-group register_btn">
                             <button type="submit" className="btn_3 btn">
-                                Register
+                                {t('register.content1')}
                             </button>
                             <div>
-                                Do you have an account?{' '}
-                                <Link to="/login" style={{ color: 'blue' }}>Login</Link>
+                                {t('register.content5')}{' '}
+                                <Link to="/login" style={{ color: 'blue' }}>{t('login.content1')}</Link>
                             </div>
                         </div>
                     </form>

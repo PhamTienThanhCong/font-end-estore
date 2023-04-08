@@ -6,25 +6,27 @@ import collection5 from './img/collection5.png';
 
 import { Link } from 'react-router-dom';
 import BestRightCap from '../BestRightCap/BestRightCap';
+import { useTranslation } from "react-i18next";
+
 
 const BestRights = [
     {
         name: 'T-shirt',
-        type: 'Jacket',
+        type: 'Clothes',
         img: collection3,
         active: false,
         link: '/productType/SHIRT-tshirt',
     },
     {
-        name: 'Menz jeans',
-        type: 'Jacket',
+        name: 'Polo',
+        type: 'Clothes',
         img: collection4,
         active: true,
         link: '/productType/SHIRT-polo',
     },
     {
-        name: 'Menz Winter',
-        type: 'Jacket',
+        name: 'Coat',
+        type: 'Clothes',
         img: collection5,
         active: false,
         link: '/productType/SHIRT-coat',
@@ -32,16 +34,17 @@ const BestRights = [
 ];
 
 export default function BestCollection() {
+    const { t } = useTranslation();
     return (
         <div className="best-collection-area section-padding2">
             <div className="container">
                 <div className="row d-flex justify-content-between align-items-end">
                     <div className="col-xl-4 col-lg-4 col-md-6">
                         <div className="best-left-cap">
-                            <h2>Best Collection of This Month</h2>
-                            <p>Designers who are interesten crea.</p>
+                            <h2>{t('collection.content1')}</h2>
+                            <p>{t('collection.content2')}</p>
                             <Link to="/productType/SHIRT-tshirt" className="btn shop1-btn">
-                                Shop Now
+                                {t('collection.content3')}
                             </Link>
                         </div>
                         <div className="best-left-img mb-30 d-none d-sm-block">

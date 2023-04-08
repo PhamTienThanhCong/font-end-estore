@@ -58,6 +58,16 @@
 	color:$theme-color;
 */
 /* line 63, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_variables.scss */
+.wrapper,.wrapper--bigger,.wrapper--medium,.wrapper--small,.wrapper--smaller {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 950px;
+  padding-left: 15px;
+  padding-right: 15px
+}
+
 .boxed-btn {
   background: #fff;
   color: #fff !important;
@@ -100,6 +110,9 @@
 .light .name_product{
   color: black !important;
 }
+.light p{
+  color: black;
+}
 
 .dark h1{
   color: rgb(240, 240, 240) !important;
@@ -131,7 +144,7 @@
 }
 
 .dark p{
-  color: rgb(190, 185, 185) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .dark h4{
@@ -171,6 +184,18 @@
 }
 .dark .content_down{
   color: white ;
+}
+.dark .browsers .image {
+  border: 2px solid #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  margin:2px;
+  margin-bottom: 20px;
+  height: 100px;
+  width:200px;
+  padding: 10px;  
+
 }
 
 .light {
@@ -3359,10 +3384,14 @@ input:focus {
   border-radius: 10px;
 }
 
-/* line 159, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_best-product.scss */
-.best-collection-area .best-right-cap .best-single .single-cap.active h4 {
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+
+/* line 155, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_best-product.scss */
+.best-collection-area .best-right-cap .best-single .single-cap:hover {
+  background: green;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: 0.4s linear;
+  
 }
 
 /* line 165, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_best-product.scss */
@@ -9255,3 +9284,4 @@ input:focus {
 @media (max-width: 991px) {
   /* line 10, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_breadcrumb.scss */
 }
+

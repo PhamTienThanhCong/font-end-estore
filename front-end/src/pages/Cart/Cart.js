@@ -5,8 +5,11 @@ import Modal from '../../Components/Modal/Modal';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 
 export default function Cart() {
+    const { t } = useTranslation();
+
     document.title = 'Cart';
     useEffect(() => {
         // 👇️ scroll to top on page load
@@ -19,7 +22,7 @@ export default function Cart() {
     return (
         <>
             <div className="slider-area " style={{ textAlign: 'center' }}>
-                <h1 style={{ color: 'black', paddingTop: 50 }}>Cart List</h1>
+                <h1 style={{ color: 'black', paddingTop: 50 }}>{t('cart.list')}</h1>
             </div>
 
             <section className="cart_area section_padding" style={{ paddingTop: 50 }}>
@@ -30,7 +33,7 @@ export default function Cart() {
 
                             <div className="checkout_btn_inner float-right pos-link">
                                 <Link className="btn_1" to="/">
-                                    Continue Shopping
+                                    {t('cart.continue')}
                                 </Link>
                                     {user ? (
                                         <div
@@ -38,11 +41,11 @@ export default function Cart() {
                                             style={{ cursor: 'pointer' }}
                                             onClick={() => setOpenModal(true)}
                                         >
-                                            process check out
+                                            {t('cart.process')}
                                         </div>
                                     ): (
                                         <Link className="btn_1 checkout_btn_1" to="/login">
-                                            Login to process check out
+                                            {t('cart.login')}
                                         </Link>
                                     )}
                             </div>

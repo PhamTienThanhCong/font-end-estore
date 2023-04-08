@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import logo from './logo.png';
+import logo from '../../../Footer/logo2_footer.png';
 import './HeaderBottom.css';
 import { useDispatch, useSelector } from 'react-redux';
 import AVATAR_IMG from './avatar.jpg';
 import { logout } from '../../../../redux/cartSlice';
+import { useTranslation } from "react-i18next";
+import Flag from 'react-world-flags'
+
 
 export default function HeaderBottom() {
+    const { t } = useTranslation();
+
     const navigate = useNavigate();
     const defaultFn = () => { };
     const dispatch = useDispatch();
@@ -120,70 +125,152 @@ export default function HeaderBottom() {
                                 <ul id="navigation">
                                     <li>
                                         <Link className="link-to" to="/">
-                                            Home
+                                        {t("header.home")}
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="link-to" to="productType/shirt">
-                                            Shirt
+                                        {t("header.titleshirt")}
                                         </Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to="/productType/SHIRT-tshirt">T-Shirt</Link>
+                                                <Link to="/productType/SHIRT-tshirt">{t("header.tshirt")}</Link>
                                             </li>
                                             <li>
-                                                <Link to="/productType/SHIRT-shirt">Shirt</Link>
+                                                <Link to="/productType/SHIRT-shirt">{t("header.shirt")}</Link>
                                             </li>
                                             <li>
-                                                <Link to="/productType/SHIRT-polo">Polo Shirt</Link>
+                                                <Link to="/productType/SHIRT-polo">{t("header.poloshirt")}</Link>
                                             </li>
                                             <li>
-                                                <Link to="/productType/SHIRT-sport">Sport Shirt</Link>
+                                                <Link to="/productType/SHIRT-sport">{t("header.sportshirt")}</Link>
                                             </li>
                                             <li>
-                                                <Link to="/productType/SHIRT-coat">Coat</Link>
+                                                <Link to="/productType/SHIRT-coat">{t("header.coat")}</Link>
                                             </li>
                                         </ul>
                                     </li>
+                                    
+
                                     <li>
                                         <Link className="link-to" to="/productType/shoes">
-                                            Shoe
+                                            {t("header.shoe")}
                                         </Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link to="/productType/shoes-nike">Nike</Link>
+                                                <Link to="/productType/shoes-hightop">
+                                                    {t("header.hightop")}
+
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link to="/productType/shoes-adidas">Adidas</Link>
+                                                <Link to="/productType/shoes-boots">
+                                                    {t("header.boots")}
+
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link to="/productType/shoes-vans">Vans</Link>
+                                                <Link to="/productType/shoes-sneaker">
+                                                    {t("header.sneaker")}
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link to="/productType/shoes-mlb">MLB</Link>
+                                                <Link to="/productType/shoes-running">
+                                                    {t("header.running")}
+
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/shoes-sport">
+                                                    {t("header.sport")}
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/shoes-sandals">
+                                                    {t("header.sandals")}
+
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
                                         <Link className="link-to" to="/productType/hat">
-                                            Hat
+                                            {t("header.hat")}
                                         </Link>
                                     </li>
                                     <li>
+                                        <Link className="link-to" to="/productType/brand">
+                                            {t("header.brand")}
+                                        </Link>
+                                        <ul className="submenu">
+                                            <li>
+                                                <Link to="/productType/BRAND-nike">Nike</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-adidas">Adidas</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-columbia">Columbia</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-reebok">Reebok</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-coolmate">Coolmate</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-bitis">Bitis</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-vans">Vans</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-thenorthface">The North Face</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/productType/BRAND-mlb">MLB</Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
                                         <Link className="link-to" to="/about">
-                                            About
+                                            {t("header.about")}
+
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="link-to" to="/contact">
-                                            Contact
+                                            {t("header.contact")}
+
                                         </Link>
+                                    </li>
+                                    <li >
+                                        <Link className="link-to" to="productType/shirt">
+                                            <i className="fas fa-globe fa-spin fa-2xl"></i>
+            
+                                        </Link>
+                                        <ul className="submenu">
+                                            <li>
+                                                <Link onClick={() => {window.location.href="/?lng=en"}}>
+                                                    <Flag code={'gb'} />
+
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link onClick={() => {window.location.href="/?lng=cs"}}>
+                                                    <Flag code={'cz'} />
+
+                                                </Link>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                    <div className="col-xl-5 col-lg-5 col-md-3 col-sm-3 fix-card">
+
+                    
+                    <div className="col-xl-5 col-lg-2 col-md-3 col-sm-3 fix-card">
                         <ul className="header-right f-right d-none d-lg-block d-flex justify-content-between">
                             <li className="d-none d-xl-block" style={{ marginTop: 9 }}>
                                 <form id="search-submit" className="form-box f-right" onSubmit={handleSubmit}>
@@ -191,7 +278,7 @@ export default function HeaderBottom() {
                                         id="search-id"
                                         type="text"
                                         name="Search"
-                                        placeholder="Search"
+                                        placeholder={t("header.search")}
                                         value={searchValue}
                                         onChange={(e) => setSearchValue(e.target.value)}
                                     />
@@ -223,6 +310,9 @@ export default function HeaderBottom() {
                                     <i className="far fa-heart"></i>
                                 </div>
                             </li> */}
+
+
+
                             <li style={{ marginTop: 9 }}>
                                 <div className="shopping-card" id='shopping-card-color'>
                                     <div className="count-of-product">{numberCart}</div>
@@ -231,6 +321,11 @@ export default function HeaderBottom() {
                                     </Link>
                                 </div>
                             </li>
+
+
+
+                            
+                            
                             <li className="d-none d-lg-block" style={{ marginTop: 9 }}>
                                 {' '}
                                 {user ? (
@@ -246,7 +341,7 @@ export default function HeaderBottom() {
                                     </div>
                                 ) : (
                                     <Link to="/login" className="btn header-btn">
-                                        Sign in
+                                        {t("header.login")}
                                     </Link>
                                 )}
                             </li>
@@ -256,6 +351,8 @@ export default function HeaderBottom() {
                         <div className="mobile_menu d-block d-lg-none">
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>

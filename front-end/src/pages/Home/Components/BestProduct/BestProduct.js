@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import cart from './img/card.png';
 import cart_man from './img/card-man.png';
-import cart_shape from './img/card-shape.png';
+import { useTranslation } from "react-i18next";
 
 export default function BestProduct() {
+    const { t } = useTranslation();
+
     return (
         <div className="best-product-area lf-padding">
             <div className="product-wrapper bg-height" style={{ backgroundImage: `url(${cart})` }}>
@@ -14,27 +16,23 @@ export default function BestProduct() {
                         </div>
                         <div className="col-xl-2 col-lg-2 col-md-2 d-none d-lg-block">
                             <div className="vertical-text">
-                                <span>Manz</span>
+                                <span>{t('bestproduct.content1')}</span>
                             </div>
                         </div>
                         <div className="col-xl-8 col-lg-8">
                             <div className="best-product-caption">
                                 <h2 className='title-color-dark'>
-                                    Find The Best Product
-                                    <br /> from Our Shop
+                                    {t('bestproduct.content2')}
+                                    <br /> {t('bestproduct.content3')}
                                 </h2>
-                                <p className='title-color-dark'>Designers who are interesten creating state ofthe.</p>
+                                <p className='title-color-dark'>{t('bestproduct.content4')}</p>
                                 <Link to="/productType/SHIRT-tshirt" className="black-btn">
-                                    Shop Now
+                                    {t('bestproduct.content5')}
                                 </Link>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="shape bounce-animate d-none d-md-block">
-                <img src={cart_shape} alt="" />
             </div>
         </div>
     );

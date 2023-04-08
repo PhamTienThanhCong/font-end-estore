@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import CartProduct from '../CartProduct/CartProduct';
+import { useTranslation } from "react-i18next";
 
 export default function CartTable() {
+    const { t } = useTranslation();
+
     const cart = useSelector((state) => state.cart);
     const [checkAll, setCheckAll] = useState(true);
     const [valueChecked, setValueChecked] = useState(cart.length);
@@ -41,12 +44,12 @@ export default function CartTable() {
                             }
                         />
                     </th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
+                    <th scope="col">{t('carttable.product')}</th>
+                    <th scope="col">{t('carttable.price')}</th>
+                    <th scope="col">{t('carttable.quantity')}</th>
+                    <th scope="col">{t('carttable.total')}</th>
                     <th scope="col" style={{ textAlign: 'center' }}>
-                        Action
+                        {t('carttable.action')}
                     </th>
                 </tr>
             </thead>
@@ -60,10 +63,10 @@ export default function CartTable() {
                     <td></td>
                     <td></td>
                     <td>
-                        <h5>Subtotal</h5>
+                        <h5>{t('carttable.subtotal')}</h5>
                     </td>
                     <td>
-                        <h5>{getTotal().totalPrice}đ</h5>
+                        <h5>{getTotal().totalPrice}$</h5>
                     </td>
                 </tr>
             </tbody>

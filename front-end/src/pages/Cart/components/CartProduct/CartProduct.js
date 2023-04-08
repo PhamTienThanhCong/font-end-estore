@@ -65,7 +65,7 @@ export default function CartProduct({ props, setValueChecked, checkAll }) {
                 </div>
             </td>
             <td className="cart-price">
-                <h5>{props.price}đ</h5>
+                <h5>{props.price}$</h5>
             </td>
             <td style={{ textAlign: 'center' }} className="btn-quantity">
                 <div className="count-product-cart">
@@ -89,7 +89,7 @@ export default function CartProduct({ props, setValueChecked, checkAll }) {
                 </div>
             </td>
             <td className="total-price">
-                <h5>{totalPrice}đ</h5>
+                <h5>{totalPrice}$</h5>
             </td>
             <td className="btn-delete">
                 <div style={{ textAlign: 'center', cursor: 'pointer' }} 

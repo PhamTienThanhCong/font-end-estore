@@ -2,6 +2,7 @@ import gallery1 from './img/gallery1.jpg';
 import gallery2 from './img/gallery2.jpg';
 import gallery3 from './img/gallery3.jpg';
 import Products from '../Products/Products';
+import { useTranslation } from "react-i18next";
 
 const imgList = [
     {
@@ -23,7 +24,7 @@ const imgList = [
 
 export default function ListImg() {
     return (
-        <section className="latest-product-area padding-bottom">
+        <section className="latest-product-area">
             <div className="container">
                 <div className="tab-content" id="nav-tabContent">
                     <div

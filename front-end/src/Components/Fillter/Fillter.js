@@ -1,42 +1,47 @@
 import "./Fillter.css";
+import { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
-function Fillter({ handleChoicePrice, handleChoiceVote, handleClear }) {
+
+function Fillter({ handleChoicePrice, handleChoiceVote, handleClear, handleBrand }) {
+    const { t } = useTranslation();
+
     return (
         <form className="shoes_fillter" id='form-reset'>
             <ul>
                 <li>
                     <h4>
-                        <i className="fas fa-filter"></i> Price
+                        <i className="fas fa-filter"></i> {t('filter.price')}
                     </h4>
                 </li>
                 <li>
                     <input id="price-1" type="radio" name='price' onClick={
-                        () => handleChoicePrice(100000)
+                        () => handleChoicePrice(30)
                     } />
-                    <label htmlFor="price-1" >0 - 100</label>
+                    <label htmlFor="price-1" >0 - 30</label>
                 </li>
                 <li>
                     <input id="price-2" type="radio" name='price' onClick={
-                        () => handleChoicePrice(250000)
+                        () => handleChoicePrice(100)
                     } />
-                    <label htmlFor="price-2" >100- 250</label>
+                    <label htmlFor="price-2" >30-100</label>
                 </li>
                 <li>
                     <input id="price-3" type="radio" name='price' onClick={
-                        () => handleChoicePrice(500000)
+                        () => handleChoicePrice(200)
                     } />
-                    <label htmlFor="price-3" >250 - 500</label>
+                    <label htmlFor="price-3" >100 - 200</label>
                 </li>
                 <li>
                     <input id='price-4' type="radio" name='price' onClick={
-                        () => handleChoicePrice(100000000)
+                        () => handleChoicePrice(1000)
                     } />
-                    <label htmlFor="price-4" >More 500</label>
+                    <label htmlFor="price-4" >{t('filter.more')}</label>
                 </li>
                 
                 <li>
                     <h4>
-                        <i className="fas fa-filter"></i> Review
+                        <i className="fas fa-filter"></i> {t('filter.review')}
                     </h4>
                 </li>
                 <li>
@@ -69,9 +74,49 @@ function Fillter({ handleChoicePrice, handleChoiceVote, handleClear }) {
                     } />
                     <label htmlFor="vote-5" >⭐⭐⭐⭐⭐</label>
                 </li>
+
+
+
+
+
+                <li>
+        <h4>
+          <i className="fas fa-filter"></i> {t('filter.brand')}
+        </h4>
+      </li>
+      <li>
+        <input id="brand-1" type="radio" name='brand' onClick={() => handleBrand("Nike")} />
+        <label htmlFor="brand-1" >Nike</label>
+      </li>
+      <li>
+        <input id="brand-2" type="radio" name='brand' onClick={() => handleBrand("Adidas")} />
+        <label htmlFor="brand-2" >Adidas</label>
+      </li>
+      <li>
+        <input id="brand-3" type="radio" name='brand' onClick={() => handleBrand("Bitis")} />
+        <label htmlFor="brand-3" >Bitis</label>
+      </li>
+      <li>
+        <input id="brand-4" type="radio" name='brand' onClick={() => handleBrand("Vans")} />
+        <label htmlFor="brand-4" >Vans</label>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
                 <li>
                     {/* button clear */}
-                    <button onClick={handleClear} className="btn btn-primary btn-clear">Clear</button>
+                    <button onClick={handleClear} className="btn btn-primary btn-clear">{t('filter.clear')}</button>
                 </li>
             </ul>
         </form>

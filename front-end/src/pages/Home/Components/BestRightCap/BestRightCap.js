@@ -5,7 +5,7 @@ export default function BestRightCap(props) {
         <div className="best-right-cap" key={props.index}>
             <div className="best-single mb-30">
                 {/* props.active true return class active */}
-                <div className={`single-cap ${props.active ? 'active' : ''}`}>
+                <div className={`single-cap + active`}>
                     <Link to={props.link}>
                         <h4>
                             {props.name}

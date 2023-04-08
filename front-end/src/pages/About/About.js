@@ -3,13 +3,14 @@ import feature_icon_1 from './img/feature_icon_1.svg';
 import feature_icon_2 from './img/feature_icon_2.svg';
 import feature_icon_3 from './img/feature_icon_3.svg';
 import feature_icon_4 from './img/feature_icon_4.svg';
-import client from './img/client.png';
-import client1 from './img/client_1.png';
-import client2 from './img/client_2.png';
-
+import client from './img/client2.jpeg';
+import client1 from './img/client1.jpeg';
+import { useTranslation } from "react-i18next";
 import { useEffect } from 'react';
 
 function About() {
+    const { t } = useTranslation();
+
     document.title = 'About';
     useEffect(() => {
         // 👇️ scroll to top on page load
@@ -18,7 +19,7 @@ function About() {
     return (
         <div>
             <div class="slider-area " style={{ textAlign: 'center' }}>
-                <h1 style={{ color: 'black', paddingTop: 50 }}>About</h1>
+                <h1 style={{ color: 'black', paddingTop: 50 }}>{t('about.title')}</h1>
             </div>
 
             <section class="about_us padding_top" style={{ paddingTop: 50 }}>
@@ -26,13 +27,9 @@ function About() {
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="about_us_content">
-                                <h5 style={{ color: 'black' }}>The purpose of the shop was born?</h5>
+                                <h5 style={{ color: 'black' }}>{t('about.content1')}</h5>
                                 <h3>
-                                    Shop was born with the desire to become an example of the US RESPONSIBILITY BUSINESS model
-                                    by doing both a methodical, profitable business and at the same time bringing great value
-                                    practical and long-term value for customers, employees, partners, community,
-                                    society and for shareholders
-                                
+                                    {t('about.content2')}                                
                                 </h3>
                                 <div class="about_us_video" style={{ display: 'flex', justifyContent: 'center' }}>
                                     <img src={about_us} alt="#" class="img-fluid" />
@@ -48,17 +45,13 @@ function About() {
                     <div class="row justify-content-between">
                         <div class="col-lg-6">
                             <div class="feature_part_tittle">
-                                <h3>Shop's customer service story</h3>
+                                <h3>{t('about.content3')}</h3>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <div class="feature_part_content">
                                 <p>
-                                    At Shop, we believe that selling a package is selling an entire buying experience
-                                    shop. Coolmate has the hope of becoming a typical customer-oriented brand
-                                    deeply in Vietnam. With the desire to contribute a small part to the change received
-                                    knowledge of businesses in bringing better experiences to customers
-                                    products, especially in the field of E-Commerce.
+                                    {t('about.content4')}
                                 </p>
                             </div>
                         </div>
@@ -67,25 +60,25 @@ function About() {
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_1} alt="#" />
-                                <h4>Credit card support</h4>
+                                <h4>{t('about.icon1')}</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_2} alt="#" />
-                                <h4>Shopping Online</h4>
+                                <h4>{t('about.icon2')}</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_3} alt="#" />
-                                <h4>Free Shipping</h4>
+                                <h4>{t('about.icon3')}</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="single_feature_part">
                                 <img src={feature_icon_4} alt="#" />
-                                <h4>Products With Gift</h4>
+                                <h4>{t('about.icon4')}</h4>
                             </div>
                         </div>
                     </div>
@@ -99,34 +92,23 @@ function About() {
                             <div class="client_review_slider owl-carousel">
                                 <div class="single_client_review">
                                     <div class="client_img">
-                                        <img src={client} alt="#" />
+                                        <img src={client} alt="1" />
                                     </div>
                                     <p>
-                                        "Working in conjunction with humanitarian aid agencies, we have supported
-                                        programmes to help alleviate human suffering.
+                                        {t('about.client1')}
                                     </p>
-                                    <h5>- Micky Mouse</h5>
+                                    <h5>Nguyen Thanh Tuan</h5>
                                 </div>
                                 <div class="single_client_review">
                                     <div class="client_img">
-                                        <img src={client1} alt="#" />
+                                        <img src={client1} alt="2" />
                                     </div>
                                     <p>
-                                        "Working in conjunction with humanitarian aid agencies, we have supported
-                                        programmes to help alleviate human suffering.
+                                        {t('about.client2')}
                                     </p>
-                                    <h5>- Micky Mouse</h5>
+                                    <h5>Nguyen Thi Nu</h5>
                                 </div>
-                                <div class="single_client_review">
-                                    <div class="client_img">
-                                        <img src={client2} alt="#" />
-                                    </div>
-                                    <p>
-                                        "Working in conjunction with humanitarian aid agencies, we have supported
-                                        programmes to help alleviate human suffering.
-                                    </p>
-                                    <h5>- Micky Mouse</h5>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -138,15 +120,14 @@ function About() {
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="subscribe_part_content">
-                                <h2>Get promotions & updates!</h2>
+                                <h2>{t('about.subcribe1')}</h2>
                                 <p>
-                                    Seamlessly empower fully researched growth strategies and interoperable internal or
-                                    “organic” sources credibly innovate granular internal .
+                                    {t('about.subcribe2')}
                                 </p>
                                 <div class="subscribe_form">
-                                    <input type="email" placeholder="Enter your mail" />
+                                    <input type="email" placeholder={t("about.email")} />
                                     <a href="#" class="btn_1">
-                                        Subscribe
+                                        {t('about.subcribe3')}
                                     </a>
                                 </div>
                             </div>

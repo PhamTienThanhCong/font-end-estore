@@ -82,7 +82,10 @@
     top: 55px;
     right: 0;
   }
-
+.language{
+  padding-left:1px;
+  padding-right:1px;
+}
   #myDropdown div{
     min-width: 200px;
     padding: 10px;

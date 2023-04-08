@@ -3,25 +3,26 @@ import ListEndow from './ListEndow';
 const Endows = [
     {
         id: 1,
-        name: 'Free Shipping Method',
-        description: 'aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.',
+        name: 'endow.content1',
+        description:  'endow.content4',
         icon: 'ti-package',
     },
     {
         id: 2,
-        name: 'Secure Payment System',
-        description: 'aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.',
+        name: 'endow.content2',
+        description: 'endow.content5',
         icon: 'ti-unlock',
     },
     {
         id: 3,
-        name: 'Update Payment System',
-        description: 'aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.',
+        name: 'endow.content3',
+        description: 'endow.content6',
         icon: 'ti-reload',
     },
 ];
 
 export default function Endow() {
+
     return (
         <div className="shop-method-area section-padding30">
             <div className="container">

@@ -2,8 +2,10 @@ import "./BuyNow.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from '../../redux/cartSlice';
+import { useTranslation } from "react-i18next";
 
 function BuyNow({ open, product, setOpen }) {
+    const { t } = useTranslation();
     const [choseColor, setChoseColor] = useState('white');
     const colors = ['white', 'black', 'red', 'yellow'];
     const dispatch = useDispatch();
@@ -39,13 +41,13 @@ function BuyNow({ open, product, setOpen }) {
         >
             <div className="container-buy-now">
                 <div className="buy-now-header">
-                    <h2>Buy Now</h2>
+                    <h2>{t('buynow.now')}</h2>
                     <button onClick={
                         () => {
                             setOpen(false);
                         }
                     } className="btn-close-buy-now">
-                        close X
+                        X
                     </button>
                 </div>
                 <div className="buy-now-body">
@@ -60,10 +62,10 @@ function BuyNow({ open, product, setOpen }) {
                                 {product.nameProduct}
                             </h3>
                             <div className="price-product">
-                                {product.price} USD
+                                {product.price} $
                             </div>
                             <div className="color-product">
-                                <div className="title">Color:</div>
+                                <div className="title">{t('buynow.color')}:</div>
                                 {colors &&
                                     colors.map((color, index) => (
                                         <span
@@ -75,7 +77,7 @@ function BuyNow({ open, product, setOpen }) {
                                     ))}
                             </div>
                             <div className="quantity-action">
-                                quantity
+                            {t('buynow.quantity')}
                             </div>
                             <div className="add-to-cart">
                                 <div className="quantity">
@@ -103,7 +105,7 @@ function BuyNow({ open, product, setOpen }) {
                                         )
                                     }
                                     >
-                                        Add To Cart
+                                        {t('buynow.addtocart')}
                                     </div>
                                     <div
                                         className="action"
@@ -122,12 +124,12 @@ function BuyNow({ open, product, setOpen }) {
                                     //     )
                                     // }
                                     >
-                                        Buy now
+                                        {t('buynow.now')}
                                     </div>
                                 </div>
                             </div>
                         <div className="feature">
-                        <div className="feature_header">Description</div>
+                        <div className="feature_header">{t('buynow.description')}</div>
                         <div className="feature_content">
                             {product.features &&
                                 product.features.map((feature, index) => (

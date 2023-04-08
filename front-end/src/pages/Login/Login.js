@@ -5,8 +5,11 @@ import { login } from '../../redux/cartSlice';
 // import { FormLogin } from "./components/FormLogin"
 import { useEffect } from 'react';
 import axios from 'axios';
+import { useTranslation } from "react-i18next";
 
 export default function Login() {
+    const { t } = useTranslation();
+
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -41,7 +44,7 @@ export default function Login() {
     return (
         <>
             <div className="slider-area " style={{ textAlign: 'center' }}>
-                <h1 style={{ color: 'black', paddingTop: 50 }}>Login</h1>
+                <h1 style={{ color: 'black', paddingTop: 50 }}>{t('login.content1')}</h1>
             </div>
 
             <section className="login_part section_padding " style={{ paddingTop: 50 }}>
@@ -50,12 +53,12 @@ export default function Login() {
                         <div className="col-lg-6 col-md-6">
                             <div className="login_part_text text-center">
                                 <div className="login_part_text_iner">
-                                    <h2>New to our Shop?</h2>
+                                    <h2>{t('login.content2')}</h2>
                                     <p>
-                                        Come join us! We are a community of people who love to shop and share
+                                        {t('login.content3')}
                                     </p>
                                     <Link to="/register" className="btn_3">
-                                        Create an Account
+                                        {t('login.content4')}
                                     </Link>
                                 </div>
                             </div>
@@ -64,7 +67,7 @@ export default function Login() {
                             <div className="login_part_form">
                                 <div className="login_part_form_iner">
                                     <h3>
-                                        Welcome Back ! <br /> Please Sign in now
+                                    {t('login.content5')} <br />  {t('login.content6')}
                                     </h3>
 
                                     <form
@@ -81,7 +84,7 @@ export default function Login() {
                                                 id="name"
                                                 name="name"
                                                 defaultValue=""
-                                                placeholder="Your Email"
+                                                placeholder={t('login.content7')}
                                                 onChange={(e) => setEmail(e.target.value)}
                                             />
                                         </div>
@@ -93,19 +96,19 @@ export default function Login() {
                                                 name="password"
                                                 defaultValue=""
                                                 onChange={(e) => setPassword(e.target.value)}
-                                                placeholder="Password"
+                                                placeholder= {t('login.content8')}
                                             />
                                         </div>
                                         <div className="col-md-12 form-group">
                                             <div className="creat_account d-flex align-items-center">
                                                 <input type="checkbox" id="f-option" name="selector" />
-                                                <label htmlFor="f-option">Remember me</label>
+                                                <label htmlFor="f-option"> {t('login.content9')}</label>
                                             </div>
                                             <button type="submit" defaultValue="submit" className="btn_3">
-                                                log in
+                                                {t('login.content10')}
                                             </button>
                                             <Link className="lost_pass" to="#">
-                                                forget password?
+                                                {t('login.content11')}
                                             </Link>
                                         </div>
                                     </form>

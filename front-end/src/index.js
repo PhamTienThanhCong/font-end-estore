@@ -1,19 +1,27 @@
-import React from 'react';
+import React,{Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import "./i18n.js";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
+
         <Provider store={store}>
+        <Suspense fallback="loading">
+
             <Router>
                 <App />
             </Router>
+            </Suspense>
+
         </Provider>
+
     </React.StrictMode>,
 );
 

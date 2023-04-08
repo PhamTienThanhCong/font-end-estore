@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 export default function HotTag(props) {
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="single-footer-caption mb-50">
@@ -10,7 +13,7 @@ export default function HotTag(props) {
                         {props.tags.map((tag, index) => {
                             return (
                                 <li key={index}>
-                                    <Link to={tag.to}>{tag.name}</Link>
+                                    <Link to={tag.to}>{t(tag.name)}</Link>
                                 </li>
                             );
                         })}

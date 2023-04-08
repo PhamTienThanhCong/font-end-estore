@@ -3,8 +3,11 @@ import Map from '../../Components/Map/Map';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+    const { t } = useTranslation();
+
     useEffect(() => {
         // 👇️ scroll to top on page load
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -40,7 +43,7 @@ function Contact() {
     return (
         <main>
             <div className="slider-area " style={{ textAlign: 'center', paddingTop: 50 }}>
-                <h1 style={{ color: 'black', paddingTop: 50 }}>Contact Us</h1>
+                <h1 style={{ color: 'black', paddingTop: 50 }}>{t('contact.title')}</h1>
             </div>
 
             <section className="contact-section" style={{ paddingTop: 50 }}>
@@ -48,7 +51,7 @@ function Contact() {
                     <Map />
                     <div className="row">
                         <div className="col-12">
-                            <h2 className="contact-title">Get in Touch</h2>
+                            <h2 className="contact-title">{t('contact.touch')}</h2>
                         </div>
                         <div className="col-lg-8">
                             <form
@@ -68,7 +71,7 @@ function Contact() {
                                                 id="message"
                                                 cols="30"
                                                 rows="9"
-                                                placeholder=" Enter Message"
+                                                placeholder={t("contact.message")}
                                                 value={message}
                                                 onChange={(e) => setMessage(e.target.value)}
                                             ></textarea>
@@ -81,7 +84,7 @@ function Contact() {
                                                 name="name"
                                                 id="name"
                                                 type="text"
-                                                placeholder="Enter your name"
+                                                placeholder={t("contact.name")}
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
                                             />
@@ -94,7 +97,7 @@ function Contact() {
                                                 name="email"
                                                 id="email"
                                                 type="email"
-                                                placeholder="Email"
+                                                placeholder={t("contact.email")}
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                             />
@@ -107,7 +110,7 @@ function Contact() {
                                                 name="subject"
                                                 id="subject"
                                                 type="text"
-                                                placeholder="Enter Subject"
+                                                placeholder={t("contact.subject")}
                                                 value={subject}
                                                 onChange={(e) => setSubject(e.target.value)}
                                             />
@@ -116,7 +119,7 @@ function Contact() {
                                 </div>
                                 <div className="form-group mt-3">
                                     <button type="submit" className="button button-contactForm boxed-btn">
-                                        Send
+                                        {t("contact.send")}
                                     </button>
                                 </div>
                             </form>
@@ -137,7 +140,7 @@ function Contact() {
                                 </span>
                                 <span className="media-body">
                                     <h3>+1 253 565 2365</h3>
-                                    <p>Mon to Fri 9am to 6pm</p>
+                                    <p>{t("contact.time")}</p>
                                 </span>
                             </div>
                             <div className="media contact-info">
@@ -150,7 +153,7 @@ function Contact() {
                                             ngu0120@vsb.cz
                                         </h3>
                                     </h3>
-                                    <p>Send us your query anytime!</p>
+                                    <p>{t("contact.sendus")}</p>
                                 </span>
                             </div>
                         </div>

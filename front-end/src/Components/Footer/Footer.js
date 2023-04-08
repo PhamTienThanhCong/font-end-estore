@@ -2,68 +2,72 @@ import logo_footer from './logo2_footer.png';
 import HotTag from './Components/HotTag';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from "react-i18next";
+
 
 const Quick_Links = [
     {
-        name: 'About',
+        name: 'footer.about',
         to: '/about',
     },
     {
-        name: 'Offers & Discounts',
-        to: '/about',
+        name: 'footer.ecommerce',
+        to: '/ecommerce',
     },
     {
-        name: 'Get Coupon',
-        to: '/about',
+        name: 'footer.size',
+        to: '/size',
     },
     {
-        name: 'Contact Us',
+        name: 'footer.contact',
         to: '/contact',
     },
+
 ];
 
 const New_Products = [
     {
-        name: 'Woman Cloth',
+        name: 'footer.clothes',
         to: '/productType/shirt',
     },
     {
-        name: 'Fashion Accessories',
+        name: 'footer.shoe',
         to: '/productType/shoes',
     },
     {
-        name: 'Man Accessories',
+        name: 'footer.hat',
         to: '/productType/hat',
     },
     {
-        name: 'Rubber made Toys',
-        to: '/productType/shoes',
+        name: 'footer.brand',
+        to: '/productType/brand',
     },
 ];
 
 const Supports = [
     {
-        name: 'Frequently Asked Questions',
-        to: '/about',
+        name: 'footer.faq',
+        to: '/FAQ',
     },
     {
-        name: 'Terms & Conditions',
-        to: '/about',
+        name: 'footer.ship',
+        to: '/ship',
     },
     {
-        name: 'Privacy Policy',
-        to: '/about',
+        name: 'footer.privacy',
+        to: '/policy',
     },
     {
-        name: 'Report a Payment Issue',
-        to: '/contact',
+        name: 'footer.return',
+        to: '/return',
     },
 ];
 
-const description = 'DEVELOPMENT OF MODERN WEB APPLICATION';
-const descriptions = 'NGU0120 - NGUYEN THANH TUAN';
+
 
 export default function Footer() {
+    const { t } = useTranslation();
+    const descriptions = 'NGU0120 - NGUYEN THANH TUAN';
     return (
         <>
             <footer>
@@ -80,7 +84,7 @@ export default function Footer() {
                                         </div>
                                         <div className="footer-tittle">
                                             <div className="footer-pera">
-                                                <p>{description}</p>
+                                                <p>{t('footer.topic')}</p>
                                                 <p>{descriptions}</p>
                                             </div>
                                         </div>
@@ -88,16 +92,16 @@ export default function Footer() {
                                 </div>
                             </div>
 
-                            <div className="col-xl-2 col-lg-3 col-md-3 col-sm-5">
-                                <HotTag name="Quick Links" tags={Quick_Links} />
+                            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-5">
+                                <HotTag name={t("footer.quick")} tags={Quick_Links} />
                             </div>
 
                             <div className="col-xl-3 col-lg-3 col-md-4 col-sm-7">
-                                <HotTag name="New Products" tags={New_Products} />
+                                <HotTag name={t("footer.product")} tags={New_Products} />
                             </div>
 
                             <div className="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-                                <HotTag name="Supports" tags={Supports} />
+                                <HotTag name={t("footer.support")} tags={Supports} />
                             </div>
                         </div>
 
