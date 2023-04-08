@@ -33,6 +33,10 @@ app.use(session({
 //routers
 app.use('/v1/product', productRoute);
 app.use('/v1/user', userRoute);
+// test api /
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 
 let port = 8000;
 app.listen(port, () => console.log('server is running in port ' + port));
