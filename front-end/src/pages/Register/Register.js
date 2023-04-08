@@ -29,7 +29,7 @@ function Register() {
         } else {
             // setting header for axios
             axios.defaults.headers.post['Content-Type'] = 'application/json';
-            axios.post('http://localhost:8000/v1/user/register', {
+            axios.post('https://web-estore-backend.onrender.com/v1/user/register', {
                 fullname: name,
                 phone: phone,
                 email: email,

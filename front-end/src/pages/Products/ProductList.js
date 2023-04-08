@@ -52,7 +52,7 @@ function MenShirt() {
         setNameApp(productType); 
         document.title = `Product | ${productType}`;
         setLoading(true);
-        axios.get('http://localhost:8000/v1/product?Category=' + productType)
+        axios.get('https://web-estore-backend.onrender.com/v1/product?Category=' + productType)
             .then(res => {
                 setPRODUCTS(res.data);
                 if (res.data.length <= 6) {

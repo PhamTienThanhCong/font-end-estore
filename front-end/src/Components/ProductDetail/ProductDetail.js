@@ -15,7 +15,7 @@ function ProductDetail() {
     const [rating, setRating] = useState(0);
     const [PRODUCTS, setPRODUCTS] = useState([]);
     useEffect (() => {
-        axios.get('http://localhost:8000/v1/product/' + productId)
+        axios.get('https://web-estore-backend.onrender.com/v1/product/' + productId)
         .then((res) => {
             setProduct(res.data);
             setRating(res.data.ratting.toFixed());
@@ -26,7 +26,7 @@ function ProductDetail() {
     }, [productId]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/v1/product')
+        axios.get('https://web-estore-backend.onrender.com/v1/product')
             .then(res => {
                 setPRODUCTS(res.data);
             })

@@ -22,7 +22,7 @@ export default function Login() {
     const handleLogin = (e) => {
         e.preventDefault();
         axios.defaults.headers.post['Content-Type'] = 'application/json';
-        axios.post('http://localhost:8000/v1/user/login', {
+        axios.post('https://web-estore-backend.onrender.com/v1/user/login', {
             email: email,
             password: password,
         })

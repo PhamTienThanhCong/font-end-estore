@@ -11,7 +11,7 @@ export default function LatestProducts() {
     const [open, setOpen] = useState(false);
     const [product, setProduct] = useState({});
     useEffect(() => {
-        axios.get('http://localhost:8000/v1/product')
+        axios.get('https://web-estore-backend.onrender.com/v1/product')
             .then(res => {
                 setPRODUCTS(res.data);
                 setLoading(false);

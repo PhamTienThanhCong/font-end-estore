@@ -38,7 +38,7 @@ function SearchProduct() {
 
     useEffect (() => {
         document.getElementById('search-id').value = searchValue;
-        axios.get(`http://localhost:8000/v1/product?nameProduct=${searchValue}`)
+        axios.get(`https://web-estore-backend.onrender.com/v1/product?nameProduct=${searchValue}`)
         .then((res) => {
             setPRODUCTS(res.data);
         })
