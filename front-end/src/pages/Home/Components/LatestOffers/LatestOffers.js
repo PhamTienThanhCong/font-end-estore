@@ -1,4 +1,5 @@
 import latest_offer from './img/latest-offer.png';
+import latest_man from './img/latest-man.png';
 import { useTranslation } from "react-i18next";
 
 export default function LatestOffers() {
@@ -31,6 +32,10 @@ export default function LatestOffers() {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div className="man-shape">
+                    <img src={latest_man} alt="" />
                 </div>
             </div>
         </div>

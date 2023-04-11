@@ -5,6 +5,7 @@ import feature_icon_3 from './img/feature_icon_3.svg';
 import feature_icon_4 from './img/feature_icon_4.svg';
 import client from './img/client2.jpeg';
 import client1 from './img/client1.jpeg';
+import client2 from './img/client2.jpeg';
 import { useTranslation } from "react-i18next";
 import { useEffect } from 'react';
 
@@ -92,7 +93,7 @@ function About() {
                             <div class="client_review_slider owl-carousel">
                                 <div class="single_client_review">
                                     <div class="client_img">
-                                        <img src={client} alt="1" />
+                                        <img src={client} alt="#" />
                                     </div>
                                     <p>
                                         {t('about.client1')}
@@ -101,7 +102,7 @@ function About() {
                                 </div>
                                 <div class="single_client_review">
                                     <div class="client_img">
-                                        <img src={client1} alt="2" />
+                                        <img src={client1} alt="#" />
                                     </div>
                                     <p>
                                         {t('about.client2')}

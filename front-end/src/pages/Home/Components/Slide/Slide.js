@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import h1_hero from './hero_man.png';
 import h2_hero from './summer-clothes.jpg';
 import h3_hero from './nike-shoes.png';
+import h4_hero from './hat.png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { useTranslation } from "react-i18next";

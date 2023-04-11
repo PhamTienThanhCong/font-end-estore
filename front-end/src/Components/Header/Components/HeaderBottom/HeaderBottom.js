@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import logo from '../../../Footer/logo2_footer.png';
+import logo from './logo.png';
 import './HeaderBottom.css';
 import { useDispatch, useSelector } from 'react-redux';
 import AVATAR_IMG from './avatar.jpg';

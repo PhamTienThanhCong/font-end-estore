@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -10,8 +8,6 @@ const productRoute = require("./routes/Product");
 const userRoute = require("./routes/User");
 
 dotenv.config();
-
-
 const app = express();
 
 app.use("/public", express.static(__dirname + "/public"));

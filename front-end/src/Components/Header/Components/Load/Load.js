@@ -1,5 +1,5 @@
 // import img
-import logo from '../../../Footer/logo2_footer.png';
+import logo from './logo.png';
 
 export default function Load() {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Marquee.css';
-import logo from '../Footer/logo2_footer.png'
+import logo from './logo.png';
 import { useTranslation } from "react-i18next";
 
 function Marquee() {
