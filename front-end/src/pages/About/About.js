@@ -5,9 +5,13 @@ import feature_icon_3 from './img/feature_icon_3.svg';
 import feature_icon_4 from './img/feature_icon_4.svg';
 import client from './img/client2.jpeg';
 import client1 from './img/client1.jpeg';
-import client2 from './img/client2.jpeg';
 import { useTranslation } from "react-i18next";
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function About() {
     const { t } = useTranslation();
@@ -15,8 +19,8 @@ function About() {
     document.title = 'About';
     useEffect(() => {
         // 👇️ scroll to top on page load
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      }, []);
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, []);
     return (
         <div>
             <div class="slider-area " style={{ textAlign: 'center' }}>
@@ -30,7 +34,7 @@ function About() {
                             <div class="about_us_content">
                                 <h5 style={{ color: 'black' }}>{t('about.content1')}</h5>
                                 <h3>
-                                    {t('about.content2')}                                
+                                    {t('about.content2')}
                                 </h3>
                                 <div class="about_us_video" style={{ display: 'flex', justifyContent: 'center' }}>
                                     <img src={about_us} alt="#" class="img-fluid" />
@@ -86,31 +90,47 @@ function About() {
                 </div>
             </section>
 
-            <section class="client_review">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="client_review_slider owl-carousel">
-                                <div class="single_client_review">
-                                    <div class="client_img">
+            <section className="client_review">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8">
+                            <OwlCarousel
+                                className="client_review_slider"
+                                items={1}
+                                loop
+                                dots
+                                autoplay
+                                autoplayHoverPause
+                                autoplayTimeout={5000}
+                                nav
+                                navText={["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]}
+                                responsive={{
+                                    0: {
+                                        nav: false
+                                    },
+                                    768: {
+                                        nav: false
+                                    },
+                                    991: {
+                                        nav: true
+                                    }
+                                }}
+                            >
+                                <div className="single_client_review">
+                                    <div className="client_img">
                                         <img src={client} alt="#" />
                                     </div>
-                                    <p>
-                                        {t('about.client1')}
-                                    </p>
+                                    <p>{t('about.client1')}</p>
                                     <h5>Nguyen Thanh Tuan</h5>
                                 </div>
-                                <div class="single_client_review">
-                                    <div class="client_img">
+                                <div className="single_client_review">
+                                    <div className="client_img">
                                         <img src={client1} alt="#" />
                                     </div>
-                                    <p>
-                                        {t('about.client2')}
-                                    </p>
+                                    <p>{t('about.client2')}</p>
                                     <h5>Nguyen Thi Nu</h5>
                                 </div>
-
-                            </div>
+                            </OwlCarousel>
                         </div>
                     </div>
                 </div>
@@ -127,9 +147,9 @@ function About() {
                                 </p>
                                 <div class="subscribe_form">
                                     <input type="email" placeholder={t("about.email")} />
-                                    <a href="#" class="btn_1">
+                                    <Link href="#" className="btn_1">
                                         {t('about.subcribe3')}
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
