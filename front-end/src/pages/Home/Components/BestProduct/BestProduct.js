@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import cart from './img/card.png';
 import cart_man from './img/card-man.png';
-import cart_shape from './img/card-shape.png';
 import { useTranslation } from "react-i18next";
 
 export default function BestProduct() {
@@ -34,10 +33,6 @@ export default function BestProduct() {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="shape bounce-animate d-none d-md-block">
-                <img src={cart_shape} alt="" />
             </div>
         </div>
     );

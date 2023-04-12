@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import logo from './logo.png';
+import logo from '../../../Footer/logo2_footer.png';
 import './HeaderBottom.css';
 import { useDispatch, useSelector } from 'react-redux';
 import AVATAR_IMG from './avatar.jpg';
@@ -251,13 +251,13 @@ export default function HeaderBottom() {
                                         </Link>
                                         <ul className="submenu">
                                             <li>
-                                                <Link onClick={() => {window.location.href="/?lng=en"}}>
+                                                <Link to="/?lng=en" onClick={() => {window.location.href="/?lng=en"}}>
                                                     <Flag code={'gb'} />
 
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link onClick={() => {window.location.href="/?lng=cs"}}>
+                                                <Link to="/?lng=cs" onClick={() => {window.location.href="/?lng=cs"}}>
                                                     <Flag code={'cz'} />
 
                                                 </Link>

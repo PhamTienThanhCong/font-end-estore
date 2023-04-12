@@ -2,7 +2,7 @@ import React from 'react';
 import './Ship.css';
 import { useEffect } from 'react';
 import { useTranslation } from "react-i18next";
-
+import background from './img/background.png'
 
 function Ship(){
     const { t } = useTranslation()
@@ -17,19 +17,17 @@ function Ship(){
                     <h1 class="ship-title">
                         {t('footer.ship')}
                     </h1>
-                    <p><img src="https://mcdn.coolmate.me/uploads/January2022/Dich_vu_giao_hang_1.jpg" width="1000" /></p> 
+                    <p><img src={background} /></p> 
                     <p>{t('ship.content1')} <a href="http://localhost:3000/">SGB </a>{t('ship.content2')}</p>                    
                     <p> {t('ship.content3')}&nbsp;</p> 
                     
                     <p>{t('ship.content4')}</p> 
-                    <p><img src="https://mcdn.coolmate.me/image/October2022/Dich_vu_giao_hang_update.jpg" width="1000" /><br/></p> 
                     <ul>
                         <li>{t('ship.content5')}</li>
                         <li>{t('ship.content6')}</li>
                     </ul> 
                     <p>{t('ship.content7')}</p>
                     <p>{t('ship.content8')}</p>
-                    <p><img src="https://mcdn.coolmate.me/uploads/January2022/Dich_vu_giao_hang_3.jpg"width="700" /></p> 
                     <ul>
                         <li>{t('ship.content9')}</li>                   
                     </ul> 

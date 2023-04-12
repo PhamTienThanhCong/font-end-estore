@@ -98,7 +98,7 @@ function Benefit() {
             <div className="Policy-page-content">
                 <h2>{t('benefit.content1')}</h2>
 
-                <p>{t('benefit.content2')} <a href="https://www.ftshp.co.uk/en-uk/footshop-club">Footshop Club</a> {t('benefit.content3')}</p>
+                <p>{t('benefit.content2')} <a href="https://web-estore-tuan.vercel.app/">Saigon Buffalo</a> {t('benefit.content3')}</p>
                 <div className="Policy-page-benefit">
                     <ul>
                         <li>
